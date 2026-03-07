@@ -13,13 +13,23 @@ The participants are:
 
 ## The process
 
+### Day 1
+
 We joined to braimstorm the game for 2 hours. We researched girly games and we reached the conclusion that
 girly games have a lot of mini-games. Doing many mini-games can be tricky because the limited time, but
 we agreed to do one at a time so the ones that we have are complete.
 
 The small Things are the fairies, that will help the little girl to fulfill a series of tasks.
 
-Tool used:
+We created the loop for the scenes, including saving the states for the minigames while returning to the map.
+
+<video width="320" height="240" controls>
+  <source src="/documentation/game-scene-loop.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+## Tools used
 - Godot 4.6
-- others for later
-asdfasdf
+- vscodium
+- Albleton
+- Bitwig

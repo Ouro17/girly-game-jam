@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dnetkr2kpe0fr"]
+
+[ext_resource type="Script" uid="uid://7uxw3exeql56" path="res://scripts/levels/outro.gd" id="1_tqx5r"]
+[ext_resource type="PackedScene" uid="uid://ci7sny2kjdnbh" path="res://scenes/UI/flash_label.tscn" id="2_y7qv2"]
+
+[node name="Outro" type="Node2D" unique_id=1411035401 node_paths=PackedStringArray("timer")]
+script = ExtResource("1_tqx5r")
+next_level = "res://scenes/levels/menu.tscn"
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=103133537]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Control" type="Control" parent="." unique_id=429794114]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="FlashLabel" parent="Control" unique_id=405698615 instance=ExtResource("2_y7qv2")]
+layout_mode = 1
+offset_left = 935.0
+offset_top = 601.0
+offset_right = 1122.0
+offset_bottom = 624.0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="Control" unique_id=1480088035]
+layout_mode = 1
+offset_left = 508.0
+offset_top = 267.0
+offset_right = 628.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 34
+text = "OUTRO"

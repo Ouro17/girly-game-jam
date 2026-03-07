@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ci7sny2kjdnbh"]
+
+[ext_resource type="Script" uid="uid://btbvqm5u4ueje" path="res://scripts/UI/flash_label.gd" id="1_a1rfv"]
+
+[node name="FlashLabel" type="Label" unique_id=405698615]
+text = "UI_PRESS_ANY_TO_SKIP"
+script = ExtResource("1_a1rfv")
+flash_interval = 1.0
+loops = 3

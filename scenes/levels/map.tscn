@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://8dnnstkbi3sx"]
+
+[ext_resource type="Script" uid="uid://ch6kq7hrwexv0" path="res://scripts/levels/map.gd" id="1_1j1lv"]
+[ext_resource type="Script" uid="uid://dla04ekjdgf7c" path="res://scripts/utils/event_observer.gd" id="2_fpdas"]
+
+[sub_resource type="Resource" id="Resource_fpdas"]
+script = ExtResource("2_fpdas")
+event_id = "mini_game_0"
+metadata/_custom_type_script = "uid://dla04ekjdgf7c"
+
+[sub_resource type="Resource" id="Resource_4u8by"]
+script = ExtResource("2_fpdas")
+event_id = "mini_game_1"
+metadata/_custom_type_script = "uid://dla04ekjdgf7c"
+
+[sub_resource type="Resource" id="Resource_5ek3c"]
+script = ExtResource("2_fpdas")
+event_id = "mini_game_2"
+metadata/_custom_type_script = "uid://dla04ekjdgf7c"
+
+[node name="Map" type="Node2D" unique_id=1665987138 node_paths=PackedStringArray("timer")]
+script = ExtResource("1_1j1lv")
+next_levels = Array[String](["res://scenes/levels/mini_game_0.tscn", "res://scenes/levels/mini_game_1.tscn", "res://scenes/levels/mini_game_2.tscn", "res://scenes/levels/outro.tscn"])
+timer = NodePath("Timer")
+events_observer = Array[ExtResource("2_fpdas")]([SubResource("Resource_fpdas"), SubResource("Resource_4u8by"), SubResource("Resource_5ek3c")])
+
+[node name="Label" type="Label" parent="." unique_id=1943918704]
+offset_left = 519.0
+offset_top = 266.0
+offset_right = 629.0
+offset_bottom = 335.0
+theme_override_font_sizes/font_size = 50
+text = "MAP"
+
+[node name="Timer" type="Timer" parent="." unique_id=219147583]
+wait_time = 2.0
+one_shot = true
+autostart = true

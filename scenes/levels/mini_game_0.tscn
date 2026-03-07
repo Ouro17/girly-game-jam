@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dmx2d3fojwube"]
+
+[ext_resource type="Script" uid="uid://dw841tvp77agh" path="res://scripts/levels/mini_game.gd" id="1_egv7s"]
+[ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="2_ctnob"]
+
+[sub_resource type="Resource" id="Resource_g6fga"]
+script = ExtResource("2_ctnob")
+id = "mini_game_0"
+metadata/_custom_type_script = "uid://dgcvhq2w4qg1v"
+
+[node name="MiniGame0" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("timer")]
+script = ExtResource("1_egv7s")
+next_level = "res://scenes/levels/map.tscn"
+timer = NodePath("Timer")
+state = SubResource("Resource_g6fga")
+
+[node name="Label" type="Label" parent="." unique_id=1738273280]
+offset_left = 411.0
+offset_top = 249.0
+offset_right = 718.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "MINIGAME 0!!!!!!!!!!!!!"
+
+[node name="Timer" type="Timer" parent="." unique_id=1843833189]
+wait_time = 2.0
+one_shot = true
+autostart = true
