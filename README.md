@@ -23,7 +23,7 @@ The small Things are the fairies, that will help the little girl to fulfill a se
 
 We created the loop for the scenes, including saving the states for the minigames while returning to the map.
 
-[!(Game Scene Loop)](/documentation/game-scene-loop.mp4)
+[!(Game Scene Loop)](https://github.com/user-attachments/assets/f886d58f-ab2b-45d3-b484-0d100769ebfb)
 
 ## Tools used
 - Godot 4.6
