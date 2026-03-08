@@ -25,6 +25,17 @@ We created the loop for the scenes, including saving the states for the minigame
 
 [!(Game Scene Loop)](https://github.com/user-attachments/assets/f886d58f-ab2b-45d3-b484-0d100769ebfb)
 
+
+### Day 2
+
+Today, 2 goals were proposed:
+- Player movement on map and enter into minigames
+- Checklist of minigames that were done
+
+The movement of the player was quite easy to do. Just handle the mouse input and set a vector for it to move automatically using the `move_and_slide` function from `CharacterBody2D` set as floating body.
+
+For the checklist, we created a new class that use an array of `CheckBox` and set the input handling to ignore, so the player can't interact with it.
+
 ## Tools used
 - Godot 4.6
 - vscodium

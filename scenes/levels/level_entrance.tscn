@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bvjj4cq3gnbev"]
+
+[ext_resource type="Script" uid="uid://bts7f55o5jcme" path="res://scripts/levels/level_entrance.gd" id="1_uqi86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2mhy"]
+size = Vector2(125, 125)
+
+[node name="LevelEntrance" type="Area2D" unique_id=347399509]
+script = ExtResource("1_uqi86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1115753299]
+shape = SubResource("RectangleShape2D_j2mhy")

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dnfws5iivk2id"]
+
+[ext_resource type="Script" uid="uid://d27rtcgwpb11j" path="res://scripts/UI/task_list.gd" id="1_j44ri"]
+
+[node name="TaskListPanel" type="Panel" unique_id=941280822 node_paths=PackedStringArray("task_items")]
+offset_right = 259.0
+offset_bottom = 123.0
+script = ExtResource("1_j44ri")
+task_items = [NodePath("VBoxContainer/CheckBox"), NodePath("VBoxContainer/CheckBox2"), NodePath("VBoxContainer/CheckBox3")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1704622171]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer" unique_id=277138768]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 20
+text = "TASK_MINIGAME_0"
+
+[node name="CheckBox2" type="CheckBox" parent="VBoxContainer" unique_id=1167211785]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 20
+text = "TASK_MINIGAME_1"
+
+[node name="CheckBox3" type="CheckBox" parent="VBoxContainer" unique_id=56403003]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 20
+text = "TASK_MINIGAME_2"
