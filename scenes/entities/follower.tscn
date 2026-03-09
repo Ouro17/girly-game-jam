@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c4n485kh48y7h"]
+
+[ext_resource type="Script" uid="uid://6iytkn73qjbn" path="res://scripts/entities/follower.gd" id="1_b8lyh"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/hadamadrina.png" id="2_vdbnc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vdbnc"]
+radius = 42.0
+
+[node name="Follower" type="CharacterBody2D" unique_id=585176023]
+z_index = 99
+script = ExtResource("1_b8lyh")
+follow_distance = 48.0
+follow_tolerance = 12.0
+speed = 150.0
+movement_threshold = 4.0
+separation_distance = 80.0
+separation_force = 80.0
+idle_wobble_strength = 6.0
+idle_wobble_speed = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=867972220]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_vdbnc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=988014808]
+shape = SubResource("CircleShape2D_vdbnc")
+disabled = true

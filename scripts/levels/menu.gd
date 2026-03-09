@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @export
 var start_button: Button

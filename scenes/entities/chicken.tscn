@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://be0xickamo2pv"]
+
+[ext_resource type="Texture2D" uid="uid://dq5qf2h7676d" path="res://assets/art/mini_game_0/chicken_0.png" id="1_5mc0i"]
+[ext_resource type="Script" uid="uid://cq8papvf4m4rj" path="res://scripts/entities/chicken.gd" id="1_r1x05"]
+[ext_resource type="Texture2D" uid="uid://bw8hc307886rh" path="res://assets/art/mini_game_0/chicken_1.png" id="2_kcxls"]
+[ext_resource type="PackedScene" uid="uid://dh67evmwbmet5" path="res://scenes/entities/egg.tscn" id="2_qm1a5"]
+[ext_resource type="Texture2D" uid="uid://be8qsmtgq86qn" path="res://assets/art/mini_game_0/chicken_2.png" id="3_kcxls"]
+
+[sub_resource type="Animation" id="Animation_r1x05"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_5mc0i")]
+}
+
+[sub_resource type="Animation" id="Animation_qm1a5"]
+resource_name = "cloack"
+
+[sub_resource type="Animation" id="Animation_tse2j"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33, 0.66),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_5mc0i"), ExtResource("2_kcxls"), ExtResource("3_kcxls")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vr1sk"]
+_data = {
+&"RESET": SubResource("Animation_r1x05"),
+&"cloack": SubResource("Animation_qm1a5"),
+&"walk": SubResource("Animation_tse2j")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6teky"]
+
+[node name="Chicken" type="CharacterBody2D" unique_id=2061741443]
+motion_mode = 1
+script = ExtResource("1_r1x05")
+speed = 300.0
+timer_range = Vector2(1, 5)
+cooldown = 1.0
+egg_scene = ExtResource("2_qm1a5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=762760273]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_5mc0i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=2093134625]
+libraries/ = SubResource("AnimationLibrary_vr1sk")
+autoplay = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=833644566]
+shape = SubResource("CircleShape2D_6teky")
+disabled = true

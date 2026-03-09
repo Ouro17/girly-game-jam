@@ -3,45 +3,37 @@
 [ext_resource type="Script" uid="uid://dw7ead3j6t8gy" path="res://scripts/levels/menu.gd" id="1_g3w80"]
 [ext_resource type="PackedScene" uid="uid://ibf70q74yfwx" path="res://scenes/UI/language_menu.tscn" id="2_k3l6u"]
 
-[node name="Menu" type="Control" unique_id=1787031011 node_paths=PackedStringArray("start_button", "exit_button")]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1128703437 node_paths=PackedStringArray("start_button", "exit_button")]
 script = ExtResource("1_g3w80")
 start_button = NodePath("VBoxContainer/StartButton")
 exit_button = NodePath("VBoxContainer/ExitButton")
 next_level = "res://scenes/levels/intro.tscn"
 
 [node name="Title" type="Label" parent="." unique_id=683311823]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -271.5
-offset_top = -158.5
+offset_top = -169.5
 offset_right = 271.5
-offset_bottom = -79.5
+offset_bottom = -90.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 58
 text = "UI_TITLE"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=967430876]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -41.5
+offset_top = -52.5
 offset_right = 100.0
-offset_bottom = 127.5
+offset_bottom = 138.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15

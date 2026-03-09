@@ -1,24 +1,28 @@
-class_name MiniGame
+class_name MiniGame0
 extends Node2D
 
 @export
 var mini_game_intro : MiniGameIntro
 
 @export
-var next_level: String
+var movement_area: Area2D
 
 @export
-var timer : Timer
+var chickens : Array[Chicken]
+
+@export
+var next_level: String
 
 @export
 var state : State
 
 func _ready() -> void:
-    timer.timeout.connect(_on_time_out)
     mini_game_intro.intro_finished.connect(_on_intro_finished)
 
 func _on_intro_finished() -> void:
     mini_game_intro.visible = false
+    for chicken in chickens:
+        chicken.set_enable(true)
 
 func _on_time_out()-> void:
     _level_complete(true)

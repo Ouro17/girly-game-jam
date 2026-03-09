@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dh67evmwbmet5"]
+
+[ext_resource type="Script" uid="uid://bpqk417vap5ul" path="res://scripts/entities/egg.gd" id="1_mkjvq"]
+[ext_resource type="Texture2D" uid="uid://gwft85lyvj82" path="res://assets/art/mini_game_0/blue_egg.png" id="1_mx2x7"]
+[ext_resource type="Texture2D" uid="uid://bd7dcju5ehl7p" path="res://assets/art/mini_game_0/pink_egg.png" id="3_73jvg"]
+[ext_resource type="Texture2D" uid="uid://qnpohh11fvte" path="res://assets/art/mini_game_0/green_egg.png" id="4_idowc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkjvq"]
+
+[node name="Egg" type="Area2D" unique_id=1581326164 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_mkjvq")
+sprite = NodePath("Sprite2D")
+textures = Array[Texture2D]([ExtResource("1_mx2x7"), ExtResource("3_73jvg"), ExtResource("4_idowc")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336369997]
+texture = ExtResource("1_mx2x7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=583681092]
+shape = SubResource("CapsuleShape2D_mkjvq")

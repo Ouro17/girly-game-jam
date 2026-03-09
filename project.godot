@@ -26,6 +26,12 @@ EventBus="*uid://dkp2hk0q6muoe"
 SceneManager="*uid://ejluko3frolj"
 GlobalState="*uid://dxyebo0sdoa7r"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
 [input]
 
 quit={
@@ -41,6 +47,9 @@ interact={
 
 [internationalization]
 
+locale/translation_remaps={
+"res://assets/art/mini_game_0/mini_game_0_english_0.png": PackedStringArray("res://assets/art/mini_game_0/mini_game_0_english_0.png:en", "res://assets/art/mini_game_0/mini_game_0_japanese_0.png:ja", "res://assets/art/mini_game_0/mini_game_0_spanish_0.png:es")
+}
 locale/translations=PackedStringArray("res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation", "res://assets/translations/UI_translations.en.translation", "res://assets/translations/UI_translations.es.translation", "res://assets/translations/UI_translations.ja.translation")
 locale/locale_filter_mode=0
 

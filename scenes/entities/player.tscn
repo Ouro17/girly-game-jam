@@ -1,20 +1,25 @@
 [gd_scene format=3 uid="uid://mm40ut7gce2"]
 
 [ext_resource type="Script" uid="uid://dejm0b607umm6" path="res://scripts/entities/player.gd" id="1_08t41"]
-[ext_resource type="Texture2D" uid="uid://b5ktx7w6jfd30" path="res://icon.svg" id="2_1ie0h"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/hadanovata.png" id="2_42nxq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0qees"]
-radius = 42.0119
+radius = 42.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2046264894]
+z_index = 99
 motion_mode = 1
 script = ExtResource("1_08t41")
 speed = 300.0
+movement_threshold = 20.0
+idle_wobble_strength = 6.0
+idle_wobble_speed = 2.0
 input_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2098282281]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_1ie0h")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1254217575]
+position = Vector2(1.9999999, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_42nxq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=342522467]
 shape = SubResource("CircleShape2D_0qees")

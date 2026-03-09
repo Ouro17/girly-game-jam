@@ -3,9 +3,16 @@
 [ext_resource type="Script" uid="uid://ch6kq7hrwexv0" path="res://scripts/levels/map.gd" id="1_1j1lv"]
 [ext_resource type="Script" uid="uid://dla04ekjdgf7c" path="res://scripts/utils/event_observer.gd" id="2_fpdas"]
 [ext_resource type="PackedScene" uid="uid://dnfws5iivk2id" path="res://scenes/UI/task_list.tscn" id="3_4u8by"]
+[ext_resource type="Texture2D" uid="uid://dnbkdnvf0dfv0" path="res://assets/art/pexels-artempodrez-7232658.jpg" id="3_k16km"]
+[ext_resource type="AudioStream" uid="uid://ip2onyi20pyy" path="res://assets/music/SongGirly_004.ogg" id="3_xvo3l"]
+[ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/pexels-artempodrez-7233124.jpg" id="4_05abr"]
 [ext_resource type="PackedScene" uid="uid://bvjj4cq3gnbev" path="res://scenes/levels/level_entrance.tscn" id="4_5ek3c"]
+[ext_resource type="Texture2D" uid="uid://b6c76ag4yxnr3" path="res://assets/art/treecard.png" id="5_db2vl"]
 [ext_resource type="PackedScene" uid="uid://dmsg4yhttrq6w" path="res://scenes/levels/end_map_label.tscn" id="5_ex8ba"]
 [ext_resource type="PackedScene" uid="uid://mm40ut7gce2" path="res://scenes/entities/player.tscn" id="6_gpbhb"]
+[ext_resource type="Texture2D" uid="uid://dvrcsgucwv88w" path="res://assets/art/cardboard.png" id="9_05abr"]
+[ext_resource type="PackedScene" uid="uid://c4n485kh48y7h" path="res://scenes/entities/follower.tscn" id="12_sxedr"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sorhada.png" id="14_gnus1"]
 
 [sub_resource type="Resource" id="Resource_fpdas"]
 script = ExtResource("2_fpdas")
@@ -25,58 +32,130 @@ metadata/_custom_type_script = "uid://dla04ekjdgf7c"
 [node name="Map" type="Node2D" unique_id=1665987138 node_paths=PackedStringArray("end_map_label", "task_list", "level_entrances")]
 script = ExtResource("1_1j1lv")
 next_levels = Array[String](["res://scenes/levels/mini_game_0.tscn", "res://scenes/levels/mini_game_1.tscn", "res://scenes/levels/mini_game_2.tscn", "res://scenes/levels/outro.tscn"])
-end_map_label = NodePath("EndMapLabel")
+end_map_label = NodePath("CanvasLayer/EndMapLabel")
 events_observer = Array[ExtResource("2_fpdas")]([SubResource("Resource_fpdas"), SubResource("Resource_4u8by"), SubResource("Resource_5ek3c")])
-task_list = NodePath("TaskListPanel")
-level_entrances = [NodePath("LevelEntrance_0"), NodePath("LevelEntrance_1"), NodePath("LevelEntrance_2")]
+task_list = NodePath("CanvasLayer/TaskListPanel")
+level_entrances = [NodePath("Entrances/LevelEntrance_0"), NodePath("Entrances/LevelEntrance_1"), NodePath("Entrances/LevelEntrance_2")]
 
-[node name="TaskListPanel" parent="." unique_id=941280822 instance=ExtResource("3_4u8by")]
-offset_left = 877.0
-offset_top = 19.0
-offset_right = 1136.0
-offset_bottom = 142.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=956188810]
 
-[node name="MapTitleLabel" type="Label" parent="." unique_id=1943918704]
-offset_left = 501.0
-offset_top = 2.0
-offset_right = 611.0
-offset_bottom = 71.0
-theme_override_font_sizes/font_size = 50
-text = "MAP"
+[node name="TaskListPanel" parent="CanvasLayer" unique_id=941280822 instance=ExtResource("3_4u8by")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -293.0
+offset_top = 17.0
+offset_right = -34.0
+offset_bottom = 140.0
+grow_horizontal = 0
 
-[node name="EndMapLabel" parent="." unique_id=2145342449 instance=ExtResource("5_ex8ba")]
+[node name="EndMapLabel" parent="CanvasLayer" unique_id=2145342449 instance=ExtResource("5_ex8ba")]
 visible = false
-offset_left = 335.0
-offset_top = 566.0
-offset_right = 792.0
-offset_bottom = 621.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.0
+offset_top = 51.0
+offset_right = 227.0
+offset_bottom = 106.0
+grow_horizontal = 2
 
-[node name="LevelEntrance_0" parent="." unique_id=347399509 instance=ExtResource("4_5ek3c")]
-position = Vector2(224, 82)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459841556]
+stream = ExtResource("3_xvo3l")
+volume_db = -10.0
+autoplay = true
 
-[node name="Label" type="Label" parent="LevelEntrance_0" unique_id=629774439]
+[node name="Art" type="Node" parent="." unique_id=468822664]
+
+[node name="Sprite2D" type="Sprite2D" parent="Art" unique_id=344246811]
+position = Vector2(639.5, 218.5)
+scale = Vector2(0.20817058, 0.12760416)
+texture = ExtResource("3_k16km")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Art" unique_id=1868302897]
+position = Vector2(639.9946, 472.44284)
+rotation = 1.5707964
+scale = Vector2(0.1428376, 0.20831025)
+texture = ExtResource("4_05abr")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Art" unique_id=836413919]
+position = Vector2(640.00006, 135.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Art" unique_id=1840826616]
+position = Vector2(962.00006, 143.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Art" unique_id=128418954]
+position = Vector2(1065, 144.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Art" unique_id=1151416018]
+position = Vector2(868.00006, 140.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Art" unique_id=1924919566]
+position = Vector2(754.00006, 155.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Art" unique_id=55002582]
+position = Vector2(540.00006, 138.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Art" unique_id=1456983951]
+position = Vector2(449.00006, 147.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Art" unique_id=398426086]
+position = Vector2(319.00006, 151.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Art" unique_id=950997864]
+position = Vector2(167.00006, 151.00002)
+scale = Vector2(0.1276, 0.12660001)
+texture = ExtResource("5_db2vl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Art" unique_id=1590687245]
+position = Vector2(1104, 322)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_05abr")
+
+[node name="Entrances" type="Node" parent="." unique_id=1448566617]
+
+[node name="LevelEntrance_0" parent="Entrances" unique_id=347399509 instance=ExtResource("4_5ek3c")]
+position = Vector2(214, 359)
+
+[node name="Label" type="Label" parent="Entrances/LevelEntrance_0" unique_id=629774439]
 offset_left = -58.0
 offset_top = -13.0
 offset_right = 67.0
 offset_bottom = 10.0
 text = "TASK_MINIGAME_0"
 
-[node name="LevelEntrance_1" parent="." unique_id=991618904 instance=ExtResource("4_5ek3c")]
-position = Vector2(798, 276)
+[node name="LevelEntrance_1" parent="Entrances" unique_id=991618904 instance=ExtResource("4_5ek3c")]
+position = Vector2(472, 604)
 next_level = 1
 
-[node name="Label" type="Label" parent="LevelEntrance_1" unique_id=608437167]
+[node name="Label" type="Label" parent="Entrances/LevelEntrance_1" unique_id=608437167]
 offset_left = -62.0
 offset_top = -13.0
 offset_right = 60.0
 offset_bottom = 10.0
 text = "TASK_MINIGAME_1"
 
-[node name="LevelEntrance_2" parent="." unique_id=1788295572 instance=ExtResource("4_5ek3c")]
-position = Vector2(208, 497)
+[node name="LevelEntrance_2" parent="Entrances" unique_id=1788295572 instance=ExtResource("4_5ek3c")]
+position = Vector2(212, 607)
 next_level = 2
 
-[node name="Label" type="Label" parent="LevelEntrance_2" unique_id=1352772652]
+[node name="Label" type="Label" parent="Entrances/LevelEntrance_2" unique_id=1352772652]
 offset_left = -81.0
 offset_top = -11.0
 offset_right = 90.0
@@ -84,4 +163,17 @@ offset_bottom = 12.0
 text = "TASK_MINIGAME_2"
 
 [node name="Player" parent="." unique_id=2046264894 instance=ExtResource("6_gpbhb")]
-position = Vector2(522, 317)
+position = Vector2(968, 441)
+
+[node name="Follower" parent="." unique_id=585176023 node_paths=PackedStringArray("leader", "other_followers") instance=ExtResource("12_sxedr")]
+leader = NodePath("../Player")
+other_followers = [null]
+
+[node name="Follower2" parent="." unique_id=675395327 node_paths=PackedStringArray("leader", "other_followers") instance=ExtResource("12_sxedr")]
+leader = NodePath("../Player")
+other_followers = [NodePath("../Follower")]
+
+[node name="Sprite2D" parent="Follower2" index="0" unique_id=867972220]
+texture = ExtResource("14_gnus1")
+
+[editable path="Follower2"]
