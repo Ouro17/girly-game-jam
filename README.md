@@ -42,6 +42,8 @@ For the checklist, we created a new class that use an array of `CheckBox` and se
 
 Here is a video about today's progress:
 
+[!(Player movement)](https://github.com/user-attachments/assets/1e0092f0-a51a-4d5b-92d5-954a8e3409b9)
+
 ### Day 3
 
 Today we started to introduce art elements, like images, music and sound effects.
@@ -59,6 +61,7 @@ We could not finish programming the minigame today, but it's almost done.
 
 Here is a video about today's progress:
 
+[![Day 3 progress](https://img.youtube.com/vi/fn-RazAVM5E/0.jpg)](https://www.youtube.com/watch?v=fn-RazAVM5E)
 
 ## Tools used
 - Godot 4.6
