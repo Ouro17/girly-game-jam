@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://be0xickamo2pv"]
 
-[ext_resource type="Texture2D" uid="uid://dq5qf2h7676d" path="res://assets/art/mini_game_0/chicken_0.png" id="1_5mc0i"]
+[ext_resource type="Texture2D" uid="uid://epa40optqxe3" path="res://assets/art/mini_game_0/chicken_0.png" id="1_5mc0i"]
 [ext_resource type="Script" uid="uid://cq8papvf4m4rj" path="res://scripts/entities/chicken.gd" id="1_r1x05"]
-[ext_resource type="Texture2D" uid="uid://bw8hc307886rh" path="res://assets/art/mini_game_0/chicken_1.png" id="2_kcxls"]
+[ext_resource type="Texture2D" uid="uid://d1tfmto2v3foj" path="res://assets/art/mini_game_0/chicken_1.png" id="2_kcxls"]
 [ext_resource type="PackedScene" uid="uid://dh67evmwbmet5" path="res://scenes/entities/egg.tscn" id="2_qm1a5"]
-[ext_resource type="Texture2D" uid="uid://be8qsmtgq86qn" path="res://assets/art/mini_game_0/chicken_2.png" id="3_kcxls"]
+[ext_resource type="Texture2D" uid="uid://d0ehs7c48jvyh" path="res://assets/art/mini_game_0/chicken_2.png" id="3_kcxls"]
+[ext_resource type="Texture2D" uid="uid://dsuwjkljcv2tw" path="res://assets/art/mini_game_0/chicken_laying.png" id="4_tse2j"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vr1sk"]
+load_path = "res://.godot/imported/chicken_0.png-a552e77ccd32f5cd596573d4138f75e1.ctex"
 
 [sub_resource type="Animation" id="Animation_r1x05"]
 length = 0.001
@@ -18,11 +22,40 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
+"values": [SubResource("CompressedTexture2D_vr1sk")]
+}
+
+[sub_resource type="Animation" id="Animation_6teky"]
+resource_name = "idle"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
 "values": [ExtResource("1_5mc0i")]
 }
 
-[sub_resource type="Animation" id="Animation_qm1a5"]
-resource_name = "cloack"
+[sub_resource type="Animation" id="Animation_758gu"]
+resource_name = "laying"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_tse2j")]
+}
 
 [sub_resource type="Animation" id="Animation_tse2j"]
 resource_name = "walk"
@@ -34,37 +67,51 @@ tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.33, 0.66),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("1_5mc0i"), ExtResource("2_kcxls"), ExtResource("3_kcxls")]
+"values": [ExtResource("1_5mc0i"), ExtResource("2_kcxls"), ExtResource("1_5mc0i"), ExtResource("3_kcxls")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vr1sk"]
 _data = {
 &"RESET": SubResource("Animation_r1x05"),
-&"cloack": SubResource("Animation_qm1a5"),
+&"idle": SubResource("Animation_6teky"),
+&"laying": SubResource("Animation_758gu"),
 &"walk": SubResource("Animation_tse2j")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6teky"]
 
-[node name="Chicken" type="CharacterBody2D" unique_id=2061741443]
+[node name="Chicken" type="CharacterBody2D" unique_id=2061741443 node_paths=PackedStringArray("navigation_agent", "sprite", "animation_player", "egg_position")]
 motion_mode = 1
 script = ExtResource("1_r1x05")
 speed = 300.0
 timer_range = Vector2(1, 5)
 cooldown = 1.0
 egg_scene = ExtResource("2_qm1a5")
+navigation_agent = NodePath("NavigationAgent2D")
+sprite = NodePath("Sprite2D")
+animation_player = NodePath("Sprite2D/AnimationPlayer")
+egg_position = NodePath("EggPosition")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=762760273]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_5mc0i")
+position = Vector2(4.9999995, -34.000004)
+scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_vr1sk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=2093134625]
 libraries/ = SubResource("AnimationLibrary_vr1sk")
-autoplay = &"walk"
+autoplay = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=833644566]
 shape = SubResource("CircleShape2D_6teky")
 disabled = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=193980195]
+path_desired_distance = 3.0
+target_desired_distance = 3.0
+path_postprocessing = 1
+
+[node name="EggPosition" type="Marker2D" parent="." unique_id=1426326353]
+position = Vector2(37, 0)

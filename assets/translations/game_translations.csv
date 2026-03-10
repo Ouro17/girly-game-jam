@@ -2,6 +2,10 @@ keys,en,es,ja
 INTERACTION_TALK,Talk,Hablar,話す
 INTERACTION_USE,Use,Usar,使う
 INTRO_DIALOG_0,Example Dialog, Dialogo de ejemplo,Example Dialog
-TASK_MINIGAME_0,Repair the truck,Repara el tractor,Repair the truck
-TASK_MINIGAME_1,Feed the babies,Alimenta a los bebes,Feed the babies
+TASK_MINIGAME_0,Where are my eggs?,¿Dónde estan mis huevos?,たまごはどこ？
+TASK_MINIGAME_1,Apple rain,Lluvia de manzanas,Apple rain
 TASK_MINIGAME_2,Gather the vegetables,Recoge las verduras,Gather the vegetables
+MINIGAME_0_DIALOG_0,Gather the eggs and put it in the right basket!,¡Recoge los huevos y ponlos en la cesta correcta!,Gather the eggs and put it in the right basket!
+MINIGAME_0_DIALOG_1,Be careful with the colors!,¡Ten cuidado con los colores!,Be careful with the colors!
+MINIGAME_0_DIALOG_2,Gather 10 eggs on each basket!,¡Consigue 10 huevos en cada cesta!,Gather 10 eggs on each basket!
+MINIGAME_0_DIALOG_3,Good work! Back to the ranch!,¡Buen trabajo! ¡Volvamos al rancho!,Good work! Back to the ranch!

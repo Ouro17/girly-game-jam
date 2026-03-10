@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://cm7jlgo4xdpyr"]
 
+[ext_resource type="Script" uid="uid://b7p1f3pvngx5x" path="res://scripts/entities/egg_basket.gd" id="1_71c1m"]
 [ext_resource type="Texture2D" uid="uid://016h7e5m262e" path="res://assets/art/mini_game_0/basket_blue.png" id="1_b7hel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r283"]
-size = Vector2(25, 19)
+size = Vector2(53, 46)
 
-[node name="DropArea" type="Area2D" unique_id=1881590268]
+[node name="EggBasket" type="Area2D" unique_id=1881590268]
+script = ExtResource("1_71c1m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2116329688]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_b7hel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1235174174]
-position = Vector2(0.5, 10.5)
+position = Vector2(0.5, 34)
 shape = SubResource("RectangleShape2D_2r283")

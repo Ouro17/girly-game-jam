@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gwft85lyvj82" path="res://assets/art/mini_game_0/blue_egg.png" id="1_mx2x7"]
 [ext_resource type="Texture2D" uid="uid://bd7dcju5ehl7p" path="res://assets/art/mini_game_0/pink_egg.png" id="3_73jvg"]
 [ext_resource type="Texture2D" uid="uid://qnpohh11fvte" path="res://assets/art/mini_game_0/green_egg.png" id="4_idowc"]
+[ext_resource type="AudioStream" uid="uid://dali8g8fu1ytx" path="res://assets/sounds/egg_lay.wav" id="5_idowc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkjvq"]
 
@@ -17,3 +18,7 @@ texture = ExtResource("1_mx2x7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=583681092]
 shape = SubResource("CapsuleShape2D_mkjvq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1276340062]
+stream = ExtResource("5_idowc")
+autoplay = true

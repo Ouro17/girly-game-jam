@@ -32,7 +32,6 @@ func _input(event: InputEvent) -> void:
             target_position = target
 
 func _physics_process(delta: float) -> void:
-
     if global_position.distance_to(target_position) > movement_threshold:
         velocity = global_position.direction_to(target_position) * speed
     else:

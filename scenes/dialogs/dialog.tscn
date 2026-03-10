@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dau5pc3cvbgon"]
+
+[ext_resource type="Script" uid="uid://c8lbcq4kb2f0x" path="res://scripts/dialogs/dialog.gd" id="1_8y6ok"]
+
+[node name="Label" type="Label" unique_id=1793182022]
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_8y6ok")

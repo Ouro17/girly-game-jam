@@ -48,7 +48,9 @@ interact={
 [internationalization]
 
 locale/translation_remaps={
-"res://assets/art/mini_game_0/mini_game_0_english_0.png": PackedStringArray("res://assets/art/mini_game_0/mini_game_0_english_0.png:en", "res://assets/art/mini_game_0/mini_game_0_japanese_0.png:ja", "res://assets/art/mini_game_0/mini_game_0_spanish_0.png:es")
+"res://assets/art/mini_game_0/title_chicken_0_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_0_es.png:es", "res://assets/art/mini_game_0/title_chicken_0_ja.png:ja"),
+"res://assets/art/mini_game_0/title_chicken_1_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_1_es.png:es", "res://assets/art/mini_game_0/title_chicken_1_ja.png:ja"),
+"res://assets/art/mini_game_0/title_chicken_2_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_2_es.png:es", "res://assets/art/mini_game_0/title_chicken_2_ja.png:ja")
 }
 locale/translations=PackedStringArray("res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation", "res://assets/translations/UI_translations.en.translation", "res://assets/translations/UI_translations.es.translation", "res://assets/translations/UI_translations.ja.translation")
 locale/locale_filter_mode=0
