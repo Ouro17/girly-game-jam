@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dla04ekjdgf7c" path="res://scripts/utils/event_observer.gd" id="2_fpdas"]
 [ext_resource type="PackedScene" uid="uid://dnfws5iivk2id" path="res://scenes/UI/task_list.tscn" id="3_4u8by"]
 [ext_resource type="Texture2D" uid="uid://dnbkdnvf0dfv0" path="res://assets/art/map/pexels-artempodrez-7232658.jpg" id="3_k16km"]
-[ext_resource type="AudioStream" uid="uid://ip2onyi20pyy" path="res://assets/music/SongGirly_004.ogg" id="3_xvo3l"]
 [ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="4_05abr"]
+[ext_resource type="AudioStream" uid="uid://w3b1naosdtp1" path="res://assets/music/SongGirly_001v1_Loop.ogg" id="5_dim3t"]
 [ext_resource type="PackedScene" uid="uid://dmsg4yhttrq6w" path="res://scenes/levels/end_map_label.tscn" id="5_ex8ba"]
 [ext_resource type="PackedScene" uid="uid://mm40ut7gce2" path="res://scenes/entities/player.tscn" id="6_gpbhb"]
 [ext_resource type="Texture2D" uid="uid://oosqsa6ghoj0" path="res://assets/art/map/sun_0.png" id="8_oxjr2"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://dpamndoctnkto" path="res://assets/art/mini_game_1/apple_2.png" id="30_qsxn8"]
 [ext_resource type="Script" uid="uid://bts7f55o5jcme" path="res://scripts/levels/level_entrance.gd" id="32_dim3t"]
 [ext_resource type="Texture2D" uid="uid://016h7e5m262e" path="res://assets/art/mini_game_0/basket_blue.png" id="32_qsxn8"]
+[ext_resource type="Texture2D" uid="uid://bub8ev3k0lifp" path="res://assets/art/map/marigold.png" id="33_dim3t"]
 
 [sub_resource type="Resource" id="Resource_fpdas"]
 script = ExtResource("2_fpdas")
@@ -131,7 +132,7 @@ offset_bottom = 106.0
 grow_horizontal = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459841556]
-stream = ExtResource("3_xvo3l")
+stream = ExtResource("5_dim3t")
 volume_db = -10.0
 autoplay = true
 
@@ -236,6 +237,17 @@ z_index = -1
 position = Vector2(0, 66)
 texture = ExtResource("16_u1b8a")
 
+[node name="Crown7" type="Sprite2D" parent="Art/Trees" unique_id=2099944526]
+z_index = -70
+position = Vector2(37, 498)
+scale = Vector2(1.2120786, 1.0617088)
+texture = ExtResource("11_pl2do")
+
+[node name="Trunk2" type="Sprite2D" parent="Art/Trees/Crown7" unique_id=866986815]
+z_index = -1
+position = Vector2(-17, 82)
+texture = ExtResource("16_u1b8a")
+
 [node name="Elements" type="Node" parent="Art" unique_id=998994288]
 
 [node name="Herb7" type="Sprite2D" parent="Art/Elements" unique_id=1814750549]
@@ -263,7 +275,7 @@ scale = Vector2(0.15985383, 0.13110746)
 texture = ExtResource("23_cuu0l")
 
 [node name="Truck" type="Sprite2D" parent="Art/Elements" unique_id=944301813]
-position = Vector2(185, 315)
+position = Vector2(206.00002, 323.00003)
 scale = Vector2(1.0298913, 1.0729167)
 texture = ExtResource("24_otrhh")
 
@@ -300,6 +312,21 @@ position = Vector2(104.62503, 638.875)
 scale = Vector2(0.4423078, 0.5899998)
 texture = ExtResource("21_cbk36")
 
+[node name="Herb9" type="Sprite2D" parent="Art/Elements" unique_id=553886837]
+position = Vector2(107, 383.00003)
+scale = Vector2(0.4423078, 0.5899998)
+texture = ExtResource("21_cbk36")
+
+[node name="Herb10" type="Sprite2D" parent="Art/Elements" unique_id=1750608214]
+position = Vector2(94, 373.00003)
+scale = Vector2(0.4615384, 0.4599998)
+texture = ExtResource("21_cbk36")
+
+[node name="Herb11" type="Sprite2D" parent="Art/Elements" unique_id=1854164708]
+position = Vector2(123.5, 368.00003)
+scale = Vector2(0.67307687, 0.6600004)
+texture = ExtResource("21_cbk36")
+
 [node name="ChickenRunFenceFront" type="Sprite2D" parent="Art/Elements" unique_id=1993786354]
 position = Vector2(186.62505, 660.87506)
 scale = Vector2(0.18378845, 0.112870894)
@@ -329,6 +356,20 @@ texture = ExtResource("30_qsxn8")
 position = Vector2(681, 608)
 scale = Vector2(0.5285713, 0.41573068)
 texture = ExtResource("32_qsxn8")
+
+[node name="Marigold4" type="Sprite2D" parent="Art/Elements" unique_id=127607622]
+position = Vector2(673.99994, 348)
+scale = Vector2(0.75000125, 0.92307734)
+texture = ExtResource("33_dim3t")
+
+[node name="Marigold3" type="Sprite2D" parent="Art/Elements" unique_id=1445031043]
+position = Vector2(1155, 574)
+texture = ExtResource("33_dim3t")
+
+[node name="Marigold5" type="Sprite2D" parent="Art/Elements" unique_id=1718669514]
+position = Vector2(346, 533)
+scale = Vector2(0.575, 0.5769231)
+texture = ExtResource("33_dim3t")
 
 [node name="Entrances" type="Node" parent="." unique_id=1448566617]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bghj3x71ybfht"]
 
-[ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scenes/entities/falling_entity.gd" id="1_sxqxw"]
+[ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scripts/entities/falling_entity.gd" id="1_sxqxw"]
 [ext_resource type="Texture2D" uid="uid://dpamndoctnkto" path="res://assets/art/mini_game_1/apple_2.png" id="2_sxqxw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0o73r"]

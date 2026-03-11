@@ -2,6 +2,38 @@
 
 [ext_resource type="Script" uid="uid://dw7ead3j6t8gy" path="res://scripts/levels/menu.gd" id="1_g3w80"]
 [ext_resource type="PackedScene" uid="uid://ibf70q74yfwx" path="res://scenes/UI/language_menu.tscn" id="2_k3l6u"]
+[ext_resource type="AudioStream" uid="uid://cja8tth7qtdlw" path="res://assets/music/SongGirly_007_Loop.ogg" id="2_w6ftq"]
+[ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="3_w6ftq"]
+[ext_resource type="Texture2D" uid="uid://dvss2qp5r1i2r" path="res://assets/art/menu/menu_cloud.png" id="4_6qf5j"]
+[ext_resource type="Texture2D" uid="uid://b0h6anyw5dx8o" path="res://assets/art/menu/menu_title_en.png" id="5_lt4mj"]
+[ext_resource type="Texture2D" uid="uid://df5ajvaujav5n" path="res://assets/art/menu/menu_box.png" id="6_dexxl"]
+[ext_resource type="Texture2D" uid="uid://cuhusi2n10sim" path="res://assets/art/menu/menu_buttons.png" id="7_dnrjr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_varmo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6ftq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qf5j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lt4mj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_swjeh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3fr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cf2io"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iymd4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gahmf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dexxl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnrjr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_varmo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_khahd"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1128703437 node_paths=PackedStringArray("start_button", "exit_button")]
 script = ExtResource("1_g3w80")
@@ -9,20 +41,82 @@ start_button = NodePath("VBoxContainer/StartButton")
 exit_button = NodePath("VBoxContainer/ExitButton")
 next_level = "res://scenes/levels/intro.tscn"
 
-[node name="Title" type="Label" parent="." unique_id=683311823]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=662489902]
+stream = ExtResource("2_w6ftq")
+volume_db = -10.0
+autoplay = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=157396180]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -271.5
-offset_top = -169.5
-offset_right = 271.5
-offset_bottom = -90.5
+offset_left = -639.0
+offset_top = -359.0
+offset_right = 641.0
+offset_bottom = 364.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 58
-text = "UI_TITLE"
+texture = ExtResource("3_w6ftq")
+expand_mode = 1
+
+[node name="Cloud" type="TextureRect" parent="." unique_id=140903436]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.5
+offset_top = -345.5
+offset_right = 223.5
+offset_bottom = -22.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6qf5j")
+
+[node name="Title" type="TextureRect" parent="." unique_id=570419397]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = -319.0
+offset_right = 149.5
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_lt4mj")
+expand_mode = 1
+
+[node name="Box" type="TextureRect" parent="." unique_id=497886682]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.5
+offset_top = -29.0
+offset_right = 182.5
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_dexxl")
+
+[node name="Buttons" type="TextureRect" parent="." unique_id=937339618]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 46.0
+offset_right = 100.0
+offset_bottom = 246.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_dnrjr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=967430876]
 anchors_preset = 8
@@ -31,24 +125,47 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -52.5
+offset_top = 42.75
 offset_right = 100.0
-offset_bottom = 138.5
+offset_bottom = 245.75
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=2030694103]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.49098212, 0.295064, 0.6207165, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.22745098, 0.50980395, 1)
+theme_override_colors/font_hover_color = Color(0.5686275, 0.36078432, 0.70980394, 1)
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_varmo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w6ftq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6qf5j")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lt4mj")
 text = "UI_START"
 
 [node name="LanguageMenu" parent="VBoxContainer" unique_id=475097680 instance=ExtResource("2_k3l6u")]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.49019608, 0.29411766, 0.61960787, 1)
+theme_override_colors/font_pressed_color = Color(0.39882186, 0.229078, 0.5097498, 1)
+theme_override_colors/font_hover_color = Color(0.5686275, 0.36078432, 0.70980394, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5686275, 0.36078432, 0.70980394, 1)
 theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_swjeh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j3fr3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cf2io")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iymd4")
 
 [node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=181314830]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.49098212, 0.295064, 0.6207165, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.22745098, 0.50980395, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.56822467, 0.35882944, 0.70866555, 1)
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gahmf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dexxl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dnrjr")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_varmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khahd")
 text = "UI_EXIT"

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://baksijoe3ijjv"]
 
-[ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scenes/entities/falling_entity.gd" id="1_d7yth"]
+[ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scripts/entities/falling_entity.gd" id="1_d7yth"]
 [ext_resource type="Texture2D" uid="uid://dpkp020uyv7o5" path="res://assets/art/mini_game_1/branch_0.png" id="2_d7yth"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0o73r"]

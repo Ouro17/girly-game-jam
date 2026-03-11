@@ -5,12 +5,12 @@
 [sub_resource type="Theme" id="Theme_65esb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65esb"]
-bg_color = Color(0.48677072, 0.48677072, 0.48677072, 0.95000005)
+bg_color = Color(0.72156864, 0.3254902, 0.5568628, 0.92941177)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.735357, 0.735357, 0.735357, 1)
+border_color = Color(0.8325601, 0.6436712, 0.9937679, 1)
 corner_radius_top_left = 2
 corner_radius_top_right = 2
 corner_radius_bottom_right = 2

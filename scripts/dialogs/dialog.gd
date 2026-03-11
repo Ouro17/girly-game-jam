@@ -13,14 +13,14 @@ var timer : Timer
 
 func start_dialog() -> void:
     visible = true
-    if time_out >= 0:
+    if time_out > 0:
         timer = Timer.new()
         timer.one_shot = true
         timer.timeout.connect(_on_time_out)
         add_child(timer)
         timer.start(time_out)
 
-func _on_time_out() -> void:
+func start_next_dialog() -> Dialog:
     visible = false
 
     dialog_finished.emit(self)
@@ -28,3 +28,7 @@ func _on_time_out() -> void:
     if next_dialog != null:
         next_dialog.start_dialog()
 
+    return next_dialog
+
+func _on_time_out() -> void:
+    start_next_dialog()

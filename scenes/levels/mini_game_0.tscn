@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="2_ctnob"]
 [ext_resource type="AudioStream" uid="uid://h5fgettjus3j" path="res://assets/sounds/chicken.wav" id="3_0hdmg"]
 [ext_resource type="AudioStream" uid="uid://uy86fkkkxd7j" path="res://assets/sounds/victory_theme_000.ogg" id="3_2rcqc"]
-[ext_resource type="AudioStream" uid="uid://kv4nl7yulct6" path="res://assets/music/SongGirly_008_Loop.ogg" id="3_310pp"]
+[ext_resource type="AudioStream" uid="uid://2e2smcs7t33k" path="res://assets/music/SongGirly_008_Loop.ogg" id="3_310pp"]
 [ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sorhada.png" id="3_g6fga"]
 [ext_resource type="PackedScene" uid="uid://c38i6ktso3wln" path="res://scenes/levels/mini_game_intro_0.tscn" id="4_ridya"]
 [ext_resource type="Texture2D" uid="uid://igdj7h5tt85n" path="res://assets/art/mini_game_0/chicken_run.png" id="5_4c7x7"]

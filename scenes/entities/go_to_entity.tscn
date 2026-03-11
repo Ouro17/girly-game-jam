@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dmh3vbkjjlhgm"]
+
+[ext_resource type="Script" uid="uid://bytbgkh8bsgpt" path="res://scripts/entities/go_to_entity.gd" id="1_sky13"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_esgp8"]
+
+[node name="GoToEntity" type="CharacterBody2D" unique_id=1201763383]
+motion_mode = 1
+script = ExtResource("1_sky13")
+movement_threshold = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114708631]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=186507101]
+shape = SubResource("CircleShape2D_esgp8")
+disabled = true

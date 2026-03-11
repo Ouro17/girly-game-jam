@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cts4n854tdnf3"]
 
 [ext_resource type="Texture2D" uid="uid://r1llfiwadmdd" path="res://assets/art/mini_game_1/apple_0.png" id="1_0o73r"]
-[ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scenes/entities/falling_entity.gd" id="1_vs2i0"]
+[ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scripts/entities/falling_entity.gd" id="1_vs2i0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0o73r"]
 radius = 19.104973

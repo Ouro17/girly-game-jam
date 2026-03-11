@@ -1,7 +1,8 @@
 keys,en,es,ja
 INTERACTION_TALK,Talk,Hablar,話す
 INTERACTION_USE,Use,Usar,使う
-INTRO_DIALOG_0,Example Dialog, Dialogo de ejemplo,Example Dialog
+INTRO_DIALOG_0,Example Dialog,Dialogo de ejemplo,Example Dialog
+INTRO_DIALOG_1,Final Dialog,Dialogo final,Final Dialog
 TASK_MINIGAME_0,Where are my eggs?,¿Dónde estan mis huevos?,たまごはどこ？
 TASK_MINIGAME_1,Apple rain,Lluvia de manzanas,Apple rain
 TASK_MINIGAME_2,Gather the vegetables,Recoge las verduras,Gather the vegetables

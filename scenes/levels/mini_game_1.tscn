@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dg4ei21horryp" path="res://scripts/levels/mini_game_1.gd" id="1_kx7g1"]
 [ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="2_mylm7"]
-[ext_resource type="AudioStream" uid="uid://cja8tth7qtdlw" path="res://assets/music/SongGirly_007_Loop.ogg" id="2_xouwl"]
 [ext_resource type="PackedScene" uid="uid://b7x1e0eaulwwp" path="res://scenes/entities/apple_1.tscn" id="3_5hgbn"]
 [ext_resource type="PackedScene" uid="uid://c8sffyl6fjcn1" path="res://scenes/levels/mini_game_intro_1.tscn" id="3_yqcg6"]
 [ext_resource type="PackedScene" uid="uid://bghj3x71ybfht" path="res://scenes/entities/apple_2.tscn" id="4_jc1dy"]
@@ -15,10 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://bmlfxyvt86m8f" path="res://scenes/entities/bad_apple.tscn" id="7_jc1dy"]
 [ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/hadamadrina.png" id="7_rdunt"]
 [ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="8_8n2ph"]
+[ext_resource type="AudioStream" uid="uid://cr3qcfgm4kpnn" path="res://assets/sounds/branches_01.wav" id="9_7en2i"]
 [ext_resource type="Texture2D" uid="uid://bxk72gtujsj3m" path="res://assets/art/map/trunk_4.png" id="9_fsuuw"]
-[ext_resource type="AudioStream" uid="uid://dwp8me231cxql" path="res://assets/sounds/victory_theme_001.ogg" id="9_yatho"]
+[ext_resource type="AudioStream" uid="uid://ddh4n617cwjah" path="res://assets/sounds/victory_theme_002.ogg" id="9_yatho"]
 [ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="10_qt7dq"]
 [ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="10_ya60s"]
+[ext_resource type="AudioStream" uid="uid://djyena83sd81l" path="res://assets/music/SongGirly_006_Loop.ogg" id="11_7en2i"]
 [ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="11_frj36"]
 [ext_resource type="Texture2D" uid="uid://wevrjgt31jrk" path="res://assets/art/map/crown_4.png" id="12_diq7j"]
 [ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="13_x74sk"]
@@ -58,12 +59,17 @@ first_dialog = NodePath("CanvasLayer/Dialog_0")
 last_dialog = NodePath("CanvasLayer/Dialog_3")
 state = SubResource("Resource_8n2ph")
 
+[node name="IntroSound" type="AudioStreamPlayer" parent="." unique_id=435405437]
+stream = ExtResource("9_7en2i")
+volume_db = -5.0
+autoplay = true
+
 [node name="Victory" type="AudioStreamPlayer" parent="." unique_id=769336688]
 stream = ExtResource("9_yatho")
 volume_db = -10.0
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=801517746]
-stream = ExtResource("2_xouwl")
+stream = ExtResource("11_7en2i")
 volume_db = -10.0
 autoplay = true
 
@@ -131,7 +137,7 @@ offset_top = 638.0
 offset_right = 83.0
 offset_bottom = 638.0
 has_max_value = true
-max_value = 25
+max_value = 3
 
 [node name="Textures" type="Node" parent="." unique_id=917866759]
 

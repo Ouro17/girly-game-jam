@@ -7,13 +7,17 @@ The goal fo the jam is to make a game that resemble the quirkiness of girly game
 The theme is `The small Things`.
 
 The participants are:
-- [Ouro17](https://ouro17.itch.io/) as Programmer
-- [HAQ1](https://soundcloud.com/haq1): Sound and music, art
-- Paula: Art
+- [Ouro17](https://ouro17.itch.io/): Programmer, Game Design
+- [HAQ1](https://soundcloud.com/haq1): Sound and Music, Art, Game Design
+- Paula: Art, Game Design
 
 ## The process
 
 ### Day 1
+
+Goals:
+- [x] Brainstorm the theme and the game aideas
+- [x] Create scene loop
 
 We joined to braimstorm the game for 2 hours. We researched girly games and we reached the conclusion that
 girly games have a lot of mini-games. Doing many mini-games can be tricky because the limited time, but
@@ -32,9 +36,9 @@ We created the loop for the scenes, including saving the states for the minigame
 
 ### Day 2
 
-Today, 2 goals were proposed:
-- Player movement on map and enter into minigames
-- Checklist of minigames that were done
+Goals:
+- [x] Player movement on map and enter into minigames
+- [x] Checklist of minigames that were done
 
 The movement of the player was quite easy to do. Just handle the mouse input and set a vector for it to move automatically using the `move_and_slide` function from `CharacterBody2D` set as floating body.
 
@@ -46,12 +50,13 @@ Here is a video about today's progress:
 
 ### Day 3
 
+Goals:
+- [x] Make some followers for the main map
+- [x] Start creating the first minigame
+- [x] Create music and sounds
+
 Today, we started to introduce art elements, like images, music and sound effects.
 For some elements, we used free usage pictures that we found on the net until we can replace them.
-
-For programming, we have these goals:
-- Make some followers for the main map
-- Start creating the first minigame
 
 For making the followers, we created a new class that takes the leader position and applies several calculations to follow. It's actually very similar to the movement of the player (which is the leader), but taking into account some separation between the followers.
 
@@ -65,11 +70,28 @@ Here is a video about today's progress:
 
 ### Day 4
 
+Goals:
+- [x] Add tons of art elemments
+- [x] Finish first minigame
+- [x] Rework some music and make more sounds
+
 On day 4 we worked on a lot of art elements and finishing the first minigame.
 
 The art for the map, the second minigame and other things were done but not incorporated to the game.
 
+The music was also corrected in some cases where loops and tempo were not correct.
+
+Here is a video of the first minigame:
+
+[![Day 4 progress](https://img.youtube.com/vi/7zV-tOqkD2A/0.jpg)](https://www.youtube.com/watch?v=7zV-tOqkD2A)
+
 ### Day 5
+
+Goals:
+- [x] More art into the game!
+- [x] Finish second minigame
+- [x] Decorate menu
+- [x] Start intro logic
 
 First, we incorporated to the game most of the elements created on day 4.
 
@@ -78,12 +100,17 @@ Then, we created the second minigame and finished it on the same day, which is v
 The second minigame was easy to do because a lot of things were reused from the map and the first minigame,
 so only the logic for falling elements really needed to be work with.
 
-It was interesting to get a random point from a collision shape, which *should* live inside an Area, but the Area does not provide any
-API to get this element, which is quite incoherent.
+It was interesting to get a random point from a collision shape, which *should* live inside an Area, but the Area does not provide any API to get this element, which is quite incoherent.
 
+We also worked on the menu, which got a huge upgrade to its looks.
 
+We also decorated more the map and started working on the intro dialog.
 
+Here is summary video of today progress:
 
+Here is a video of the first minigame
+
+[![Day 5 progress](https://img.youtube.com/vi/efh3PhLnlbA/0.jpg)](https://www.youtube.com/watch?v=efh3PhLnlbA)
 
 
 ## Tools used
@@ -98,3 +125,5 @@ API to get this element, which is quite incoherent.
 [Blue background](https://www.pexels.com/es-es/foto/arte-creativo-espacio-azul-7232658/)
 
 [Green background](https://www.pexels.com/es-es/foto/textura-abstracto-resumen-verde-7233124/)
+
+TODO Credit house frame
