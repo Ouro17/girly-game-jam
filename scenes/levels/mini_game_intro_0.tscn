@@ -51,7 +51,6 @@ _data = {
 }
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8thsp"]
-load_path = "res://.godot/imported/mini_game_0_english_0.png-15272b22cd022912267a1d4ba81ae048.ctex"
 
 [sub_resource type="Animation" id="Animation_m0nki"]
 length = 0.001
@@ -110,9 +109,9 @@ texture = ExtResource("3_5av16")
 expand_mode = 1
 
 [node name="Chicken" type="TextureRect" parent="." unique_id=1546622929]
-offset_left = 238.0
+offset_left = 217.0
 offset_top = 183.0
-offset_right = 556.0
+offset_right = 535.0
 offset_bottom = 503.0
 texture = SubResource("CompressedTexture2D_qd4ob")
 expand_mode = 1

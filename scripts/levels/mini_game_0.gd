@@ -5,6 +5,12 @@ extends Node2D
 var mini_game_intro : MiniGameIntro
 
 @export
+var victory_sound : AudioStreamPlayer
+
+@export
+var music : AudioStreamPlayer
+
+@export
 var movement_area: NavigationRegion2D
 
 @export
@@ -73,6 +79,8 @@ func _on_egg_received(index : int, correct : bool) -> void:
     fill_baskets[index] = holder.is_max_value_reached
 
     if fill_baskets.all(is_true):
+        victory_sound.play()
+        music.stop()
         last_dialog.start_dialog()
 
 func _on_dialog_finished(dialog : Dialog) -> void:

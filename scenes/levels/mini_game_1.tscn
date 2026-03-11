@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/hadamadrina.png" id="7_rdunt"]
 [ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="8_8n2ph"]
 [ext_resource type="Texture2D" uid="uid://bxk72gtujsj3m" path="res://assets/art/map/trunk_4.png" id="9_fsuuw"]
+[ext_resource type="AudioStream" uid="uid://dwp8me231cxql" path="res://assets/sounds/victory_theme_001.ogg" id="9_yatho"]
 [ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="10_qt7dq"]
 [ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="10_ya60s"]
 [ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="11_frj36"]
@@ -40,9 +41,11 @@ b = Vector2(-1000, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc1dy"]
 size = Vector2(1197, 21)
 
-[node name="MiniGame1" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "from", "collision_shape", "outlimits", "fairy", "number_holder", "first_dialog", "last_dialog")]
+[node name="MiniGame1" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "victory_sound", "music", "from", "collision_shape", "outlimits", "fairy", "number_holder", "first_dialog", "last_dialog")]
 script = ExtResource("1_kx7g1")
 mini_game_intro = NodePath("MiniGameIntro_1")
+victory_sound = NodePath("Victory")
+music = NodePath("Music")
 timer_range = Vector2(0.5, 1.5)
 falling_elements = Array[PackedScene]([ExtResource("25_bu8e1"), ExtResource("3_5hgbn"), ExtResource("4_jc1dy"), ExtResource("5_yatho"), ExtResource("6_7en2i"), ExtResource("7_jc1dy")])
 from = NodePath("From")
@@ -55,13 +58,16 @@ first_dialog = NodePath("CanvasLayer/Dialog_0")
 last_dialog = NodePath("CanvasLayer/Dialog_3")
 state = SubResource("Resource_8n2ph")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=801517746]
+[node name="Victory" type="AudioStreamPlayer" parent="." unique_id=769336688]
+stream = ExtResource("9_yatho")
+volume_db = -10.0
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=801517746]
 stream = ExtResource("2_xouwl")
 volume_db = -10.0
 autoplay = true
 
 [node name="MiniGameIntro_1" parent="." unique_id=809843581 instance=ExtResource("3_yqcg6")]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1309865142]
 
@@ -117,7 +123,7 @@ offset_right = 1139.0
 offset_bottom = 71.0
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_3"
-time_out = 4.0
+time_out = 5.0
 
 [node name="NumberHolder" parent="CanvasLayer" unique_id=1606689379 instance=ExtResource("6_x74sk")]
 offset_left = 83.0
@@ -125,7 +131,7 @@ offset_top = 638.0
 offset_right = 83.0
 offset_bottom = 638.0
 has_max_value = true
-max_value = 10
+max_value = 25
 
 [node name="Textures" type="Node" parent="." unique_id=917866759]
 
@@ -277,3 +283,4 @@ shape = SubResource("RectangleShape2D_jc1dy")
 
 [node name="Fairy" parent="." unique_id=337846277 instance=ExtResource("27_jc1dy")]
 position = Vector2(637, 557)
+speed = 350.0

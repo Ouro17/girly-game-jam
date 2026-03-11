@@ -5,6 +5,12 @@ extends Node2D
 var mini_game_intro : MiniGameIntro
 
 @export
+var victory_sound : AudioStreamPlayer
+
+@export
+var music : AudioStreamPlayer
+
+@export
 var timer_range : Vector2
 
 @export
@@ -88,6 +94,7 @@ func _on_intro_finished() -> void:
 
 func _level_complete(result : bool)-> void:
     _save_state(result)
+
     EventBus.observers.emit(state.id)
 
     SceneManager.change_scene_to(next_level)
@@ -112,6 +119,8 @@ func _on_body_entered(body : Node2D) -> void:
 
     if number_holder.is_max_value_reached:
         game_enabled = false
+        victory_sound.play()
+        music.stop()
         last_dialog.start_dialog()
 
     body.queue_free()

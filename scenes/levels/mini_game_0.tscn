@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c4rys663hnwlv" path="res://scripts/levels/mini_game_0.gd" id="1_ridya"]
 [ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="2_ctnob"]
 [ext_resource type="AudioStream" uid="uid://h5fgettjus3j" path="res://assets/sounds/chicken.wav" id="3_0hdmg"]
+[ext_resource type="AudioStream" uid="uid://uy86fkkkxd7j" path="res://assets/sounds/victory_theme_000.ogg" id="3_2rcqc"]
 [ext_resource type="AudioStream" uid="uid://kv4nl7yulct6" path="res://assets/music/SongGirly_008_Loop.ogg" id="3_310pp"]
 [ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sorhada.png" id="3_g6fga"]
 [ext_resource type="PackedScene" uid="uid://c38i6ktso3wln" path="res://scenes/levels/mini_game_intro_0.tscn" id="4_ridya"]
@@ -30,9 +31,11 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(59, 172, 58, 657, 922, 653, 917, 170)])
 agent_radius = 5.0
 
-[node name="MiniGame0" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "movement_area", "chickens", "egg_baskets", "number_holders", "first_dialog", "last_dialog")]
+[node name="MiniGame0" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "victory_sound", "music", "movement_area", "chickens", "egg_baskets", "number_holders", "first_dialog", "last_dialog")]
 script = ExtResource("1_ridya")
 mini_game_intro = NodePath("MiniGameIntro_0")
+victory_sound = NodePath("VictorySound")
+music = NodePath("Music")
 movement_area = NodePath("NavigationRegion2D")
 chickens = [NodePath("Chickens/Chicken"), NodePath("Chickens/Chicken2"), NodePath("Chickens/Chicken3"), NodePath("Chickens/Chicken4")]
 egg_baskets = [NodePath("Baskets/Basket_0"), NodePath("Baskets/Basket_1"), NodePath("Baskets/Basket_2")]
@@ -42,12 +45,16 @@ first_dialog = NodePath("CanvasLayer/Dialog_0")
 last_dialog = NodePath("CanvasLayer/Dialog_3")
 state = SubResource("Resource_itc4e")
 
+[node name="VictorySound" type="AudioStreamPlayer" parent="." unique_id=1928242998]
+stream = ExtResource("3_2rcqc")
+volume_db = -10.0
+
 [node name="ChickenSound" type="AudioStreamPlayer" parent="." unique_id=812105654]
 stream = ExtResource("3_0hdmg")
-volume_db = -15.0
+volume_db = -10.0
 autoplay = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=801517746]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=801517746]
 stream = ExtResource("3_310pp")
 volume_db = -10.0
 autoplay = true
