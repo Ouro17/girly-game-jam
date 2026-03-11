@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4o02sgfwaom1"
-path="res://.godot/imported/pexels-artempodrez-7233124.jpg-16a1b3eeafe13d332b49640d29f7a962.ctex"
+uid="uid://cecy5isq1jpns"
+path="res://.godot/imported/farmhouse.png-b7d99a4008f3d43b6e7cb0369b6a19b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pexels-artempodrez-7233124.jpg"
-dest_files=["res://.godot/imported/pexels-artempodrez-7233124.jpg-16a1b3eeafe13d332b49640d29f7a962.ctex"]
+source_file="res://assets/art/map/farmhouse.png"
+dest_files=["res://.godot/imported/farmhouse.png-b7d99a4008f3d43b6e7cb0369b6a19b6.ctex"]
 
 [params]
 

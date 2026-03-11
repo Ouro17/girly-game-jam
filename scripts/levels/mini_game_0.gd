@@ -59,7 +59,6 @@ func _save_state(value: bool) -> void:
     if state != null:
         return state.save_state(value)
 
-
 func is_true(value : bool):
     return value
 

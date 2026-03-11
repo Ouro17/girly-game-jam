@@ -46,7 +46,7 @@ Here is a video about today's progress:
 
 ### Day 3
 
-Today we started to introduce art elements, like images, music and sound effects.
+Today, we started to introduce art elements, like images, music and sound effects.
 For some elements, we used free usage pictures that we found on the net until we can replace them.
 
 For programming, we have these goals:
@@ -62,6 +62,29 @@ We could not finish programming the minigame today, but it's almost done.
 Here is a video about today's progress:
 
 [![Day 3 progress](https://img.youtube.com/vi/fn-RazAVM5E/0.jpg)](https://www.youtube.com/watch?v=fn-RazAVM5E)
+
+### Day 4
+
+On day 4 we worked on a lot of art elements and finishing the first minigame.
+
+The art for the map, the second minigame and other things were done but not incorporated to the game.
+
+### Day 5
+
+First, we incorporated to the game most of the elements created on day 4.
+
+Then, we created the second minigame and finished it on the same day, which is very good!
+
+The second minigame was easy to do because a lot of things were reused from the map and the first minigame,
+so only the logic for falling elements really needed to be work with.
+
+It was interesting to get a random point from a collision shape, which *should* live inside an Area, but the Area does not provide any
+API to get this element, which is quite incoherent.
+
+
+
+
+
 
 ## Tools used
 - Godot 4.6

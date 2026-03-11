@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnbkdnvf0dfv0"
-path="res://.godot/imported/pexels-artempodrez-7232658.jpg-a4a096367803d572f4a33ef1957dd1a9.ctex"
+uid="uid://cihvmu4e5fu38"
+path="res://.godot/imported/chicken_minigame_0.png-cc41a32192a99cfc4b83d67775e3e83b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pexels-artempodrez-7232658.jpg"
-dest_files=["res://.godot/imported/pexels-artempodrez-7232658.jpg-a4a096367803d572f4a33ef1957dd1a9.ctex"]
+source_file="res://assets/art/map/chicken_minigame_0.png"
+dest_files=["res://.godot/imported/chicken_minigame_0.png-cc41a32192a99cfc4b83d67775e3e83b.ctex"]
 
 [params]
 

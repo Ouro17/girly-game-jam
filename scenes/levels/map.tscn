@@ -3,16 +3,39 @@
 [ext_resource type="Script" uid="uid://ch6kq7hrwexv0" path="res://scripts/levels/map.gd" id="1_1j1lv"]
 [ext_resource type="Script" uid="uid://dla04ekjdgf7c" path="res://scripts/utils/event_observer.gd" id="2_fpdas"]
 [ext_resource type="PackedScene" uid="uid://dnfws5iivk2id" path="res://scenes/UI/task_list.tscn" id="3_4u8by"]
-[ext_resource type="Texture2D" uid="uid://dnbkdnvf0dfv0" path="res://assets/art/pexels-artempodrez-7232658.jpg" id="3_k16km"]
+[ext_resource type="Texture2D" uid="uid://dnbkdnvf0dfv0" path="res://assets/art/map/pexels-artempodrez-7232658.jpg" id="3_k16km"]
 [ext_resource type="AudioStream" uid="uid://ip2onyi20pyy" path="res://assets/music/SongGirly_004.ogg" id="3_xvo3l"]
-[ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/pexels-artempodrez-7233124.jpg" id="4_05abr"]
-[ext_resource type="PackedScene" uid="uid://bvjj4cq3gnbev" path="res://scenes/levels/level_entrance.tscn" id="4_5ek3c"]
-[ext_resource type="Texture2D" uid="uid://b6c76ag4yxnr3" path="res://assets/art/treecard.png" id="5_db2vl"]
+[ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="4_05abr"]
 [ext_resource type="PackedScene" uid="uid://dmsg4yhttrq6w" path="res://scenes/levels/end_map_label.tscn" id="5_ex8ba"]
 [ext_resource type="PackedScene" uid="uid://mm40ut7gce2" path="res://scenes/entities/player.tscn" id="6_gpbhb"]
-[ext_resource type="Texture2D" uid="uid://dvrcsgucwv88w" path="res://assets/art/cardboard.png" id="9_05abr"]
+[ext_resource type="Texture2D" uid="uid://oosqsa6ghoj0" path="res://assets/art/map/sun_0.png" id="8_oxjr2"]
+[ext_resource type="Texture2D" uid="uid://js12vbmqlh4u" path="res://assets/art/map/sun_1.png" id="9_3rg7r"]
+[ext_resource type="Texture2D" uid="uid://dvu8myxe5qurn" path="res://assets/art/map/sun_2.png" id="10_xbtyt"]
+[ext_resource type="Texture2D" uid="uid://wevrjgt31jrk" path="res://assets/art/map/crown_4.png" id="11_pl2do"]
+[ext_resource type="Texture2D" uid="uid://dhlw08ifbglr" path="res://assets/art/map/trunk_1.png" id="12_ookhf"]
 [ext_resource type="PackedScene" uid="uid://c4n485kh48y7h" path="res://scenes/entities/follower.tscn" id="12_sxedr"]
+[ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="13_qsxn8"]
+[ext_resource type="Texture2D" uid="uid://y10r2bf2itck" path="res://assets/art/map/trunk_0.png" id="14_dim3t"]
 [ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sorhada.png" id="14_gnus1"]
+[ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="15_o1cqd"]
+[ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="16_u1b8a"]
+[ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="17_k01hm"]
+[ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="18_voih8"]
+[ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="19_1fsak"]
+[ext_resource type="Texture2D" uid="uid://bn700dfokopay" path="res://assets/art/map/trunk_5.png" id="20_q8wrr"]
+[ext_resource type="Texture2D" uid="uid://c81q6ptkyscnj" path="res://assets/art/map/herb.png" id="21_cbk36"]
+[ext_resource type="Texture2D" uid="uid://cecy5isq1jpns" path="res://assets/art/map/farmhouse.png" id="22_1atqk"]
+[ext_resource type="Texture2D" uid="uid://cmgqdccsxhnnk" path="res://assets/art/map/pig.png" id="23_cuu0l"]
+[ext_resource type="Texture2D" uid="uid://d2pbax0ehc5al" path="res://assets/art/map/truck.png" id="24_otrhh"]
+[ext_resource type="Texture2D" uid="uid://cdhsofuofimjm" path="res://assets/art/map/rat.png" id="25_2fngh"]
+[ext_resource type="Texture2D" uid="uid://cihvmu4e5fu38" path="res://assets/art/map/chicken_minigame_0.png" id="26_t3pip"]
+[ext_resource type="Texture2D" uid="uid://b7bpm2ikemrpt" path="res://assets/art/mini_game_0/chicken_run_fence_front.png" id="27_yk617"]
+[ext_resource type="Texture2D" uid="uid://r1llfiwadmdd" path="res://assets/art/mini_game_1/apple_0.png" id="28_pl2do"]
+[ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="28_qsxn8"]
+[ext_resource type="Texture2D" uid="uid://deu3s1oa6e4xi" path="res://assets/art/mini_game_1/apple_1.png" id="29_ookhf"]
+[ext_resource type="Texture2D" uid="uid://dpamndoctnkto" path="res://assets/art/mini_game_1/apple_2.png" id="30_qsxn8"]
+[ext_resource type="Script" uid="uid://bts7f55o5jcme" path="res://scripts/levels/level_entrance.gd" id="32_dim3t"]
+[ext_resource type="Texture2D" uid="uid://016h7e5m262e" path="res://assets/art/mini_game_0/basket_blue.png" id="32_qsxn8"]
 
 [sub_resource type="Resource" id="Resource_fpdas"]
 script = ExtResource("2_fpdas")
@@ -28,6 +51,53 @@ metadata/_custom_type_script = "uid://dla04ekjdgf7c"
 script = ExtResource("2_fpdas")
 event_id = "mini_game_2"
 metadata/_custom_type_script = "uid://dla04ekjdgf7c"
+
+[sub_resource type="Animation" id="Animation_lt3sg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_oxjr2")]
+}
+
+[sub_resource type="Animation" id="Animation_83g3v"]
+resource_name = "play"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666, 1.333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_oxjr2"), ExtResource("9_3rg7r"), ExtResource("10_xbtyt")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7xn0r"]
+_data = {
+&"RESET": SubResource("Animation_lt3sg"),
+&"play": SubResource("Animation_83g3v")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1cqd"]
+size = Vector2(138, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1b8a"]
+size = Vector2(84.75, 77.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ookhf"]
+size = Vector2(78, 82)
 
 [node name="Map" type="Node2D" unique_id=1665987138 node_paths=PackedStringArray("end_map_label", "task_list", "level_entrances")]
 script = ExtResource("1_1j1lv")
@@ -67,109 +137,259 @@ autoplay = true
 
 [node name="Art" type="Node" parent="." unique_id=468822664]
 
-[node name="Sprite2D" type="Sprite2D" parent="Art" unique_id=344246811]
+[node name="Background" type="Node" parent="Art" unique_id=1861891177]
+
+[node name="Sky" type="Sprite2D" parent="Art/Background" unique_id=344246811]
+z_index = -99
 position = Vector2(639.5, 218.5)
 scale = Vector2(0.20817058, 0.12760416)
 texture = ExtResource("3_k16km")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Art" unique_id=1868302897]
-position = Vector2(639.9946, 472.44284)
+[node name="Grass" type="Sprite2D" parent="Art/Background" unique_id=1868302897]
+z_index = -99
+position = Vector2(640, 521.85)
 rotation = 1.5707964
-scale = Vector2(0.1428376, 0.20831025)
+scale = Vector2(0.11603781, 0.20831025)
 texture = ExtResource("4_05abr")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Art" unique_id=836413919]
-position = Vector2(640.00006, 135.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="SkyElements" type="Node" parent="Art" unique_id=784466733]
 
-[node name="Sprite2D9" type="Sprite2D" parent="Art" unique_id=1840826616]
-position = Vector2(962.00006, 143.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="Sun" type="Sprite2D" parent="Art/SkyElements" unique_id=508493480]
+z_index = -98
+position = Vector2(142, 100)
+texture = ExtResource("8_oxjr2")
 
-[node name="Sprite2D12" type="Sprite2D" parent="Art" unique_id=128418954]
-position = Vector2(1065, 144.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Art/SkyElements/Sun" unique_id=339130245]
+libraries/ = SubResource("AnimationLibrary_7xn0r")
+autoplay = &"play"
 
-[node name="Sprite2D10" type="Sprite2D" parent="Art" unique_id=1151416018]
-position = Vector2(868.00006, 140.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="Trees" type="Node" parent="Art" unique_id=575928878]
 
-[node name="Sprite2D11" type="Sprite2D" parent="Art" unique_id=1924919566]
-position = Vector2(754.00006, 155.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="Crown1" type="Sprite2D" parent="Art/Trees" unique_id=1716829]
+z_index = -70
+position = Vector2(459, 211)
+texture = ExtResource("11_pl2do")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Art" unique_id=55002582]
-position = Vector2(540.00006, 138.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="Trunk1" type="Sprite2D" parent="Art/Trees/Crown1" unique_id=2030553795]
+z_index = -1
+position = Vector2(-18, 43)
+texture = ExtResource("12_ookhf")
 
-[node name="Sprite2D6" type="Sprite2D" parent="Art" unique_id=1456983951]
-position = Vector2(449.00006, 147.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="Crown0" type="Sprite2D" parent="Art/Trees" unique_id=825036227]
+z_index = -70
+position = Vector2(562, 261)
+texture = ExtResource("13_qsxn8")
 
-[node name="Sprite2D7" type="Sprite2D" parent="Art" unique_id=398426086]
-position = Vector2(319.00006, 151.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="Trunk0" type="Sprite2D" parent="Art/Trees/Crown0" unique_id=749162523]
+z_index = -1
+position = Vector2(-11, 27)
+texture = ExtResource("14_dim3t")
 
-[node name="Sprite2D8" type="Sprite2D" parent="Art" unique_id=950997864]
-position = Vector2(167.00006, 151.00002)
-scale = Vector2(0.1276, 0.12660001)
-texture = ExtResource("5_db2vl")
+[node name="Crown5" type="Sprite2D" parent="Art/Trees" unique_id=229562195]
+z_index = -70
+position = Vector2(349, 248)
+texture = ExtResource("15_o1cqd")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Art" unique_id=1590687245]
-position = Vector2(1104, 322)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_05abr")
+[node name="Trunk0" type="Sprite2D" parent="Art/Trees/Crown5" unique_id=1669671624]
+z_index = -1
+position = Vector2(-10, 55)
+texture = ExtResource("14_dim3t")
+
+[node name="Crown4" type="Sprite2D" parent="Art/Trees" unique_id=1124960150]
+z_index = -70
+position = Vector2(800, 229)
+scale = Vector2(0.98595494, 0.81962013)
+texture = ExtResource("11_pl2do")
+
+[node name="Trunk2" type="Sprite2D" parent="Art/Trees/Crown4" unique_id=1764052597]
+z_index = -1
+position = Vector2(-17, 82)
+texture = ExtResource("16_u1b8a")
+
+[node name="Crown2" type="Sprite2D" parent="Art/Trees" unique_id=150255995]
+z_index = -70
+position = Vector2(1156, 233)
+scale = Vector2(1.0408163, 1.1390977)
+texture = ExtResource("17_k01hm")
+
+[node name="Trunk3" type="Sprite2D" parent="Art/Trees/Crown2" unique_id=549421125]
+z_index = -1
+position = Vector2(2, 96)
+texture = ExtResource("18_voih8")
+
+[node name="Crown3" type="Sprite2D" parent="Art/Trees" unique_id=2073273733]
+z_index = -70
+position = Vector2(906, 256)
+texture = ExtResource("19_1fsak")
+
+[node name="Trunk5" type="Sprite2D" parent="Art/Trees/Crown3" unique_id=1951963927]
+z_index = -1
+position = Vector2(-6, 68)
+texture = ExtResource("20_q8wrr")
+
+[node name="Crown6" type="Sprite2D" parent="Art/Trees" unique_id=9088222]
+position = Vector2(15, 237)
+texture = ExtResource("19_1fsak")
+
+[node name="Trunk2" type="Sprite2D" parent="Art/Trees/Crown6" unique_id=936544862]
+z_index = -1
+position = Vector2(0, 66)
+texture = ExtResource("16_u1b8a")
+
+[node name="Elements" type="Node" parent="Art" unique_id=998994288]
+
+[node name="Herb7" type="Sprite2D" parent="Art/Elements" unique_id=1814750549]
+position = Vector2(878, 445.5)
+scale = Vector2(1.2307693, 1.11)
+texture = ExtResource("21_cbk36")
+
+[node name="Herb6" type="Sprite2D" parent="Art/Elements" unique_id=1443237921]
+position = Vector2(857.5, 466)
+scale = Vector2(0.8653846, 0.78000003)
+texture = ExtResource("21_cbk36")
+
+[node name="Herb8" type="Sprite2D" parent="Art/Elements" unique_id=938983940]
+position = Vector2(905, 458.75)
+scale = Vector2(0.84615445, 0.7750002)
+texture = ExtResource("21_cbk36")
+
+[node name="Farmhouse" type="Sprite2D" parent="Art/Elements" unique_id=1973508301]
+position = Vector2(1010, 414)
+texture = ExtResource("22_1atqk")
+
+[node name="Pig" type="Sprite2D" parent="Art/Elements" unique_id=679897455]
+position = Vector2(1101, 529)
+scale = Vector2(0.15985383, 0.13110746)
+texture = ExtResource("23_cuu0l")
+
+[node name="Truck" type="Sprite2D" parent="Art/Elements" unique_id=944301813]
+position = Vector2(185, 315)
+scale = Vector2(1.0298913, 1.0729167)
+texture = ExtResource("24_otrhh")
+
+[node name="Rat" type="Sprite2D" parent="Art/Elements" unique_id=421907892]
+position = Vector2(926, 506)
+scale = Vector2(0.46899223, 0.48979592)
+texture = ExtResource("25_2fngh")
+
+[node name="Herb" type="Sprite2D" parent="Art/Elements" unique_id=907689354]
+position = Vector2(1210, 487)
+texture = ExtResource("21_cbk36")
+
+[node name="Herb2" type="Sprite2D" parent="Art/Elements" unique_id=554641718]
+position = Vector2(1241, 467)
+scale = Vector2(1.4423077, 1.24)
+texture = ExtResource("21_cbk36")
+
+[node name="Herb3" type="Sprite2D" parent="Art/Elements" unique_id=208108215]
+position = Vector2(1178, 477)
+texture = ExtResource("21_cbk36")
+
+[node name="ChickenMinigame0" type="Sprite2D" parent="Art/Elements" unique_id=851507845]
+position = Vector2(205.62503, 609.875)
+scale = Vector2(0.20051695, 0.17183283)
+texture = ExtResource("26_t3pip")
+
+[node name="Herb4" type="Sprite2D" parent="Art/Elements" unique_id=519944002]
+position = Vector2(82.62503, 627.87506)
+scale = Vector2(0.7307692, 0.9200005)
+texture = ExtResource("21_cbk36")
+
+[node name="Herb5" type="Sprite2D" parent="Art/Elements" unique_id=416487204]
+position = Vector2(104.62503, 638.875)
+scale = Vector2(0.4423078, 0.5899998)
+texture = ExtResource("21_cbk36")
+
+[node name="ChickenRunFenceFront" type="Sprite2D" parent="Art/Elements" unique_id=1993786354]
+position = Vector2(186.62505, 660.87506)
+scale = Vector2(0.18378845, 0.112870894)
+texture = ExtResource("27_yk617")
+
+[node name="BasketYellow" type="Sprite2D" parent="Art/Elements" unique_id=1141733484]
+position = Vector2(408, 357)
+scale = Vector2(0.29424426, 0.24606755)
+texture = ExtResource("28_qsxn8")
+
+[node name="Apple0" type="Sprite2D" parent="Art/Elements" unique_id=174319328]
+position = Vector2(397.8, 384.05)
+scale = Vector2(0.2, 0.164)
+texture = ExtResource("28_pl2do")
+
+[node name="Apple1" type="Sprite2D" parent="Art/Elements" unique_id=2103201412]
+position = Vector2(421, 380.99997)
+scale = Vector2(0.2, 0.164)
+texture = ExtResource("29_ookhf")
+
+[node name="Apple2" type="Sprite2D" parent="Art/Elements" unique_id=1211027544]
+position = Vector2(410.00003, 393)
+scale = Vector2(0.2, 0.164)
+texture = ExtResource("30_qsxn8")
+
+[node name="BasketBlue" type="Sprite2D" parent="Art/Elements" unique_id=1657675700]
+position = Vector2(681, 608)
+scale = Vector2(0.5285713, 0.41573068)
+texture = ExtResource("32_qsxn8")
 
 [node name="Entrances" type="Node" parent="." unique_id=1448566617]
 
-[node name="LevelEntrance_0" parent="Entrances" unique_id=347399509 instance=ExtResource("4_5ek3c")]
-position = Vector2(214, 359)
+[node name="LevelEntrance_0" type="Area2D" parent="Entrances" unique_id=347399509]
+position = Vector2(236, 597)
+script = ExtResource("32_dim3t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrances/LevelEntrance_0" unique_id=1115753299]
+position = Vector2(-30, 0)
+shape = SubResource("RectangleShape2D_o1cqd")
 
 [node name="Label" type="Label" parent="Entrances/LevelEntrance_0" unique_id=629774439]
-offset_left = -58.0
-offset_top = -13.0
-offset_right = 67.0
-offset_bottom = 10.0
+offset_left = -107.0
+offset_top = -38.0
+offset_right = 48.0
+offset_bottom = -15.0
 text = "TASK_MINIGAME_0"
 
-[node name="LevelEntrance_1" parent="Entrances" unique_id=991618904 instance=ExtResource("4_5ek3c")]
-position = Vector2(472, 604)
+[node name="LevelEntrance_1" type="Area2D" parent="Entrances" unique_id=991618904]
+position = Vector2(406, 360)
+script = ExtResource("32_dim3t")
 next_level = 1
 
-[node name="Label" type="Label" parent="Entrances/LevelEntrance_1" unique_id=608437167]
-offset_left = -62.0
-offset_top = -13.0
-offset_right = 60.0
-offset_bottom = 10.0
-text = "TASK_MINIGAME_1"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrances/LevelEntrance_1" unique_id=679880609]
+position = Vector2(4, 8)
+shape = SubResource("RectangleShape2D_u1b8a")
 
-[node name="LevelEntrance_2" parent="Entrances" unique_id=1788295572 instance=ExtResource("4_5ek3c")]
-position = Vector2(212, 607)
+[node name="Label" type="Label" parent="Entrances/LevelEntrance_1" unique_id=608437167]
+offset_left = -60.0
+offset_top = 43.0
+offset_right = 62.0
+offset_bottom = 66.0
+text = "TASK_MINIGAME_1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelEntrance_2" type="Area2D" parent="Entrances" unique_id=1788295572]
+position = Vector2(683, 605)
+script = ExtResource("32_dim3t")
 next_level = 2
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrances/LevelEntrance_2" unique_id=1481939461]
+shape = SubResource("RectangleShape2D_ookhf")
+
 [node name="Label" type="Label" parent="Entrances/LevelEntrance_2" unique_id=1352772652]
-offset_left = -81.0
-offset_top = -11.0
-offset_right = 90.0
-offset_bottom = 12.0
+offset_left = -74.0
+offset_top = 43.0
+offset_right = 97.0
+offset_bottom = 66.0
 text = "TASK_MINIGAME_2"
 
 [node name="Player" parent="." unique_id=2046264894 instance=ExtResource("6_gpbhb")]
-position = Vector2(968, 441)
+position = Vector2(869, 467)
 
 [node name="Follower" parent="." unique_id=585176023 node_paths=PackedStringArray("leader", "other_followers") instance=ExtResource("12_sxedr")]
+position = Vector2(896, 359)
 leader = NodePath("../Player")
 other_followers = [null]
 
 [node name="Follower2" parent="." unique_id=675395327 node_paths=PackedStringArray("leader", "other_followers") instance=ExtResource("12_sxedr")]
+position = Vector2(896, 359)
 leader = NodePath("../Player")
 other_followers = [NodePath("../Follower")]
 

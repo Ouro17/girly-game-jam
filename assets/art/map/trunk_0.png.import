@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6c76ag4yxnr3"
-path="res://.godot/imported/treecard.png-a2505e88a2b824ae05333aef98b6c47b.ctex"
+uid="uid://y10r2bf2itck"
+path="res://.godot/imported/trunk_0.png-82a9393f38c983f55ec57f06f0845104.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/treecard.png"
-dest_files=["res://.godot/imported/treecard.png-a2505e88a2b824ae05333aef98b6c47b.ctex"]
+source_file="res://assets/art/map/trunk_0.png"
+dest_files=["res://.godot/imported/trunk_0.png-82a9393f38c983f55ec57f06f0845104.ctex"]
 
 [params]
 

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dwfoqhvi1j0ee"]
+
+[ext_resource type="Script" uid="uid://c4xxw4qs5vo8v" path="res://scripts/entities/fairy.gd" id="1_fv1qd"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/hadanovata.png" id="1_ty7oa"]
+[ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="2_pkgla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fv1qd"]
+size = Vector2(98, 37)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fv1qd"]
+
+[node name="Fairy" type="CharacterBody2D" unique_id=337846277 node_paths=PackedStringArray("area")]
+z_index = 49
+motion_mode = 1
+script = ExtResource("1_fv1qd")
+speed = 300.0
+movement_threshold = 20.0
+area = NodePath("Area2D")
+
+[node name="Main" type="Sprite2D" parent="." unique_id=1751812098]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ty7oa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=413033481]
+position = Vector2(-54, -5)
+scale = Vector2(0.39172655, 0.40955052)
+texture = ExtResource("2_pkgla")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=67500605]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2135430270]
+position = Vector2(-28, 11.5)
+shape = SubResource("RectangleShape2D_fv1qd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372834055]
+shape = SubResource("CircleShape2D_fv1qd")
+disabled = true

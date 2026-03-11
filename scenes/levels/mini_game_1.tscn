@@ -1,29 +1,279 @@
 [gd_scene format=3 uid="uid://cuw6vayofkmol"]
 
-[ext_resource type="Script" uid="uid://dw841tvp77agh" path="res://scripts/levels/mini_game.gd" id="1_53ur5"]
+[ext_resource type="Script" uid="uid://dg4ei21horryp" path="res://scripts/levels/mini_game_1.gd" id="1_kx7g1"]
 [ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="2_mylm7"]
+[ext_resource type="AudioStream" uid="uid://cja8tth7qtdlw" path="res://assets/music/SongGirly_007_Loop.ogg" id="2_xouwl"]
+[ext_resource type="PackedScene" uid="uid://b7x1e0eaulwwp" path="res://scenes/entities/apple_1.tscn" id="3_5hgbn"]
+[ext_resource type="PackedScene" uid="uid://c8sffyl6fjcn1" path="res://scenes/levels/mini_game_intro_1.tscn" id="3_yqcg6"]
+[ext_resource type="PackedScene" uid="uid://bghj3x71ybfht" path="res://scenes/entities/apple_2.tscn" id="4_jc1dy"]
+[ext_resource type="PackedScene" uid="uid://dau5pc3cvbgon" path="res://scenes/dialogs/dialog.tscn" id="5_diq7j"]
+[ext_resource type="PackedScene" uid="uid://baksijoe3ijjv" path="res://scenes/entities/branch_0.tscn" id="5_yatho"]
+[ext_resource type="PackedScene" uid="uid://b23lospxukp8g" path="res://scenes/entities/branch_1.tscn" id="6_7en2i"]
+[ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="6_kavq8"]
+[ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="6_x74sk"]
+[ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="7_f0hj2"]
+[ext_resource type="PackedScene" uid="uid://bmlfxyvt86m8f" path="res://scenes/entities/bad_apple.tscn" id="7_jc1dy"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/hadamadrina.png" id="7_rdunt"]
+[ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="8_8n2ph"]
+[ext_resource type="Texture2D" uid="uid://bxk72gtujsj3m" path="res://assets/art/map/trunk_4.png" id="9_fsuuw"]
+[ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="10_qt7dq"]
+[ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="10_ya60s"]
+[ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="11_frj36"]
+[ext_resource type="Texture2D" uid="uid://wevrjgt31jrk" path="res://assets/art/map/crown_4.png" id="12_diq7j"]
+[ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="13_x74sk"]
+[ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="14_18wxj"]
+[ext_resource type="Texture2D" uid="uid://bn700dfokopay" path="res://assets/art/map/trunk_5.png" id="15_diq7j"]
+[ext_resource type="Texture2D" uid="uid://dhlw08ifbglr" path="res://assets/art/map/trunk_1.png" id="16_x74sk"]
+[ext_resource type="Texture2D" uid="uid://dgm2a1gocs0nd" path="res://assets/art/map/crown_3.png" id="19_m1vqb"]
+[ext_resource type="PackedScene" uid="uid://cts4n854tdnf3" path="res://scenes/entities/apple_0.tscn" id="25_bu8e1"]
+[ext_resource type="PackedScene" uid="uid://dwfoqhvi1j0ee" path="res://scenes/entities/fairy.tscn" id="27_jc1dy"]
 
-[sub_resource type="Resource" id="Resource_mylm7"]
+[sub_resource type="Resource" id="Resource_8n2ph"]
 script = ExtResource("2_mylm7")
 id = "mini_game_1"
 metadata/_custom_type_script = "uid://dgcvhq2w4qg1v"
 
-[node name="MiniGame" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("timer")]
-script = ExtResource("1_53ur5")
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ya60s"]
+a = Vector2(1000, 0)
+b = Vector2(-1000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc1dy"]
+size = Vector2(1197, 21)
+
+[node name="MiniGame1" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "from", "collision_shape", "outlimits", "fairy", "number_holder", "first_dialog", "last_dialog")]
+script = ExtResource("1_kx7g1")
+mini_game_intro = NodePath("MiniGameIntro_1")
+timer_range = Vector2(0.5, 1.5)
+falling_elements = Array[PackedScene]([ExtResource("25_bu8e1"), ExtResource("3_5hgbn"), ExtResource("4_jc1dy"), ExtResource("5_yatho"), ExtResource("6_7en2i"), ExtResource("7_jc1dy")])
+from = NodePath("From")
+collision_shape = NodePath("From/CollisionShape2D")
+outlimits = NodePath("OutLimits")
+fairy = NodePath("Fairy")
+number_holder = NodePath("CanvasLayer/NumberHolder")
 next_level = "res://scenes/levels/map.tscn"
-timer = NodePath("Timer")
-state = SubResource("Resource_mylm7")
+first_dialog = NodePath("CanvasLayer/Dialog_0")
+last_dialog = NodePath("CanvasLayer/Dialog_3")
+state = SubResource("Resource_8n2ph")
 
-[node name="Label" type="Label" parent="." unique_id=1738273280]
-offset_left = 394.0
-offset_top = 268.0
-offset_right = 736.0
-offset_bottom = 313.0
-theme_override_colors/font_color = Color(1, 0.35253903, 1, 1)
-theme_override_font_sizes/font_size = 32
-text = "MINIGAME 1!!!!!!!!!!!!!!!!!"
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=801517746]
+stream = ExtResource("2_xouwl")
+volume_db = -10.0
+autoplay = true
 
-[node name="Timer" type="Timer" parent="." unique_id=1843833189]
-wait_time = 2.0
-one_shot = true
-autostart = true
+[node name="MiniGameIntro_1" parent="." unique_id=809843581 instance=ExtResource("3_yqcg6")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1309865142]
+
+[node name="Dialog_0" parent="CanvasLayer" unique_id=1947356223 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_diq7j")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -535.0
+offset_top = 30.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_1_DIALOG_0"
+next_dialog = NodePath("../Dialog_1")
+time_out = 4.0
+
+[node name="Dialog_1" parent="CanvasLayer" unique_id=1119049695 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_diq7j")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -385.0
+offset_top = 30.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_1_DIALOG_1"
+next_dialog = NodePath("../Dialog_2")
+time_out = 4.0
+
+[node name="Dialog_2" parent="CanvasLayer" unique_id=728835761 instance=ExtResource("5_diq7j")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -424.0
+offset_top = 30.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_1_DIALOG_2"
+time_out = 4.0
+
+[node name="Dialog_3" parent="CanvasLayer" unique_id=1793182022 instance=ExtResource("5_diq7j")]
+visible = false
+offset_left = 690.0
+offset_top = 37.0
+offset_right = 1139.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_1_DIALOG_3"
+time_out = 4.0
+
+[node name="NumberHolder" parent="CanvasLayer" unique_id=1606689379 instance=ExtResource("6_x74sk")]
+offset_left = 83.0
+offset_top = 638.0
+offset_right = 83.0
+offset_bottom = 638.0
+has_max_value = true
+max_value = 10
+
+[node name="Textures" type="Node" parent="." unique_id=917866759]
+
+[node name="Background" type="Sprite2D" parent="Textures" unique_id=132083790]
+z_index = -99
+position = Vector2(640, 359.5)
+scale = Vector2(0.37094906, 0.117350265)
+texture = ExtResource("6_kavq8")
+
+[node name="BasketYellow" type="Sprite2D" parent="Textures" unique_id=1460026899]
+position = Vector2(82, 605)
+scale = Vector2(0.61870503, 0.6292135)
+texture = ExtResource("7_f0hj2")
+
+[node name="Trunk6" type="Sprite2D" parent="Textures" unique_id=2105581465]
+position = Vector2(909, 28)
+texture = ExtResource("16_x74sk")
+
+[node name="Trunk4" type="Sprite2D" parent="Textures" unique_id=241403595]
+position = Vector2(257, 171)
+scale = Vector2(2.6111112, 2.0783134)
+texture = ExtResource("9_fsuuw")
+
+[node name="Trunk2" type="Sprite2D" parent="Textures" unique_id=1827596644]
+position = Vector2(363.99997, 117.99999)
+scale = Vector2(1.9827586, 1.9272727)
+texture = ExtResource("10_ya60s")
+
+[node name="Crown17" type="Sprite2D" parent="Textures" unique_id=1254763605]
+position = Vector2(411, 25)
+texture = ExtResource("14_18wxj")
+
+[node name="Crown15" type="Sprite2D" parent="Textures" unique_id=580188129]
+position = Vector2(400, 100)
+texture = ExtResource("11_frj36")
+
+[node name="Trunk3" type="Sprite2D" parent="Textures" unique_id=1338577231]
+position = Vector2(658, 244.00002)
+scale = Vector2(1.8179834, 2.1542792)
+texture = ExtResource("8_8n2ph")
+
+[node name="Trunk5" type="Sprite2D" parent="Textures" unique_id=555697672]
+position = Vector2(146, 212)
+scale = Vector2(3.7368422, 2.3679245)
+texture = ExtResource("15_diq7j")
+
+[node name="Trunk1" type="Sprite2D" parent="Textures" unique_id=442638326]
+position = Vector2(1112, 96.00003)
+scale = Vector2(1.6639347, 1.9931507)
+texture = ExtResource("16_x74sk")
+
+[node name="Crown0" type="Sprite2D" parent="Textures" unique_id=753849967]
+position = Vector2(731.00006, 131)
+scale = Vector2(3.740385, 2.5681818)
+texture = ExtResource("10_qt7dq")
+
+[node name="Crown1" type="Sprite2D" parent="Textures" unique_id=145906625]
+position = Vector2(520, 150.00002)
+scale = Vector2(2.2053573, 1.45)
+texture = ExtResource("11_frj36")
+
+[node name="Crown4" type="Sprite2D" parent="Textures" unique_id=116844743]
+position = Vector2(709, 46.000004)
+scale = Vector2(1.7247192, 1.3227848)
+texture = ExtResource("12_diq7j")
+
+[node name="Crown2" type="Sprite2D" parent="Textures" unique_id=317357689]
+position = Vector2(527, 44)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("13_x74sk")
+
+[node name="Crown5" type="Sprite2D" parent="Textures" unique_id=932885349]
+position = Vector2(304.99994, 57)
+scale = Vector2(1.53937, 1.5791367)
+texture = ExtResource("14_18wxj")
+
+[node name="Crown3" type="Sprite2D" parent="Textures" unique_id=914342349]
+position = Vector2(132.00003, 57.000008)
+scale = Vector2(3.740385, 2.5681818)
+texture = ExtResource("10_qt7dq")
+
+[node name="Crown6" type="Sprite2D" parent="Textures" unique_id=1036937252]
+position = Vector2(222, 116.00001)
+scale = Vector2(2.2053573, 1.45)
+texture = ExtResource("11_frj36")
+
+[node name="Crown7" type="Sprite2D" parent="Textures" unique_id=1883161026]
+position = Vector2(80.99997, 132)
+scale = Vector2(1.7247192, 1.3227848)
+texture = ExtResource("12_diq7j")
+
+[node name="Crown8" type="Sprite2D" parent="Textures" unique_id=568566811]
+position = Vector2(123, 101)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("13_x74sk")
+
+[node name="Crown9" type="Sprite2D" parent="Textures" unique_id=1478415551]
+position = Vector2(120.00001, 42)
+scale = Vector2(1.53937, 1.5791367)
+texture = ExtResource("14_18wxj")
+
+[node name="Crown10" type="Sprite2D" parent="Textures" unique_id=1449128634]
+position = Vector2(1120, 103)
+scale = Vector2(3.740385, 2.5681818)
+texture = ExtResource("10_qt7dq")
+
+[node name="Crown11" type="Sprite2D" parent="Textures" unique_id=328061154]
+position = Vector2(1188.5, 100.75001)
+scale = Vector2(2.2053573, 1.45)
+texture = ExtResource("11_frj36")
+
+[node name="Crown12" type="Sprite2D" parent="Textures" unique_id=111479976]
+position = Vector2(1188, 67.00001)
+scale = Vector2(1.7247192, 1.3227848)
+texture = ExtResource("12_diq7j")
+
+[node name="Crown13" type="Sprite2D" parent="Textures" unique_id=2146168172]
+position = Vector2(1035, 48)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("13_x74sk")
+
+[node name="Crown14" type="Sprite2D" parent="Textures" unique_id=1674710522]
+position = Vector2(1243, 103)
+scale = Vector2(1.53937, 1.5791367)
+texture = ExtResource("14_18wxj")
+
+[node name="Crown16" type="Sprite2D" parent="Textures" unique_id=2024826249]
+position = Vector2(918, 35)
+texture = ExtResource("19_m1vqb")
+
+[node name="Helper" type="Sprite2D" parent="." unique_id=231764570]
+z_index = 99
+position = Vector2(1200, 95)
+scale = Vector2(0.27291667, 0.24856046)
+texture = ExtResource("7_rdunt")
+
+[node name="OutLimits" type="Area2D" parent="." unique_id=1744875056]
+position = Vector2(641, 848)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutLimits" unique_id=112226119]
+shape = SubResource("SegmentShape2D_ya60s")
+
+[node name="From" type="Area2D" parent="." unique_id=1229194982]
+position = Vector2(629, -69)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="From" unique_id=976907575]
+position = Vector2(17.5, 52.5)
+shape = SubResource("RectangleShape2D_jc1dy")
+
+[node name="Fairy" parent="." unique_id=337846277 instance=ExtResource("27_jc1dy")]
+position = Vector2(637, 557)
