@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://ikcn5nkt2wfm"]
+
+[ext_resource type="Texture2D" uid="uid://if07reipecgm" path="res://assets/art/mini_game_2/carrot_head.png" id="1_yf8qs"]
+[ext_resource type="Script" uid="uid://dpfwedxtpojag" path="res://scripts/entities/vegetable.gd" id="2_ehxoj"]
+
+[sub_resource type="Animation" id="Animation_ehxoj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vegetable:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_u5hb1"]
+resource_name = "pull"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vegetable:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.0, -2.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uq15e"]
+_data = {
+&"RESET": SubResource("Animation_ehxoj"),
+&"pull": SubResource("Animation_u5hb1")
+}
+
+[node name="Node2D" type="Node2D" unique_id=327591319 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(0, -1.5629662)
+script = ExtResource("2_ehxoj")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="." unique_id=62723174]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_yf8qs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=178839199]
+libraries/ = SubResource("AnimationLibrary_uq15e")

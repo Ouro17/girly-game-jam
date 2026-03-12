@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://dwrqi14gppbof" path="res://scripts/levels/mini_game_intro.gd" id="1_dmjur"]
 [ext_resource type="Texture2D" uid="uid://bhu6m1medibqr" path="res://assets/art/mini_game_0/textile-background.png" id="2_dggva"]
 [ext_resource type="Texture2D" uid="uid://1xuc26md0v2x" path="res://assets/art/mini_game_0/cloud.png" id="3_a5vs1"]
-[ext_resource type="Texture2D" uid="uid://du1nruwetrb7o" path="res://assets/art/mini_game_0/chicken_avatar_0.png" id="4_knxb2"]
-[ext_resource type="Texture2D" uid="uid://v0jwtq7wh3f7" path="res://assets/art/mini_game_0/chicken_avatar_1.png" id="5_6l7qh"]
-[ext_resource type="Texture2D" uid="uid://bg4wcrhxepb4c" path="res://assets/art/mini_game_0/chicken_avatar_2.png" id="6_d6muc"]
-[ext_resource type="Texture2D" uid="uid://byr1d8dybn3in" path="res://assets/art/mini_game_0/title_chicken_0_en.png" id="7_we1m1"]
-[ext_resource type="Texture2D" uid="uid://duultd0ybgjau" path="res://assets/art/mini_game_0/title_chicken_1_en.png" id="8_m3yi2"]
-[ext_resource type="Texture2D" uid="uid://7nfgrqvrmpjw" path="res://assets/art/mini_game_0/title_chicken_2_en.png" id="9_pjco3"]
+[ext_resource type="Texture2D" uid="uid://t36txt26o45w" path="res://assets/art/mini_game_2/avatar_mini_game_2_0.png" id="4_dmjur"]
+[ext_resource type="Texture2D" uid="uid://b70f3l3q2gn4o" path="res://assets/art/mini_game_2/avatar_mini_game_2_1.png" id="5_dggva"]
+[ext_resource type="Texture2D" uid="uid://cxmcp14fkokqj" path="res://assets/art/mini_game_2/avatar_mini_game_2_2.png" id="6_a5vs1"]
+[ext_resource type="Texture2D" uid="uid://d23otfrj827kn" path="res://assets/art/mini_game_2/title_mini_game_2_0_en.png" id="7_dmjur"]
+[ext_resource type="Texture2D" uid="uid://bj4tfu3xcu2kx" path="res://assets/art/mini_game_2/title_mini_game_2_1_en.png" id="8_dggva"]
+[ext_resource type="Texture2D" uid="uid://do2ildn3f4we1" path="res://assets/art/mini_game_2/title_mini_game_2_2_en.png" id="9_a5vs1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qd4ob"]
 
@@ -41,7 +41,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.166, 0.332),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("4_knxb2"), ExtResource("5_6l7qh"), ExtResource("6_d6muc")]
+"values": [ExtResource("4_dmjur"), ExtResource("5_dggva"), ExtResource("6_a5vs1")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ic330"]
@@ -81,7 +81,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.16666667, 0.332),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("7_we1m1"), ExtResource("8_m3yi2"), ExtResource("9_pjco3")]
+"values": [ExtResource("7_dmjur"), ExtResource("8_dggva"), ExtResource("9_a5vs1")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y1ves"]
@@ -90,9 +90,9 @@ _data = {
 &"play": SubResource("Animation_8thsp")
 }
 
-[node name="MiniGameIntro_0" type="CanvasLayer" unique_id=809843581]
+[node name="MiniGameIntro_2" type="CanvasLayer" unique_id=809843581]
 script = ExtResource("1_dmjur")
-wait_time = 1.0
+wait_time = 3.0
 
 [node name="Background_0" type="TextureRect" parent="." unique_id=820904897]
 offset_right = 1282.0
@@ -108,7 +108,7 @@ offset_bottom = 687.0
 texture = ExtResource("3_a5vs1")
 expand_mode = 1
 
-[node name="Chicken" type="TextureRect" parent="." unique_id=1546622929]
+[node name="Avatar" type="TextureRect" parent="." unique_id=1546622929]
 offset_left = 238.0
 offset_top = 183.0
 offset_right = 556.0
@@ -116,7 +116,7 @@ offset_bottom = 503.0
 texture = SubResource("CompressedTexture2D_qd4ob")
 expand_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Chicken" unique_id=926066746]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Avatar" unique_id=926066746]
 libraries/ = SubResource("AnimationLibrary_ic330")
 autoplay = &"play"
 

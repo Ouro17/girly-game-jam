@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="6_x74sk"]
 [ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="7_f0hj2"]
 [ext_resource type="PackedScene" uid="uid://bmlfxyvt86m8f" path="res://scenes/entities/bad_apple.tscn" id="7_jc1dy"]
-[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/hadamadrina.png" id="7_rdunt"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/head_fairy.png" id="7_rdunt"]
 [ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="8_8n2ph"]
 [ext_resource type="AudioStream" uid="uid://cr3qcfgm4kpnn" path="res://assets/sounds/branches_01.wav" id="9_7en2i"]
 [ext_resource type="Texture2D" uid="uid://bxk72gtujsj3m" path="res://assets/art/map/trunk_4.png" id="9_fsuuw"]

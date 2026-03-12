@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c4n485kh48y7h" path="res://scenes/entities/follower.tscn" id="12_sxedr"]
 [ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="13_qsxn8"]
 [ext_resource type="Texture2D" uid="uid://y10r2bf2itck" path="res://assets/art/map/trunk_0.png" id="14_dim3t"]
-[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sorhada.png" id="14_gnus1"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sister_fairy.png" id="14_gnus1"]
 [ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="15_o1cqd"]
 [ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="16_u1b8a"]
 [ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="17_k01hm"]
@@ -36,8 +36,8 @@
 [ext_resource type="Texture2D" uid="uid://deu3s1oa6e4xi" path="res://assets/art/mini_game_1/apple_1.png" id="29_ookhf"]
 [ext_resource type="Texture2D" uid="uid://dpamndoctnkto" path="res://assets/art/mini_game_1/apple_2.png" id="30_qsxn8"]
 [ext_resource type="Script" uid="uid://bts7f55o5jcme" path="res://scripts/levels/level_entrance.gd" id="32_dim3t"]
-[ext_resource type="Texture2D" uid="uid://016h7e5m262e" path="res://assets/art/mini_game_0/basket_blue.png" id="32_qsxn8"]
 [ext_resource type="Texture2D" uid="uid://bub8ev3k0lifp" path="res://assets/art/map/marigold.png" id="33_dim3t"]
+[ext_resource type="Texture2D" uid="uid://ctrpimvv0bbrb" path="res://assets/art/mini_game_2/patch.png" id="33_o1cqd"]
 
 [sub_resource type="Resource" id="Resource_fpdas"]
 script = ExtResource("2_fpdas")
@@ -99,7 +99,7 @@ size = Vector2(138, 82)
 size = Vector2(84.75, 77.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ookhf"]
-size = Vector2(78, 82)
+size = Vector2(143, 101)
 
 [node name="Map" type="Node2D" unique_id=1665987138 node_paths=PackedStringArray("end_map_label", "task_list", "level_entrances")]
 script = ExtResource("1_1j1lv")
@@ -120,7 +120,6 @@ offset_top = 17.0
 offset_right = -34.0
 offset_bottom = 140.0
 grow_horizontal = 0
-theme = ExtResource("4_o1cqd")
 
 [node name="EndMapLabel" parent="CanvasLayer" unique_id=2145342449 instance=ExtResource("5_ex8ba")]
 visible = false
@@ -354,11 +353,6 @@ position = Vector2(410.00003, 393)
 scale = Vector2(0.2, 0.164)
 texture = ExtResource("30_qsxn8")
 
-[node name="BasketBlue" type="Sprite2D" parent="Art/Elements" unique_id=1657675700]
-position = Vector2(681, 608)
-scale = Vector2(0.5285713, 0.41573068)
-texture = ExtResource("32_qsxn8")
-
 [node name="Marigold4" type="Sprite2D" parent="Art/Elements" unique_id=127607622]
 position = Vector2(673.99994, 348)
 scale = Vector2(0.75000125, 0.92307734)
@@ -372,6 +366,11 @@ texture = ExtResource("33_dim3t")
 position = Vector2(346, 533)
 scale = Vector2(0.575, 0.5769231)
 texture = ExtResource("33_dim3t")
+
+[node name="Patch" type="Sprite2D" parent="Art/Elements" unique_id=1377448622]
+position = Vector2(644.5, 608)
+scale = Vector2(0.12890625, 0.16666667)
+texture = ExtResource("33_o1cqd")
 
 [node name="Entrances" type="Node" parent="." unique_id=1448566617]
 
@@ -416,6 +415,7 @@ script = ExtResource("32_dim3t")
 next_level = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entrances/LevelEntrance_2" unique_id=1481939461]
+position = Vector2(-37.5, 3.5)
 shape = SubResource("RectangleShape2D_ookhf")
 
 [node name="Label" type="Label" parent="Entrances/LevelEntrance_2" unique_id=1352772652]

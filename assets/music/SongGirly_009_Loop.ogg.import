@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/SongGirly_009_Loop.ogg-4e30de15d1c7dfe591dafc
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

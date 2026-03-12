@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://klpcrpntyiur"
-path="res://.godot/imported/hadanovata.png-907514a646f29ecd2eb2cd3dfc3b6a5d.ctex"
+uid="uid://1stqk3d3a1cs"
+path="res://.godot/imported/beetroot.png-d9e359a592a107e49fff46cd45b78169.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/hadanovata.png"
-dest_files=["res://.godot/imported/hadanovata.png-907514a646f29ecd2eb2cd3dfc3b6a5d.ctex"]
+source_file="res://assets/art/mini_game_2/beetroot.png"
+dest_files=["res://.godot/imported/beetroot.png-d9e359a592a107e49fff46cd45b78169.ctex"]
 
 [params]
 

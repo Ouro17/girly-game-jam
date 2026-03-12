@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwfoqhvi1j0ee"]
 
 [ext_resource type="Script" uid="uid://c4xxw4qs5vo8v" path="res://scripts/entities/fairy.gd" id="1_fv1qd"]
-[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/hadanovata.png" id="1_ty7oa"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/newbie_fairy.png" id="1_ty7oa"]
 [ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="2_pkgla"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fv1qd"]

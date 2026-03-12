@@ -1,31 +1,543 @@
 [gd_scene format=3 uid="uid://81er7tgn3kav"]
 
-[ext_resource type="Script" uid="uid://dw841tvp77agh" path="res://scripts/levels/mini_game.gd" id="1_f82im"]
-[ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="2_6neai"]
-[ext_resource type="Theme" uid="uid://oy3t17qlmoo3" path="res://theme/MenuTheme.tres" id="3_f7ugc"]
+[ext_resource type="Script" uid="uid://dc6rdt23t06oi" path="res://scripts/levels/mini_game_2.gd" id="1_fw7ko"]
+[ext_resource type="PackedScene" uid="uid://42a153qruc5c" path="res://scenes/entities/mole.tscn" id="2_2rqse"]
+[ext_resource type="AudioStream" uid="uid://d1ce4a5lha533" path="res://assets/sounds/mole_intro.wav" id="2_fw7ko"]
+[ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="3_2q8ro"]
+[ext_resource type="AudioStream" uid="uid://cvvhflaq8syr2" path="res://assets/sounds/victory_theme_004.ogg" id="3_fw7ko"]
+[ext_resource type="PackedScene" uid="uid://pgvfx1i4tmb7" path="res://scenes/levels/mini_game_intro_2.tscn" id="4_32lln"]
+[ext_resource type="AudioStream" uid="uid://cn0x7pa4n1ial" path="res://assets/music/SongGirly_009_Loop.ogg" id="4_lqojs"]
+[ext_resource type="PackedScene" uid="uid://dau5pc3cvbgon" path="res://scenes/dialogs/dialog.tscn" id="5_u3yqj"]
+[ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="6_o87ru"]
+[ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="7_5n0ms"]
+[ext_resource type="Texture2D" uid="uid://ctrpimvv0bbrb" path="res://assets/art/mini_game_2/patch.png" id="11_2q8ro"]
+[ext_resource type="PackedScene" uid="uid://ikcn5nkt2wfm" path="res://scenes/entities/vegetable.tscn" id="13_fsirv"]
+[ext_resource type="Script" uid="uid://dpfwedxtpojag" path="res://scripts/entities/vegetable.gd" id="13_i3ujm"]
+[ext_resource type="Texture2D" uid="uid://if07reipecgm" path="res://assets/art/mini_game_2/carrot_head.png" id="14_kth5j"]
+[ext_resource type="Texture2D" uid="uid://m82xucnmyxnu" path="res://assets/art/mini_game_2/potato_head.png" id="14_n1dgv"]
+[ext_resource type="Texture2D" uid="uid://n8744e68lty2" path="res://assets/art/mini_game_2/beetroot_head.png" id="16_0m7ds"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/newbie_fairy.png" id="22_ef58g"]
 
-[sub_resource type="Resource" id="Resource_mylm7"]
-script = ExtResource("2_6neai")
+[sub_resource type="Resource" id="Resource_fsirv"]
+script = ExtResource("3_2q8ro")
 id = "mini_game_2"
 metadata/_custom_type_script = "uid://dgcvhq2w4qg1v"
 
-[node name="MiniGame" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("timer")]
-script = ExtResource("1_f82im")
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0y6n6"]
+vertices = PackedVector2Array(138, 75, 153, 674, 77, 676, 67, 74, 1146, 669, 163, 674, 161, 617, 801, 612.4453, 1145, 610, 810.39844, 612.375, 803, 407, 892, 407, 892, 607, 502, 408, 511, 613, 426, 608, 418, 407, 1167, 604, 1087, 602, 1083, 403, 1158, 402, 1137, 400, 151, 403, 150, 334, 1133, 333, 490, 155, 489, 329, 390, 332, 396, 151, 770, 332, 758, 159, 865, 161, 817.1094, 327.78906, 872, 327, 1135, 161, 1138, 330, 1061, 328, 1060, 159, 1133, 77, 1136, 153, 144, 149, 146, 75)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 8, 7), PackedInt32Array(9, 7, 10, 11, 12), PackedInt32Array(13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(32, 31, 33), PackedInt32Array(34, 35, 36, 37), PackedInt32Array(38, 39, 40, 41)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(77, 676, 153, 674, 138, 75, 67, 74), PackedVector2Array(163, 674, 1146, 669, 1145, 610, 161, 617), PackedVector2Array(758, 159, 770, 332, 817.11206, 327.78976, 872, 327, 865, 161), PackedVector2Array(150, 334, 1133, 333, 1137, 400, 151, 403), PackedVector2Array(1133, 77, 1136, 153, 144, 149, 146, 75), PackedVector2Array(1061, 328, 1138, 330, 1135, 161, 1060, 159), PackedVector2Array(418, 407, 426, 608, 511, 613, 502, 408), PackedVector2Array(803, 407, 801, 613, 892, 607, 892, 407), PackedVector2Array(1083, 403, 1087, 602, 1167, 604, 1158, 402), PackedVector2Array(396, 151, 390, 332, 489, 329, 490, 155)])
+agent_radius = 0.0
+
+[sub_resource type="Animation" id="Animation_ehxoj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vegetable:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_u5hb1"]
+resource_name = "pull"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vegetable:offset:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.0, -2.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uq15e"]
+_data = {
+&"RESET": SubResource("Animation_ehxoj"),
+&"pull": SubResource("Animation_u5hb1")
+}
+
+[node name="MiniGame2" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "victory_sound", "music", "navigation_map", "spawn_markers", "vegetables", "number_holder", "first_dialog", "last_dialog")]
+script = ExtResource("1_fw7ko")
+mini_game_intro = NodePath("MiniGameIntro_2")
+victory_sound = NodePath("Victory")
+music = NodePath("Music")
+timer_range = Vector2(1, 5)
+mole_scene = ExtResource("2_2rqse")
+max_moles = 10
+navigation_map = NodePath("Map/NavigationRegion2D")
+spawn_markers = [NodePath("Map/EntryPoints/Marker2D"), NodePath("Map/EntryPoints/Marker2D2"), NodePath("Map/EntryPoints/Marker2D3"), NodePath("Map/EntryPoints/Marker2D4"), NodePath("Map/EntryPoints/Marker2D6"), NodePath("Map/EntryPoints/Marker2D5"), NodePath("Map/EntryPoints/Marker2D7"), NodePath("Map/EntryPoints/Marker2D8"), NodePath("Map/EntryPoints/Marker2D9"), NodePath("Map/EntryPoints/Marker2D10"), NodePath("Map/EntryPoints/Marker2D11"), NodePath("Map/EntryPoints/Marker2D12"), NodePath("Map/EntryPoints/Marker2D13"), NodePath("Map/EntryPoints/Marker2D14")]
+vegetables = [NodePath("Map/Vegetables/Vegetable3"), NodePath("Map/Vegetables/Vegetable"), NodePath("Map/Vegetables/Vegetable4"), NodePath("Map/Vegetables/Vegetable5"), NodePath("Map/Vegetables/Vegetable6"), NodePath("Map/Vegetables/Vegetable7"), NodePath("Map/Vegetables/Vegetable8"), NodePath("Map/Vegetables/Vegetable9"), NodePath("Map/Vegetables/Vegetable10"), NodePath("Map/Vegetables/Vegetable11"), NodePath("Map/Vegetables/Vegetable12"), NodePath("Map/Vegetables/Vegetable13"), NodePath("Map/Vegetables/Vegetable14"), NodePath("Map/Vegetables/Vegetable15"), NodePath("Map/Vegetables/Vegetable16"), NodePath("Map/Vegetables/Vegetable17"), NodePath("Map/Vegetables/Vegetable18"), NodePath("Map/Vegetables/Vegetable19"), NodePath("Map/Vegetables/Vegetable20"), NodePath("Map/Vegetables/Vegetable21"), NodePath("Map/Vegetables/Vegetable22"), NodePath("Map/Vegetables/Vegetable23"), NodePath("Map/Vegetables/Vegetable24"), NodePath("Map/Vegetables/Vegetable2")]
+number_holder = NodePath("CanvasLayer/NumberHolder")
 next_level = "res://scenes/levels/map.tscn"
-timer = NodePath("Timer")
-state = SubResource("Resource_mylm7")
+first_dialog = NodePath("CanvasLayer/Dialog_0")
+last_dialog = NodePath("CanvasLayer/Dialog_3")
+state = SubResource("Resource_fsirv")
 
-[node name="Label" type="Label" parent="." unique_id=1738273280]
-offset_left = 394.0
-offset_top = 268.0
-offset_right = 736.0
-offset_bottom = 313.0
-theme = ExtResource("3_f7ugc")
-theme_override_colors/font_color = Color(0.34539708, 0.7059161, 0.9914041, 1)
-theme_override_font_sizes/font_size = 32
-text = "MINIGAME  2!!!!!!!!!!!!!!!!!"
+[node name="IntroSound" type="AudioStreamPlayer" parent="." unique_id=1789269393]
+stream = ExtResource("2_fw7ko")
+volume_db = -5.0
+autoplay = true
 
-[node name="Timer" type="Timer" parent="." unique_id=1843833189]
-wait_time = 2.0
-one_shot = true
-autostart = true
+[node name="Victory" type="AudioStreamPlayer" parent="." unique_id=1531315106]
+stream = ExtResource("3_fw7ko")
+volume_db = -10.0
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=2095100617]
+stream = ExtResource("4_lqojs")
+volume_db = -10.0
+autoplay = true
+
+[node name="MiniGameIntro_2" parent="." unique_id=809843581 instance=ExtResource("4_32lln")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1085494626]
+
+[node name="Dialog_0" parent="CanvasLayer" unique_id=1793182022 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_u3yqj")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -535.0
+offset_top = 30.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme = ExtResource("6_o87ru")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_2_DIALOG_0"
+next_dialog = NodePath("../Dialog_1")
+time_out = 4.0
+
+[node name="Dialog_1" parent="CanvasLayer" unique_id=1555376497 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_u3yqj")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -385.0
+offset_top = 30.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme = ExtResource("6_o87ru")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_2_DIALOG_1"
+next_dialog = NodePath("../Dialog_2")
+time_out = 4.0
+
+[node name="Dialog_2" parent="CanvasLayer" unique_id=386784480 instance=ExtResource("5_u3yqj")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -424.0
+offset_top = 30.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme = ExtResource("6_o87ru")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_2_DIALOG_2"
+time_out = 4.0
+
+[node name="Dialog_3" parent="CanvasLayer" unique_id=589213497 instance=ExtResource("5_u3yqj")]
+visible = false
+offset_left = 690.0
+offset_top = 37.0
+offset_right = 1139.0
+offset_bottom = 71.0
+theme = ExtResource("6_o87ru")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_2_DIALOG_3"
+time_out = 5.0
+
+[node name="NumberHolder" parent="CanvasLayer" unique_id=1606689379 instance=ExtResource("7_5n0ms")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -492.0
+offset_top = 33.0
+offset_right = -492.0
+offset_bottom = 33.0
+grow_horizontal = 2
+theme = ExtResource("6_o87ru")
+current_value = 30
+has_max_value = true
+max_value = 30
+
+[node name="Textures" type="Node" parent="." unique_id=687521404]
+
+[node name="Background" type="Sprite2D" parent="Textures" unique_id=115114646]
+z_index = -99
+position = Vector2(640, 360)
+texture = ExtResource("11_2q8ro")
+
+[node name="Helper" type="Sprite2D" parent="." unique_id=191884786]
+z_index = 99
+position = Vector2(1200, 95)
+scale = Vector2(0.27291667, 0.24856046)
+texture = ExtResource("22_ef58g")
+
+[node name="Map" type="Node" parent="." unique_id=969201818]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Map" unique_id=1945685114]
+position = Vector2(26, -2)
+navigation_polygon = SubResource("NavigationPolygon_0y6n6")
+
+[node name="NavigationLink2D" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1405920383]
+start_position = Vector2(848, 175)
+end_position = Vector2(848, 134)
+
+[node name="NavigationLink2D2" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1631469554]
+start_position = Vector2(151, 643)
+end_position = Vector2(180, 645)
+
+[node name="NavigationLink2D3" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1613898472]
+start_position = Vector2(137, 369)
+end_position = Vector2(169, 369)
+
+[node name="NavigationLink2D4" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1678236244]
+start_position = Vector2(128, 118)
+end_position = Vector2(156, 117)
+
+[node name="NavigationLink2D5" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=122448654]
+position = Vector2(-23, 2)
+start_position = Vector2(446, 124)
+end_position = Vector2(447, 162)
+
+[node name="NavigationLink2D16" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1843185374]
+position = Vector2(-23, 2)
+start_position = Vector2(488, 125)
+end_position = Vector2(487, 162)
+
+[node name="NavigationLink2D6" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1935681422]
+position = Vector2(-16, 5)
+start_position = Vector2(457, 384)
+end_position = Vector2(457, 421)
+
+[node name="NavigationLink2D14" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=29248452]
+position = Vector2(12, -1)
+start_position = Vector2(453, 308)
+end_position = Vector2(456, 345)
+
+[node name="NavigationLink2D15" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1714241848]
+start_position = Vector2(851, 313)
+end_position = Vector2(852, 352)
+
+[node name="NavigationLink2D17" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1937177034]
+position = Vector2(-21, 1)
+start_position = Vector2(814, 310)
+end_position = Vector2(816, 350)
+
+[node name="NavigationLink2D19" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1198271976]
+position = Vector2(15, -1)
+start_position = Vector2(398, 310)
+end_position = Vector2(399, 348)
+
+[node name="NavigationLink2D21" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1703551331]
+position = Vector2(-29, 5)
+start_position = Vector2(511, 385)
+end_position = Vector2(513, 423)
+
+[node name="NavigationLink2D22" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=404846669]
+position = Vector2(-27, 3)
+start_position = Vector2(525, 588)
+end_position = Vector2(526, 623)
+
+[node name="NavigationLink2D24" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=2082576813]
+position = Vector2(29, 0)
+start_position = Vector2(795, 586)
+end_position = Vector2(794, 620)
+
+[node name="NavigationLink2D26" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1883976239]
+position = Vector2(6, 0)
+start_position = Vector2(787, 136)
+end_position = Vector2(789, 183)
+
+[node name="NavigationLink2D7" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=187908803]
+position = Vector2(27, -1)
+start_position = Vector2(834, 390)
+end_position = Vector2(834, 424)
+
+[node name="NavigationLink2D12" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=883906890]
+position = Vector2(-8, 0)
+start_position = Vector2(834, 390)
+end_position = Vector2(834, 424)
+
+[node name="NavigationLink2D8" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=1293734666]
+start_position = Vector2(1117, 386)
+end_position = Vector2(1119, 418)
+
+[node name="NavigationLink2D10" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=551668181]
+start_position = Vector2(1128, 576)
+end_position = Vector2(1130, 619)
+
+[node name="NavigationLink2D11" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=2012888012]
+position = Vector2(16, 0)
+start_position = Vector2(848, 588)
+end_position = Vector2(851, 621)
+
+[node name="NavigationLink2D13" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=769786574]
+position = Vector2(-32, 2)
+start_position = Vector2(478, 591)
+end_position = Vector2(478, 627)
+
+[node name="NavigationLink2D9" type="NavigationLink2D" parent="Map/NavigationRegion2D" unique_id=548810804]
+start_position = Vector2(1101, 138)
+end_position = Vector2(1100, 167)
+
+[node name="EntryPoints" type="Node" parent="Map" unique_id=263319032]
+
+[node name="Marker2D" type="Marker2D" parent="Map/EntryPoints" unique_id=1529223955]
+position = Vector2(867, 750)
+
+[node name="Marker2D2" type="Marker2D" parent="Map/EntryPoints" unique_id=770023596]
+position = Vector2(504, 756)
+
+[node name="Marker2D3" type="Marker2D" parent="Map/EntryPoints" unique_id=1666580644]
+position = Vector2(143, 761)
+
+[node name="Marker2D4" type="Marker2D" parent="Map/EntryPoints" unique_id=885758623]
+position = Vector2(-48, 367)
+
+[node name="Marker2D6" type="Marker2D" parent="Map/EntryPoints" unique_id=1767980088]
+position = Vector2(-53, 646)
+
+[node name="Marker2D5" type="Marker2D" parent="Map/EntryPoints" unique_id=453372491]
+position = Vector2(-37, 120)
+
+[node name="Marker2D7" type="Marker2D" parent="Map/EntryPoints" unique_id=140479820]
+position = Vector2(139, -44)
+
+[node name="Marker2D8" type="Marker2D" parent="Map/EntryPoints" unique_id=61210799]
+position = Vector2(474, -49)
+
+[node name="Marker2D9" type="Marker2D" parent="Map/EntryPoints" unique_id=1566737232]
+position = Vector2(828, -51)
+
+[node name="Marker2D10" type="Marker2D" parent="Map/EntryPoints" unique_id=1542951377]
+position = Vector2(1121, -53)
+
+[node name="Marker2D11" type="Marker2D" parent="Map/EntryPoints" unique_id=116399414]
+position = Vector2(1346, 351)
+
+[node name="Marker2D12" type="Marker2D" parent="Map/EntryPoints" unique_id=1167812016]
+position = Vector2(1357, 596)
+
+[node name="Marker2D13" type="Marker2D" parent="Map/EntryPoints" unique_id=25376236]
+position = Vector2(1323, 114)
+
+[node name="Marker2D14" type="Marker2D" parent="Map/EntryPoints" unique_id=358859900]
+position = Vector2(1149, 742)
+
+[node name="Vegetables" type="Node" parent="Map" unique_id=673826513]
+
+[node name="Vegetable" type="Node2D" parent="Map/Vegetables" unique_id=62723174 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(220, 145)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable" unique_id=249534756]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_kth5j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable" unique_id=178839199]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable3" type="Node2D" parent="Map/Vegetables" unique_id=1233977365 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(234, 290)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable3" unique_id=1373730527]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_n1dgv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable3" unique_id=327429808]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable4" type="Node2D" parent="Map/Vegetables" unique_id=577294249 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(345, 145)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable4" unique_id=357914597]
+position = Vector2(-4.4, -5)
+scale = Vector2(0.70927835, 0.6947369)
+texture = ExtResource("16_0m7ds")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable4" unique_id=343898251]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable5" parent="Map/Vegetables" unique_id=1762106916 instance=ExtResource("13_fsirv")]
+position = Vector2(594, 148)
+
+[node name="Vegetable6" type="Node2D" parent="Map/Vegetables" unique_id=950756543 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(720, 145)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable6" unique_id=1570479252]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_n1dgv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable6" unique_id=1383787337]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable7" parent="Map/Vegetables" unique_id=1573019736 instance=ExtResource("13_fsirv")]
+position = Vector2(945, 148)
+
+[node name="Vegetable8" type="Node2D" parent="Map/Vegetables" unique_id=533977529 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(1051, 148)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable8" unique_id=821543686]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_0m7ds")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable8" unique_id=360204218]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable9" parent="Map/Vegetables" unique_id=734974661 instance=ExtResource("13_fsirv")]
+position = Vector2(1055, 271)
+
+[node name="Vegetable10" parent="Map/Vegetables" unique_id=1849338707 instance=ExtResource("13_fsirv")]
+position = Vector2(948, 285)
+
+[node name="Vegetable11" parent="Map/Vegetables" unique_id=1228097522 instance=ExtResource("13_fsirv")]
+position = Vector2(724, 279)
+
+[node name="Vegetable12" type="Node2D" parent="Map/Vegetables" unique_id=973693703 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(604, 271)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable12" unique_id=864755541]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_n1dgv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable12" unique_id=1797675723]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable13" parent="Map/Vegetables" unique_id=1025864620 instance=ExtResource("13_fsirv")]
+position = Vector2(609, 401)
+
+[node name="Vegetable14" parent="Map/Vegetables" unique_id=166143041 instance=ExtResource("13_fsirv")]
+position = Vector2(758, 409)
+
+[node name="Vegetable15" type="Node2D" parent="Map/Vegetables" unique_id=1655931868 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(969, 401)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable15" unique_id=778335330]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_0m7ds")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable15" unique_id=2111548815]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable16" parent="Map/Vegetables" unique_id=1968283462 instance=ExtResource("13_fsirv")]
+position = Vector2(1065, 403)
+
+[node name="Vegetable17" type="Node2D" parent="Map/Vegetables" unique_id=1649578398 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(1069, 548)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable17" unique_id=1451047133]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_n1dgv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable17" unique_id=462691475]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable18" parent="Map/Vegetables" unique_id=367271248 instance=ExtResource("13_fsirv")]
+position = Vector2(975, 546)
+
+[node name="Vegetable19" type="Node2D" parent="Map/Vegetables" unique_id=2142865611 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(759, 559)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable19" unique_id=2027952902]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_n1dgv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable19" unique_id=252875041]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable20" type="Node2D" parent="Map/Vegetables" unique_id=1850755210 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(622, 556)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable20" unique_id=963135190]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_0m7ds")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable20" unique_id=360874970]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable21" parent="Map/Vegetables" unique_id=2084093079 instance=ExtResource("13_fsirv")]
+position = Vector2(348, 296)
+
+[node name="Vegetable22" parent="Map/Vegetables" unique_id=614497310 instance=ExtResource("13_fsirv")]
+position = Vector2(231, 409)
+
+[node name="Vegetable23" type="Node2D" parent="Map/Vegetables" unique_id=740453646 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(237, 562)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable23" unique_id=1715397204]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("14_n1dgv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable23" unique_id=1808656386]
+libraries/ = SubResource("AnimationLibrary_uq15e")
+
+[node name="Vegetable24" parent="Map/Vegetables" unique_id=1526143793 instance=ExtResource("13_fsirv")]
+position = Vector2(360, 562)
+
+[node name="Vegetable2" type="Node2D" parent="Map/Vegetables" unique_id=1443397357 node_paths=PackedStringArray("animation_player")]
+z_index = -1
+position = Vector2(354, 399)
+script = ExtResource("13_i3ujm")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Vegetable" type="Sprite2D" parent="Map/Vegetables/Vegetable2" unique_id=1137086568]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_0m7ds")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map/Vegetables/Vegetable2" unique_id=1334187816]
+libraries/ = SubResource("AnimationLibrary_uq15e")

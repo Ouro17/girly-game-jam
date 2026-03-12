@@ -21,9 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://dgm2a1gocs0nd" path="res://assets/art/map/crown_3.png" id="14_beoo7"]
 [ext_resource type="PackedScene" uid="uid://dmh3vbkjjlhgm" path="res://scenes/entities/go_to_entity.tscn" id="15_3h8ha"]
 [ext_resource type="Texture2D" uid="uid://bgyhm8fyo7xv" path="res://assets/art/intro/girl.png" id="15_r5eo8"]
-[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/hadamadrina.png" id="16_qkk1i"]
-[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/hadanovata.png" id="18_bg8ub"]
-[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sorhada.png" id="19_2i82p"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/head_fairy.png" id="16_qkk1i"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/newbie_fairy.png" id="18_bg8ub"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sister_fairy.png" id="19_2i82p"]
 
 [sub_resource type="Resource" id="Resource_7ttt4"]
 script = ExtResource("2_0xv0b")

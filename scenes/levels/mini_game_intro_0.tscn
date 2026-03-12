@@ -108,7 +108,7 @@ offset_bottom = 687.0
 texture = ExtResource("3_5av16")
 expand_mode = 1
 
-[node name="Chicken" type="TextureRect" parent="." unique_id=1546622929]
+[node name="Avatar" type="TextureRect" parent="." unique_id=1546622929]
 offset_left = 217.0
 offset_top = 183.0
 offset_right = 535.0
@@ -116,7 +116,7 @@ offset_bottom = 503.0
 texture = SubResource("CompressedTexture2D_qd4ob")
 expand_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Chicken" unique_id=926066746]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Avatar" unique_id=926066746]
 libraries/ = SubResource("AnimationLibrary_ic330")
 autoplay = &"play"
 

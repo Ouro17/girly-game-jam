@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpqvaat11id51"
-path="res://.godot/imported/sorhada.png-b3192655c8e0d369a21684baa9ca5252.ctex"
+uid="uid://t36txt26o45w"
+path="res://.godot/imported/avatar_mini_game_2_0.png-11b8aa507f5cbb2268659eca18d9b3e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/sorhada.png"
-dest_files=["res://.godot/imported/sorhada.png-b3192655c8e0d369a21684baa9ca5252.ctex"]
+source_file="res://assets/art/mini_game_2/avatar_mini_game_2_0.png"
+dest_files=["res://.godot/imported/avatar_mini_game_2_0.png-11b8aa507f5cbb2268659eca18d9b3e6.ctex"]
 
 [params]
 

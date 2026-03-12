@@ -98,13 +98,11 @@ func _get_next_position() -> Vector2:
 
 func _update_facing(direction : Vector2) -> void:
     if abs(direction.x) > 0.1:
-
         var facing_right : bool = direction.x > 0
         sprite.flip_h = facing_right
 
         if facing_right:
             egg_position.position.x = -abs(egg_marker_base_position.x)
-
         else:
             egg_position.position.x = abs(egg_marker_base_position.x)
 

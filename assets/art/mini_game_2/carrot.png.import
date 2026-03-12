@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://prluh2xwdcl0"
-path="res://.godot/imported/hadamadrina.png-ba3b9720804646be2dfcdcf76874806b.ctex"
+uid="uid://i5byo7fg04db"
+path="res://.godot/imported/carrot.png-95dc1fb22546d35acea43c925dcdf846.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/hadamadrina.png"
-dest_files=["res://.godot/imported/hadamadrina.png-ba3b9720804646be2dfcdcf76874806b.ctex"]
+source_file="res://assets/art/mini_game_2/carrot.png"
+dest_files=["res://.godot/imported/carrot.png-95dc1fb22546d35acea43c925dcdf846.ctex"]
 
 [params]
 
