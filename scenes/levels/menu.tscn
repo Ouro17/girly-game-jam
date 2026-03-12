@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dw7ead3j6t8gy" path="res://scripts/levels/menu.gd" id="1_g3w80"]
 [ext_resource type="PackedScene" uid="uid://ibf70q74yfwx" path="res://scenes/UI/language_menu.tscn" id="2_k3l6u"]
 [ext_resource type="AudioStream" uid="uid://cja8tth7qtdlw" path="res://assets/music/SongGirly_007_Loop.ogg" id="2_w6ftq"]
+[ext_resource type="Theme" uid="uid://oy3t17qlmoo3" path="res://theme/MenuTheme.tres" id="3_6qf5j"]
 [ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="3_w6ftq"]
 [ext_resource type="Texture2D" uid="uid://dvss2qp5r1i2r" path="res://assets/art/menu/menu_cloud.png" id="4_6qf5j"]
 [ext_resource type="Texture2D" uid="uid://b0h6anyw5dx8o" path="res://assets/art/menu/menu_title_en.png" id="5_lt4mj"]
@@ -58,6 +59,7 @@ offset_right = 641.0
 offset_bottom = 364.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_6qf5j")
 texture = ExtResource("3_w6ftq")
 expand_mode = 1
 
@@ -73,6 +75,7 @@ offset_right = 223.5
 offset_bottom = -22.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_6qf5j")
 texture = ExtResource("4_6qf5j")
 
 [node name="Title" type="TextureRect" parent="." unique_id=570419397]
@@ -87,6 +90,7 @@ offset_right = 149.5
 offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_6qf5j")
 texture = ExtResource("5_lt4mj")
 expand_mode = 1
 
@@ -102,6 +106,7 @@ offset_right = 182.5
 offset_bottom = 331.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_6qf5j")
 texture = ExtResource("6_dexxl")
 
 [node name="Buttons" type="TextureRect" parent="." unique_id=937339618]
@@ -116,6 +121,7 @@ offset_right = 100.0
 offset_bottom = 246.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_6qf5j")
 texture = ExtResource("7_dnrjr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=967430876]
@@ -130,11 +136,13 @@ offset_right = 100.0
 offset_bottom = 245.75
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_6qf5j")
 theme_override_constants/separation = 30
 alignment = 1
 
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=2030694103]
 layout_mode = 2
+theme = ExtResource("3_6qf5j")
 theme_override_colors/font_color = Color(0.49098212, 0.295064, 0.6207165, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.22745098, 0.50980395, 1)
 theme_override_colors/font_hover_color = Color(0.5686275, 0.36078432, 0.70980394, 1)
@@ -147,6 +155,7 @@ text = "UI_START"
 
 [node name="LanguageMenu" parent="VBoxContainer" unique_id=475097680 instance=ExtResource("2_k3l6u")]
 layout_mode = 2
+theme = ExtResource("3_6qf5j")
 theme_override_colors/font_color = Color(0.49019608, 0.29411766, 0.61960787, 1)
 theme_override_colors/font_pressed_color = Color(0.39882186, 0.229078, 0.5097498, 1)
 theme_override_colors/font_hover_color = Color(0.5686275, 0.36078432, 0.70980394, 1)
@@ -159,6 +168,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_iymd4")
 
 [node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=181314830]
 layout_mode = 2
+theme = ExtResource("3_6qf5j")
 theme_override_colors/font_color = Color(0.49098212, 0.295064, 0.6207165, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.22745098, 0.50980395, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.56822467, 0.35882944, 0.70866555, 1)

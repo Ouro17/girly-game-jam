@@ -1,6 +1,6 @@
 # Fairies Helper Initiative
 
-Fairies Helper Initiative is a game made for the game jam [Girly Game Jam](https://itch.io/jam/-girly-game-jam-3-1).
+Fairies Helper Initiative is a game made for the game jam [Girly Game Jam 2026](https://itch.io/jam/-girly-game-jam-3-1).
 
 The goal fo the jam is to make a game that resemble the quirkiness of girly games in early 2000s.
 
@@ -113,6 +113,14 @@ Here is a video of the first minigame
 [![Day 5 progress](https://img.youtube.com/vi/efh3PhLnlbA/0.jpg)](https://www.youtube.com/watch?v=efh3PhLnlbA)
 
 
+### Day 6
+
+Goals:
+- [x] Finish intro and outro
+- [x] Finish third minigame
+- [x] Add new fonts and ensure that they work on web
+
+
 ## Tools used
 - Godot 4.6
 - vscodium
@@ -122,8 +130,17 @@ Here is a video of the first minigame
 ## Credits
 
 ### From [Artepodrez](https://www.pexels.com/es-es/@artempodrez/)
+
 [Blue background](https://www.pexels.com/es-es/foto/arte-creativo-espacio-azul-7232658/)
 
 [Green background](https://www.pexels.com/es-es/foto/textura-abstracto-resumen-verde-7233124/)
 
-TODO Credit house frame
+### From [tohamina](https://www.freepik.es/autor/tohamina)
+
+[Cardboard house](https://www.freepik.es/psd-gratis/adorable-modelo-casa-carton-simbolo-hogar-suenos_409867895.htm#fromView=keyword&page=1&position=0&uuid=480b355d-d059-498e-ae81-38b0b69a88e6&query=Casa+carton)
+
+### Fonts
+
+- [Ribeye](https://fonts.google.com/specimen/Ribeye) for dialogs
+- [Emilys Candy](https://fonts.google.com/specimen/Emilys+Candy) for the menu
+- [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP) for everything in Japanese

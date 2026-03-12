@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dw841tvp77agh" path="res://scripts/levels/mini_game.gd" id="1_f82im"]
 [ext_resource type="Script" uid="uid://dgcvhq2w4qg1v" path="res://scripts/utils/state.gd" id="2_6neai"]
+[ext_resource type="Theme" uid="uid://oy3t17qlmoo3" path="res://theme/MenuTheme.tres" id="3_f7ugc"]
 
 [sub_resource type="Resource" id="Resource_mylm7"]
 script = ExtResource("2_6neai")
@@ -19,6 +20,7 @@ offset_left = 394.0
 offset_top = 268.0
 offset_right = 736.0
 offset_bottom = 313.0
+theme = ExtResource("3_f7ugc")
 theme_override_colors/font_color = Color(0.34539708, 0.7059161, 0.9914041, 1)
 theme_override_font_sizes/font_size = 32
 text = "MINIGAME  2!!!!!!!!!!!!!!!!!"

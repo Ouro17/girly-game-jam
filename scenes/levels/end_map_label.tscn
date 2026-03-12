@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dmsg4yhttrq6w"]
 
 [ext_resource type="Script" uid="uid://bw375rgxxwjv3" path="res://scripts/levels/end_map_label.gd" id="1_a5wig"]
+[ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="1_ylj5j"]
 
 [node name="EndMapLabel" type="Label" unique_id=2145342449]
+theme = ExtResource("1_ylj5j")
 theme_override_colors/font_color = Color(0.9667881, 0.00076720415, 0.9667817, 1)
 theme_override_font_sizes/font_size = 40
 text = "WELL DONE, YOU WON!"

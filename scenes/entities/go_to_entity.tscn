@@ -4,10 +4,11 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_esgp8"]
 
-[node name="GoToEntity" type="CharacterBody2D" unique_id=1201763383]
+[node name="GoToEntity" type="CharacterBody2D" unique_id=1201763383 node_paths=PackedStringArray("sprite")]
 motion_mode = 1
 script = ExtResource("1_sky13")
 movement_threshold = 20.0
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114708631]
 

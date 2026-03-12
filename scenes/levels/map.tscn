@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dnfws5iivk2id" path="res://scenes/UI/task_list.tscn" id="3_4u8by"]
 [ext_resource type="Texture2D" uid="uid://dnbkdnvf0dfv0" path="res://assets/art/map/pexels-artempodrez-7232658.jpg" id="3_k16km"]
 [ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="4_05abr"]
+[ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="4_o1cqd"]
 [ext_resource type="AudioStream" uid="uid://w3b1naosdtp1" path="res://assets/music/SongGirly_001v1_Loop.ogg" id="5_dim3t"]
 [ext_resource type="PackedScene" uid="uid://dmsg4yhttrq6w" path="res://scenes/levels/end_map_label.tscn" id="5_ex8ba"]
 [ext_resource type="PackedScene" uid="uid://mm40ut7gce2" path="res://scenes/entities/player.tscn" id="6_gpbhb"]
@@ -119,6 +120,7 @@ offset_top = 17.0
 offset_right = -34.0
 offset_bottom = 140.0
 grow_horizontal = 0
+theme = ExtResource("4_o1cqd")
 
 [node name="EndMapLabel" parent="CanvasLayer" unique_id=2145342449 instance=ExtResource("5_ex8ba")]
 visible = false
@@ -386,6 +388,7 @@ offset_left = -107.0
 offset_top = -38.0
 offset_right = 48.0
 offset_bottom = -15.0
+theme = ExtResource("4_o1cqd")
 text = "TASK_MINIGAME_0"
 
 [node name="LevelEntrance_1" type="Area2D" parent="Entrances" unique_id=991618904]
@@ -402,6 +405,7 @@ offset_left = -60.0
 offset_top = 43.0
 offset_right = 62.0
 offset_bottom = 66.0
+theme = ExtResource("4_o1cqd")
 text = "TASK_MINIGAME_1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -419,6 +423,7 @@ offset_left = -74.0
 offset_top = 43.0
 offset_right = 97.0
 offset_bottom = 66.0
+theme = ExtResource("4_o1cqd")
 text = "TASK_MINIGAME_2"
 
 [node name="Player" parent="." unique_id=2046264894 instance=ExtResource("6_gpbhb")]

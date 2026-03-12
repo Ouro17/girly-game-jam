@@ -1,37 +1,510 @@
 [gd_scene format=3 uid="uid://dnetkr2kpe0fr"]
 
 [ext_resource type="Script" uid="uid://7uxw3exeql56" path="res://scripts/levels/outro.gd" id="1_tqx5r"]
+[ext_resource type="AudioStream" uid="uid://ip2onyi20pyy" path="res://assets/music/SongGirly_004.ogg" id="2_dxqrg"]
+[ext_resource type="Script" uid="uid://b5shl5kxdjpjm" path="res://scripts/entities/intro_entry.gd" id="2_j70xl"]
 [ext_resource type="PackedScene" uid="uid://ci7sny2kjdnbh" path="res://scenes/UI/flash_label.tscn" id="2_y7qv2"]
+[ext_resource type="Texture2D" uid="uid://cvkkjad1t811r" path="res://assets/art/intro/dialog_box.png" id="3_j70xl"]
+[ext_resource type="PackedScene" uid="uid://dau5pc3cvbgon" path="res://scenes/dialogs/dialog.tscn" id="5_ey8bw"]
+[ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="6_ey8bw"]
+[ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="6_u8tpa"]
+[ext_resource type="Texture2D" uid="uid://dhlw08ifbglr" path="res://assets/art/map/trunk_1.png" id="7_pr0uv"]
+[ext_resource type="Texture2D" uid="uid://bxk72gtujsj3m" path="res://assets/art/map/trunk_4.png" id="8_f1x7h"]
+[ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="9_6qhlp"]
+[ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="10_g6uq8"]
+[ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="11_ik2ll"]
+[ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="12_f2jod"]
+[ext_resource type="Texture2D" uid="uid://bn700dfokopay" path="res://assets/art/map/trunk_5.png" id="13_0hlyj"]
+[ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="14_lmhhd"]
+[ext_resource type="Texture2D" uid="uid://wevrjgt31jrk" path="res://assets/art/map/crown_4.png" id="15_lbma2"]
+[ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="16_ik23h"]
+[ext_resource type="Texture2D" uid="uid://dgm2a1gocs0nd" path="res://assets/art/map/crown_3.png" id="17_8dybj"]
+[ext_resource type="PackedScene" uid="uid://dmh3vbkjjlhgm" path="res://scenes/entities/go_to_entity.tscn" id="18_4bsmt"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/hadanovata.png" id="19_qss0p"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/hadamadrina.png" id="20_y16sc"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sorhada.png" id="21_w8wua"]
+[ext_resource type="Texture2D" uid="uid://bgyhm8fyo7xv" path="res://assets/art/intro/girl.png" id="22_t70ky"]
 
-[node name="Outro" type="Node2D" unique_id=1411035401 node_paths=PackedStringArray("timer")]
+[sub_resource type="Resource" id="Resource_ey8bw"]
+script = ExtResource("2_j70xl")
+metadata/_custom_type_script = "uid://b5shl5kxdjpjm"
+
+[sub_resource type="Resource" id="Resource_u8tpa"]
+script = ExtResource("2_j70xl")
+entity = 1
+metadata/_custom_type_script = "uid://b5shl5kxdjpjm"
+
+[sub_resource type="Resource" id="Resource_pr0uv"]
+script = ExtResource("2_j70xl")
+entity = 2
+metadata/_custom_type_script = "uid://b5shl5kxdjpjm"
+
+[sub_resource type="Resource" id="Resource_f1x7h"]
+script = ExtResource("2_j70xl")
+entity = 3
+metadata/_custom_type_script = "uid://b5shl5kxdjpjm"
+
+[node name="Outro" type="Node2D" unique_id=1411035401 node_paths=PackedStringArray("flash_label", "dialog_cloud", "entities", "girl_markers", "fairy_0", "fairy_1", "fairy_2", "dialogs")]
 script = ExtResource("1_tqx5r")
 next_level = "res://scenes/levels/menu.tscn"
-timer = NodePath("Timer")
+flash_label = NodePath("CanvasLayer/FlashLabel")
+dialog_cloud = NodePath("CanvasLayer/DialogCloud")
+entries = Array[ExtResource("2_j70xl")]([SubResource("Resource_ey8bw"), SubResource("Resource_u8tpa"), SubResource("Resource_pr0uv"), SubResource("Resource_f1x7h")])
+entities = [NodePath("Girl"), NodePath("Fairy_0"), NodePath("Fairy_1"), NodePath("Fairy_2")]
+girl_markers = [NodePath("GirlPositions/GirlPosition_0")]
+fairy_0 = [NodePath("Fairy_0_Positions/Fairy_0_Position_0"), NodePath("Fairy_0_Positions/Fairy_0_Position_1")]
+fairy_1 = [NodePath("Fairy_1_Positions/Fairy_1_Position_0"), NodePath("Fairy_1_Positions/Fairy_1_Position_1")]
+fairy_2 = [NodePath("Fairy_2_Positions/Fairy_2_Position_0"), NodePath("Fairy_2_Positions/Fairy_2_Position_1")]
+dialogs = [NodePath("CanvasLayer/Dialog0"), NodePath("CanvasLayer/Dialog1"), NodePath("CanvasLayer/Dialog2"), NodePath("CanvasLayer/Dialog3"), NodePath("CanvasLayer/Dialog4"), NodePath("CanvasLayer/Dialog5"), NodePath("CanvasLayer/Dialog6"), NodePath("CanvasLayer/Dialog7"), NodePath("CanvasLayer/Dialog8"), NodePath("CanvasLayer/Dialog9"), NodePath("CanvasLayer/Dialog10")]
 
-[node name="Timer" type="Timer" parent="." unique_id=103133537]
-wait_time = 2.0
-one_shot = true
-autostart = true
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1215339404]
+stream = ExtResource("2_dxqrg")
+volume_db = -10.0
+autoplay = true
 
-[node name="Control" type="Control" parent="." unique_id=429794114]
-layout_mode = 3
-anchors_preset = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=480374430]
 
-[node name="FlashLabel" parent="Control" unique_id=405698615 instance=ExtResource("2_y7qv2")]
-layout_mode = 1
-offset_left = 935.0
-offset_top = 601.0
-offset_right = 1122.0
-offset_bottom = 624.0
+[node name="DialogCloud" type="TextureRect" parent="CanvasLayer" unique_id=695349894]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -529.5
+offset_top = -220.0
+offset_right = 529.5
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_j70xl")
+
+[node name="FlashLabel" parent="CanvasLayer" unique_id=405698615 instance=ExtResource("2_y7qv2")]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -399.0
+offset_top = -35.0
+offset_right = -175.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
 size_flags_vertical = 8
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.19765186, 0.39458627, 0.56214315, 1)
+theme_override_font_sizes/font_size = 20
+text = "UI_PRESS_ANY_TO_CONTINUE"
+loops = 4
 
-[node name="Label" type="Label" parent="Control" unique_id=1480088035]
-layout_mode = 1
-offset_left = 508.0
-offset_top = 267.0
-offset_right = 628.0
-offset_bottom = 314.0
-theme_override_font_sizes/font_size = 34
-text = "OUTRO"
+[node name="Dialog0" parent="CanvasLayer" unique_id=1793182022 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -193.5
+offset_top = -87.0
+offset_right = 193.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_0"
+next_dialog = NodePath("../Dialog1")
+
+[node name="Dialog1" parent="CanvasLayer" unique_id=1797355821 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -197.0
+offset_top = -87.0
+offset_right = 197.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.95686275, 0.85490197, 0.08235294, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_1"
+next_dialog = NodePath("../Dialog2")
+
+[node name="Dialog2" parent="CanvasLayer" unique_id=1414384876 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -149.0
+offset_top = -87.0
+offset_right = 149.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.6509804, 0.3882353, 0.98039216, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_2"
+next_dialog = NodePath("../Dialog3")
+
+[node name="Dialog3" parent="CanvasLayer" unique_id=1788690372 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -87.0
+offset_right = 279.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.6509804, 0.3882353, 0.98039216, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_3"
+next_dialog = NodePath("../Dialog4")
+
+[node name="Dialog4" parent="CanvasLayer" unique_id=1411142098 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -87.0
+offset_right = 120.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.80784315, 0.4509804, 0.03137255, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_4"
+next_dialog = NodePath("../Dialog5")
+
+[node name="Dialog5" parent="CanvasLayer" unique_id=407055132 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -271.5
+offset_top = -87.0
+offset_right = 271.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.80784315, 0.4509804, 0.03137255, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_5"
+next_dialog = NodePath("../Dialog6")
+
+[node name="Dialog6" parent="CanvasLayer" unique_id=509335012 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -327.0
+offset_top = -87.0
+offset_right = 327.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.80784315, 0.4509804, 0.03137255, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_6"
+next_dialog = NodePath("../Dialog7")
+
+[node name="Dialog7" parent="CanvasLayer" unique_id=1210329897 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.0
+offset_top = -87.0
+offset_right = 169.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_7"
+next_dialog = NodePath("../Dialog8")
+
+[node name="Dialog8" parent="CanvasLayer" unique_id=934493708 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -347.5
+offset_top = -87.0
+offset_right = 347.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_8"
+next_dialog = NodePath("../Dialog9")
+
+[node name="Dialog9" parent="CanvasLayer" unique_id=973588491 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -281.5
+offset_top = -87.0
+offset_right = 281.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_9"
+next_dialog = NodePath("../Dialog10")
+
+[node name="Dialog10" parent="CanvasLayer" unique_id=2057949737 instance=ExtResource("5_ey8bw")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -222.5
+offset_top = -87.0
+offset_right = 222.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_ey8bw")
+theme_override_colors/font_color = Color(0.80784315, 0.4509804, 0.03137255, 1)
+theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+theme_override_font_sizes/font_size = 28
+text = "OUTRO_DIALOG_10"
+
+[node name="Textures" type="Node" parent="." unique_id=1082946868]
+
+[node name="Background" type="Sprite2D" parent="Textures" unique_id=1703066542]
+z_index = -99
+position = Vector2(640, 359.5)
+scale = Vector2(0.37094906, 0.117350265)
+texture = ExtResource("6_u8tpa")
+
+[node name="Trunk6" type="Sprite2D" parent="Textures" unique_id=1769818722]
+position = Vector2(909, 28)
+texture = ExtResource("7_pr0uv")
+
+[node name="Trunk4" type="Sprite2D" parent="Textures" unique_id=307653861]
+position = Vector2(257, 171)
+scale = Vector2(2.6111112, 2.0783134)
+texture = ExtResource("8_f1x7h")
+
+[node name="Trunk2" type="Sprite2D" parent="Textures" unique_id=1114797470]
+position = Vector2(363.99997, 117.99999)
+scale = Vector2(1.9827586, 1.9272727)
+texture = ExtResource("9_6qhlp")
+
+[node name="Crown17" type="Sprite2D" parent="Textures" unique_id=59997615]
+position = Vector2(411, 25)
+texture = ExtResource("10_g6uq8")
+
+[node name="Crown15" type="Sprite2D" parent="Textures" unique_id=370005159]
+position = Vector2(400, 100)
+texture = ExtResource("11_ik2ll")
+
+[node name="Trunk3" type="Sprite2D" parent="Textures" unique_id=838462367]
+position = Vector2(658, 244.00002)
+scale = Vector2(1.8179834, 2.1542792)
+texture = ExtResource("12_f2jod")
+
+[node name="Trunk5" type="Sprite2D" parent="Textures" unique_id=1696133289]
+position = Vector2(146, 212)
+scale = Vector2(3.7368422, 2.3679245)
+texture = ExtResource("13_0hlyj")
+
+[node name="Trunk1" type="Sprite2D" parent="Textures" unique_id=1298046398]
+position = Vector2(1112, 96.00003)
+scale = Vector2(1.6639347, 1.9931507)
+texture = ExtResource("7_pr0uv")
+
+[node name="Crown0" type="Sprite2D" parent="Textures" unique_id=1870910838]
+position = Vector2(731.00006, 131)
+scale = Vector2(3.740385, 2.5681818)
+texture = ExtResource("14_lmhhd")
+
+[node name="Crown1" type="Sprite2D" parent="Textures" unique_id=1849714615]
+position = Vector2(520, 150.00002)
+scale = Vector2(2.2053573, 1.45)
+texture = ExtResource("11_ik2ll")
+
+[node name="Crown4" type="Sprite2D" parent="Textures" unique_id=970090174]
+position = Vector2(709, 46.000004)
+scale = Vector2(1.7247192, 1.3227848)
+texture = ExtResource("15_lbma2")
+
+[node name="Crown2" type="Sprite2D" parent="Textures" unique_id=279695521]
+position = Vector2(527, 44)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("16_ik23h")
+
+[node name="Crown5" type="Sprite2D" parent="Textures" unique_id=4269226]
+position = Vector2(304.99994, 57)
+scale = Vector2(1.53937, 1.5791367)
+texture = ExtResource("10_g6uq8")
+
+[node name="Crown3" type="Sprite2D" parent="Textures" unique_id=1258668567]
+position = Vector2(132.00003, 57.000008)
+scale = Vector2(3.740385, 2.5681818)
+texture = ExtResource("14_lmhhd")
+
+[node name="Crown6" type="Sprite2D" parent="Textures" unique_id=151265003]
+position = Vector2(222, 116.00001)
+scale = Vector2(2.2053573, 1.45)
+texture = ExtResource("11_ik2ll")
+
+[node name="Crown7" type="Sprite2D" parent="Textures" unique_id=280597102]
+position = Vector2(80.99997, 132)
+scale = Vector2(1.7247192, 1.3227848)
+texture = ExtResource("15_lbma2")
+
+[node name="Crown8" type="Sprite2D" parent="Textures" unique_id=464085621]
+position = Vector2(123, 101)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("16_ik23h")
+
+[node name="Crown9" type="Sprite2D" parent="Textures" unique_id=1377947690]
+position = Vector2(120.00001, 42)
+scale = Vector2(1.53937, 1.5791367)
+texture = ExtResource("10_g6uq8")
+
+[node name="Crown10" type="Sprite2D" parent="Textures" unique_id=709320270]
+position = Vector2(1120, 103)
+scale = Vector2(3.740385, 2.5681818)
+texture = ExtResource("14_lmhhd")
+
+[node name="Crown11" type="Sprite2D" parent="Textures" unique_id=180840600]
+position = Vector2(1188.5, 100.75001)
+scale = Vector2(2.2053573, 1.45)
+texture = ExtResource("11_ik2ll")
+
+[node name="Crown12" type="Sprite2D" parent="Textures" unique_id=592721858]
+position = Vector2(1188, 67.00001)
+scale = Vector2(1.7247192, 1.3227848)
+texture = ExtResource("15_lbma2")
+
+[node name="Crown13" type="Sprite2D" parent="Textures" unique_id=372939160]
+position = Vector2(1035, 48)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("16_ik23h")
+
+[node name="Crown14" type="Sprite2D" parent="Textures" unique_id=1991114152]
+position = Vector2(1243, 103)
+scale = Vector2(1.53937, 1.5791367)
+texture = ExtResource("10_g6uq8")
+
+[node name="Crown16" type="Sprite2D" parent="Textures" unique_id=2093324218]
+position = Vector2(918, 35)
+texture = ExtResource("17_8dybj")
+
+[node name="Fairy_0" parent="." unique_id=1201763383 instance=ExtResource("18_4bsmt")]
+z_index = 100
+position = Vector2(1592, 312)
+
+[node name="Sprite2D" parent="Fairy_0" index="0" unique_id=1114708631]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_qss0p")
+
+[node name="Fairy_1" parent="." unique_id=497390513 instance=ExtResource("18_4bsmt")]
+z_index = 100
+position = Vector2(1453, 309)
+
+[node name="Sprite2D" parent="Fairy_1" index="0" unique_id=1114708631]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_y16sc")
+
+[node name="Fairy_2" parent="." unique_id=882597083 instance=ExtResource("18_4bsmt")]
+z_index = 100
+position = Vector2(1497, 335)
+
+[node name="Sprite2D" parent="Fairy_2" index="0" unique_id=1114708631]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_w8wua")
+
+[node name="Girl" parent="." unique_id=64386220 instance=ExtResource("18_4bsmt")]
+z_index = 1
+position = Vector2(1471, 430)
+
+[node name="Sprite2D" parent="Girl" index="0" unique_id=1114708631]
+position = Vector2(8, -141)
+scale = Vector2(0.71934867, 0.72356826)
+texture = ExtResource("22_t70ky")
+flip_h = true
+
+[node name="GirlPositions" type="Node" parent="." unique_id=2063156379]
+
+[node name="GirlPosition_0" type="Marker2D" parent="GirlPositions" unique_id=1334714451]
+position = Vector2(1104, 424)
+
+[node name="Fairy_0_Positions" type="Node" parent="." unique_id=1795920941]
+
+[node name="Fairy_0_Position_0" type="Marker2D" parent="Fairy_0_Positions" unique_id=1960837067]
+position = Vector2(744, 404)
+
+[node name="Fairy_0_Position_1" type="Marker2D" parent="Fairy_0_Positions" unique_id=1615681238]
+position = Vector2(-108, -7)
+
+[node name="Fairy_1_Positions" type="Node" parent="." unique_id=395428369]
+
+[node name="Fairy_1_Position_0" type="Marker2D" parent="Fairy_1_Positions" unique_id=830150333]
+position = Vector2(638, 338)
+
+[node name="Fairy_1_Position_1" type="Marker2D" parent="Fairy_1_Positions" unique_id=1548129506]
+position = Vector2(-80, -69)
+
+[node name="Fairy_2_Positions" type="Node" parent="." unique_id=2116436288]
+
+[node name="Fairy_2_Position_0" type="Marker2D" parent="Fairy_2_Positions" unique_id=1739411683]
+position = Vector2(644, 449)
+
+[node name="Fairy_2_Position_1" type="Marker2D" parent="Fairy_2_Positions" unique_id=349908]
+position = Vector2(-168, 38)
+
+[editable path="Fairy_0"]
+[editable path="Fairy_1"]
+[editable path="Fairy_2"]
+[editable path="Girl"]

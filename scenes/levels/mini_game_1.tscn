@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="11_frj36"]
 [ext_resource type="Texture2D" uid="uid://wevrjgt31jrk" path="res://assets/art/map/crown_4.png" id="12_diq7j"]
 [ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="13_x74sk"]
+[ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="14_2pi3j"]
 [ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="14_18wxj"]
 [ext_resource type="Texture2D" uid="uid://bn700dfokopay" path="res://assets/art/map/trunk_5.png" id="15_diq7j"]
 [ext_resource type="Texture2D" uid="uid://dhlw08ifbglr" path="res://assets/art/map/trunk_1.png" id="16_x74sk"]
@@ -87,6 +88,7 @@ offset_top = 30.0
 offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
+theme = ExtResource("14_2pi3j")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_0"
 next_dialog = NodePath("../Dialog_1")
@@ -102,6 +104,7 @@ offset_top = 30.0
 offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
+theme = ExtResource("14_2pi3j")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_1"
 next_dialog = NodePath("../Dialog_2")
@@ -117,6 +120,7 @@ offset_top = 30.0
 offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
+theme = ExtResource("14_2pi3j")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_2"
 time_out = 4.0
@@ -127,6 +131,7 @@ offset_left = 690.0
 offset_top = 37.0
 offset_right = 1139.0
 offset_bottom = 71.0
+theme = ExtResource("14_2pi3j")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_3"
 time_out = 5.0
@@ -136,8 +141,9 @@ offset_left = 83.0
 offset_top = 638.0
 offset_right = 83.0
 offset_bottom = 638.0
+theme = ExtResource("14_2pi3j")
 has_max_value = true
-max_value = 3
+max_value = 15
 
 [node name="Textures" type="Node" parent="." unique_id=917866759]
 

@@ -18,7 +18,7 @@ func _ready():
 
 func start_flashing() -> void:
     tween = create_tween()
-    tween.tween_property(self, "modulate:a", 0.0, flash_interval)
     tween.tween_property(self, "modulate:a", 1.0, flash_interval)
+    tween.tween_property(self, "modulate:a", 0.0, flash_interval)
     tween.set_trans(Tween.TRANS_BOUNCE)
     tween.set_loops(loops)

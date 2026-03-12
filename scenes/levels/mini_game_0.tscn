@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b7bpm2ikemrpt" path="res://assets/art/mini_game_0/chicken_run_fence_front.png" id="7_0hdmg"]
 [ext_resource type="Texture2D" uid="uid://dgip1ddxrhe4y" path="res://assets/art/mini_game_0/basket_pink.png" id="7_458go"]
 [ext_resource type="PackedScene" uid="uid://be0xickamo2pv" path="res://scenes/entities/chicken.tscn" id="7_nfofj"]
+[ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="7_w7lsb"]
 [ext_resource type="Texture2D" uid="uid://cs46ckogfhwgu" path="res://assets/art/mini_game_0/basket_green.png" id="8_310pp"]
 [ext_resource type="PackedScene" uid="uid://dau5pc3cvbgon" path="res://scenes/dialogs/dialog.tscn" id="14_0hdmg"]
 [ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="15_g1s10"]
@@ -71,6 +72,7 @@ offset_top = 30.0
 offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
+theme = ExtResource("7_w7lsb")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_0"
 next_dialog = NodePath("../Dialog_1")
@@ -86,6 +88,7 @@ offset_top = 30.0
 offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
+theme = ExtResource("7_w7lsb")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_1"
 next_dialog = NodePath("../Dialog_2")
@@ -101,6 +104,7 @@ offset_top = 30.0
 offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
+theme = ExtResource("7_w7lsb")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_2"
 time_out = 4.0
@@ -111,6 +115,7 @@ offset_left = 748.0
 offset_top = 30.0
 offset_right = 1098.0
 offset_bottom = 64.0
+theme = ExtResource("7_w7lsb")
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_3"
 time_out = 4.0
@@ -120,6 +125,7 @@ offset_left = 1188.0
 offset_top = 273.0
 offset_right = 1188.0
 offset_bottom = 273.0
+theme = ExtResource("7_w7lsb")
 has_max_value = true
 max_value = 10
 
@@ -128,6 +134,7 @@ offset_left = 1188.0
 offset_top = 426.0
 offset_right = 1188.0
 offset_bottom = 426.0
+theme = ExtResource("7_w7lsb")
 has_max_value = true
 max_value = 10
 
@@ -136,6 +143,7 @@ offset_left = 1188.0
 offset_top = 580.0
 offset_right = 1188.0
 offset_bottom = 580.0
+theme = ExtResource("7_w7lsb")
 has_max_value = true
 max_value = 10
 

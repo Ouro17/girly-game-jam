@@ -6,10 +6,16 @@ signal target_reached(entity : GoToEntity)
 @export
 var movement_threshold : float
 
+@export
+var sprite : Sprite2D
+
 var speed : float = 0
 var target_position: Vector2
 var is_going_to_target : bool
 var id : int
+
+func flip()->void:
+    sprite.flip_h = ! sprite.flip_h
 
 func set_id(new_id:int)->void:
     id = new_id

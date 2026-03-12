@@ -1,16 +1,38 @@
 keys,en,es,ja
-INTERACTION_TALK,Talk,Hablar,話す
-INTERACTION_USE,Use,Usar,使う
-INTRO_DIALOG_0,Example Dialog,Dialogo de ejemplo,Example Dialog
-INTRO_DIALOG_1,Final Dialog,Dialogo final,Final Dialog
+INTRO_DIALOG_0,Oh! My parents are gone because the newborn!,¡Oh! ¡Mis padres se fueron por el recién nacido!,あっ！赤ちゃんが生まれたから、両親はいなくなっちゃった！
+INTRO_DIALOG_1,What I can do for myself?,¿Qué puedo hacer yo sola?,私はどうしたらいいの？
+INTRO_DIALOG_2,It is too much work in the farm!,¡Hay demasiado trabajo en la granja!,農場の仕事が多すぎるよ！
+INTRO_DIALOG_3,If only someone could help me!,¡Si tan solo alguien pudiera ayudarme!,誰か助けてくれたらいいのに！
+INTRO_DIALOG_4,You see? I was right. She is alone and need help!,¿Lo ves? Tenía razón. ¡Está sola y necesita ayuda!,ほらね？言った通りだ。彼女は一人で助けが必要だ！
+INTRO_DIALOG_5,You are right! Let's send the newbie to help her.,¡Tienes razón! Enviemos al novato para ayudarla.,その通り！新人を送って手伝わせよう。
+INTRO_DIALOG_6,You there! Don't be shy! Help her!,¡Tú! ¡No seas tímido! ¡Ayúdala!,そこのあなた！恥ずかしがらないで！手伝って！
+INTRO_DIALOG_6,Me? Are you sure? Okay...,¿Yo? ¿Seguro? Bueno...,私？？本当に？？わ、わかりました。。。
+INTRO_DIALOG_7,Hello little girl!,¡Hola pequeña!,こんにちは、小さな女の子！
+INTRO_DIALOG_8,A Fairy!,¡Un hada!,妖精だ！
+INTRO_DIALOG_9,Yes! We are from the FCI and we are here to help you!,¡Sí! Somos de la FCI y estamos aquí para ayudarte.,そう！私たちはFCIから来て、あなたを助けに来たの！
+INTRO_DIALOG_10,Oh! Thank you fairy! I have so much work in the farm!,¡Oh! ¡Gracias hada! ¡Tengo muchísimo trabajo en la granja!,わあ！ありがとう妖精さん！農場の仕事がたくさんあるの！
+INTRO_DIALOG_11,We can do any kind of work! Guide us to the farm!,¡Podemos hacer cualquier tipo de trabajo! ¡Guíanos a la granja!,どんな仕事でもできるよ！農場へ案内して！
+INTRO_DIALOG_12,Thank you! Follow me!,¡Gracias! ¡Sígueme!,ありがとう！ついてきて！
+INTRO_DIALOG_13,To the farm!,¡A la granja!,農場へ！
+OUTRO_DIALOG_0,Wow! That was a lot of work!,¡Wow! ¡Eso fue mucho trabajo!,わあ！すごい量の仕事だったね！
+OUTRO_DIALOG_1,But you did very well newbie!,¡Pero lo hiciste muy bien novato!,でも新人、よくやったよ！
+OUTRO_DIALOG_2,Newbie no more!,¡Ya no es novato!,もう新人じゃない！
+OUTRO_DIALOG_3,From now on you are a real FCI member!!,¡Desde ahora eres un verdadero miembro de la FCI!!,今日からあなたは本物のFCIメンバーだ！！
+OUTRO_DIALOG_4,Thank you fairies!,¡Gracias hadas!,ありがとう妖精さんたち！
+OUTRO_DIALOG_5,Now the farm is tidy and the work done!,¡Ahora la granja está ordenada y el trabajo terminado!,これで農場はきれいになって、仕事も終わった！
+OUTRO_DIALOG_6,My parents could rest and take care of the baby!,¡Mis padres pueden descansar y cuidar del bebé!,両親も休んで赤ちゃんの世話ができるね！
+OUTRO_DIALOG_7,It was a pleasure to help!,¡Fue un placer ayudar!,手伝えてうれしかった！
+OUTRO_DIALOG_8,We have to go to help other children but remember...,Tenemos que ir a ayudar a otros niños. Pero recuerda...,私たちは他の子どもたちを助けに行かなきゃ。でも覚えておいて。。。
+OUTRO_DIALOG_9,The FCI will be there when you need help!,¡La FCI estará ahí cuando necesites ayuda!,助けが必要なときはFCIがそばにいるよ！
+OUTRO_DIALOG_10,Goodbye little fairies! Thank you!,¡Adiós pequeñas hadas! ¡Gracias!,さようなら妖精さんたち！ありがとう！
 TASK_MINIGAME_0,Where are my eggs?,¿Dónde estan mis huevos?,たまごはどこ？
-TASK_MINIGAME_1,Apple rain,Lluvia de manzanas,Apple rain
-TASK_MINIGAME_2,Gather the vegetables,Recoge las verduras,Gather the vegetables
-MINIGAME_0_DIALOG_0,Gather the eggs and put it in the right basket!,¡Recoge los huevos y ponlos en la cesta correcta!,Gather the eggs and put it in the right basket!
-MINIGAME_0_DIALOG_1,Be careful with the colors!,¡Ten cuidado con los colores!,Be careful with the colors!
-MINIGAME_0_DIALOG_2,Gather 10 eggs on each basket!,¡Consigue 10 huevos en cada cesta!,Gather 10 eggs on each basket!
-MINIGAME_0_DIALOG_3,Good work! Back to the ranch!,¡Buen trabajo! ¡Volvamos al rancho!,Good work! Back to the ranch!
-MINIGAME_1_DIALOG_0,Gather the falling apples!,¡Recoge las manzanas que se caen!,Gather the falling apples!
-MINIGAME_1_DIALOG_1,Avoid the bad apples and the branches!,¡Ten cuidado con los colores!,Be careful with the colors!
-MINIGAME_1_DIALOG_2,Gather 25 apples for the cake!,¡Consigue 25 manzanas para la tarda!,Gather 25 apples for the cake!
-MINIGAME_1_DIALOG_3,Wonderful! Now we can bake the cake!,¡Maravilloso! ¡Ahora podemos hacer la tarta!,Wonderful! Now we can bake the cake!
+TASK_MINIGAME_1,Apple rain,Lluvia de manzanas,アップルレイン
+TASK_MINIGAME_2,Hit'mole,Dale al topo,モグラたたき
+MINIGAME_0_DIALOG_0,Gather the eggs and put it in the right basket!,¡Recoge los huevos y ponlos en la cesta correcta!,たまごを集めて、正しいかごに入れて！
+MINIGAME_0_DIALOG_1,Be careful with the colors!,¡Ten cuidado con los colores!,色に気をつけて！
+MINIGAME_0_DIALOG_2,Gather 10 eggs on each basket!,¡Consigue 10 huevos en cada cesta!,それぞれのかごにたまごを10こ集めて！
+MINIGAME_0_DIALOG_3,Good work! Back to the ranch!,¡Buen trabajo! ¡Volvamos al rancho!,よくできた！牧場にもどろう！
+MINIGAME_1_DIALOG_0,Gather the falling apples!,¡Recoge las manzanas que se caen!,落ちてくるりんごを集めて！
+MINIGAME_1_DIALOG_1,Avoid the bad apples and the branches!,¡Ten cuidado con los colores!,悪いりんごと枝をよけて！
+MINIGAME_1_DIALOG_2,Gather 15 apples for the cake!,¡Consigue 15 manzanas para la tarda!,ケーキのためにりんごを15こ集めて！
+MINIGAME_1_DIALOG_3,Wonderful! Now we can bake the cake!,¡Maravilloso! ¡Ahora podemos hacer la tarta!,すばらしい！これでケーキが作れる！

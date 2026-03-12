@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://btlkwsg0o3blf"]
+
+[ext_resource type="FontFile" uid="uid://h0fnlaw2ki1g" path="res://assets/fonts/Ribeye-Regular.ttf" id="1_84guq"]
+
+[resource]
+default_font = ExtResource("1_84guq")

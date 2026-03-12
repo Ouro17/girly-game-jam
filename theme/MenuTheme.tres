@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://oy3t17qlmoo3"]
+
+[ext_resource type="FontFile" uid="uid://b4dvtbsyfombk" path="res://assets/fonts/EmilysCandy-Regular.ttf" id="1_v2nfw"]
+
+[resource]
+default_font = ExtResource("1_v2nfw")
