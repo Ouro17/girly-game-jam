@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://but31phbaog0n" path="res://assets/art/mini_game_1/avatar_mini_game_2_0.png" id="4_l37c7"]
 [ext_resource type="Texture2D" uid="uid://dwelhioickuqa" path="res://assets/art/mini_game_1/avatar_mini_game_2_1.png" id="5_rx1mv"]
 [ext_resource type="Texture2D" uid="uid://bfysfjmbvyxdf" path="res://assets/art/mini_game_1/avatar_mini_game_2_2.png" id="6_ggwph"]
-[ext_resource type="Texture2D" uid="uid://dnti667suxts" path="res://assets/art/mini_game_1/title_mini_game_2_0_en.png" id="7_6mreo"]
-[ext_resource type="Texture2D" uid="uid://cb71jq0o63k4i" path="res://assets/art/mini_game_1/title_mini_game_2_1_en.png" id="8_6o3rq"]
-[ext_resource type="Texture2D" uid="uid://yxwecy7wvf2" path="res://assets/art/mini_game_1/title_mini_game_2_2_en.png" id="9_7imy1"]
+[ext_resource type="Texture2D" uid="uid://dnti667suxts" path="res://assets/art/mini_game_1/title_mini_game_1_0_en.png" id="7_6mreo"]
+[ext_resource type="Texture2D" uid="uid://cb71jq0o63k4i" path="res://assets/art/mini_game_1/title_mini_game_1_1_en.png" id="8_6o3rq"]
+[ext_resource type="Texture2D" uid="uid://yxwecy7wvf2" path="res://assets/art/mini_game_1/title_mini_game_1_2_en.png" id="9_7imy1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qd4ob"]
 

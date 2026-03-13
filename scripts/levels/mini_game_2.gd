@@ -5,6 +5,9 @@ extends Node2D
 var mini_game_intro : MiniGameIntro
 
 @export
+var retry_sound : AudioStreamPlayer
+
+@export
 var victory_sound : AudioStreamPlayer
 
 @export
@@ -12,6 +15,9 @@ var music : AudioStreamPlayer
 
 @export
 var timer_range : Vector2
+
+@export
+var restock_time : float
 
 @export
 var mole_scene : PackedScene
@@ -41,6 +47,9 @@ var first_dialog : Dialog
 var last_dialog : Dialog
 
 @export
+var retry_dialog : Dialog
+
+@export
 var state : State
 
 var spawn_timer : Timer
@@ -52,6 +61,7 @@ var countdown_timer : Timer
 func _ready() -> void:
     mini_game_intro.intro_finished.connect(_on_intro_finished)
     last_dialog.dialog_finished.connect(_on_dialog_finished)
+    retry_dialog.dialog_finished.connect(_on_retry_dialog_finished)
 
     game_enabled = false
     current_moles = 0
@@ -67,6 +77,10 @@ func _ready() -> void:
     countdown_timer.one_shot = true
     countdown_timer.timeout.connect(_on_count_down)
     add_child(countdown_timer)
+
+    for vegetable in vegetables:
+        if not vegetable.visible:
+            vegetable.is_target = true
 
 func start_spawn_timer() -> void:
     spawn_timer.start(randf_range(timer_range.x, timer_range.y))
@@ -108,14 +122,27 @@ func spawn() -> void:
 
         instance.removing.connect(_on_mole_removed)
 
+func _on_retry_dialog_finished(dialog : Dialog) -> void:
+    if dialog == retry_dialog:
+        game_enabled = true
+
 func _on_mole_removed() -> void:
     current_moles = max(0, current_moles - 1)
     if game_enabled and vegetables.all(func(v : Vegetable):
         return not v.visible
     ):
         game_enabled = false
-        _level_complete(false)
-        # last_dialog.start_dialog() # Other dialog and restart?
+        retry_sound.play()
+        retry_dialog.start_dialog()
+        number_holder.set_value(number_holder.max_value)
+
+        for vegetable in vegetables:
+            vegetable.stop()
+            vegetable.is_target = false
+            vegetable.visible = true
+            await get_tree().create_timer(restock_time).timeout
+
+
 
 func _on_intro_finished() -> void:
     mini_game_intro.visible = false

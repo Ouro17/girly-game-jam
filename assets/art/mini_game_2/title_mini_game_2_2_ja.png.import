@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb71jq0o63k4i"
-path="res://.godot/imported/title_mini_game_2_1_en.png-522da784f218a87353092cc63dc34830.ctex"
+uid="uid://c4akxjvftb5un"
+path="res://.godot/imported/title_mini_game_2_2_ja.png-77c2427ea06db177ae125683d5bb02ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/mini_game_1/title_mini_game_2_1_en.png"
-dest_files=["res://.godot/imported/title_mini_game_2_1_en.png-522da784f218a87353092cc63dc34830.ctex"]
+source_file="res://assets/art/mini_game_2/title_mini_game_2_2_ja.png"
+dest_files=["res://.godot/imported/title_mini_game_2_2_ja.png-77c2427ea06db177ae125683d5bb02ee.ctex"]
 
 [params]
 

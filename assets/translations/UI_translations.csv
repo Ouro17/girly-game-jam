@@ -5,6 +5,7 @@ UI_EXIT,Exit,Salir,閉じる
 UI_START,Start,Empezar,始める
 UI_TITLE,Fairy Care Initiative,Iniciativa Hadas Cuidadoras,ようせいケアけいかく
 UI_PRESS_ANY_TO_CONTINUE,Press any button to continue,Pulsa cualquier botón para continuar,何かキーを押して続ける
+UI_TIME_LEFT,Time,Tiempo,タイム
 LANG_EN,English,English,English
 LANG_ES,Español,Español,Español
 LANG_JA,日本語,日本語,日本語

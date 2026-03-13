@@ -2,6 +2,8 @@
 
 Fairies Helper Initiative is a game made for the game jam [Girly Game Jam 2026](https://itch.io/jam/-girly-game-jam-3-1).
 
+You can play the game [here](https://ouro17.itch.io/fairy-care-initiative).
+
 The goal fo the jam is to make a game that resemble the quirkiness of girly games in early 2000s.
 
 The theme is `The small Things`.
@@ -108,10 +110,7 @@ We also decorated more the map and started working on the intro dialog.
 
 Here is summary video of today progress:
 
-Here is a video of the first minigame
-
 [![Day 5 progress](https://img.youtube.com/vi/efh3PhLnlbA/0.jpg)](https://www.youtube.com/watch?v=efh3PhLnlbA)
-
 
 ### Day 6
 
@@ -119,6 +118,32 @@ Goals:
 - [x] Finish intro and outro
 - [x] Finish third minigame
 - [x] Add new fonts and ensure that they work on web
+
+We were worried about Japanese not rendering on the web, so we made a compilation just in case and verified that indeed, it was not working. The solution was creating UI themes that will hold the proper font and a fallback for other languages (like japanese in this case).
+
+Then we spend the morning working in the intro and outro, trying to not make it very static by giving some movement to the entities.
+
+On the evening, we working on the third and last minigame, hitting the mole. It was complete but with a failing condition for the game.
+
+We don't like that, so tomorrow will try to remove the fail condition and just make the player able to play until they win.
+
+Here is summary video of the third minigame:
+
+[![Day 6 progress](https://img.youtube.com/vi/IwA81SkvrVc/0.jpg)](https://www.youtube.com/watch?v=IwA81SkvrVc)
+
+### Day 7 - Part 1 Delivery day
+
+Goals:
+- [x] Finish third minigame
+- [x] Credit properly on itch page
+- [x] Finish documentation
+- [x] Readproof the dialogs
+
+Today morning we focused on quickly address the failing condition on the third game, so players can't lose the game.
+
+Also we work on the documentation and on the itch.io page.
+
+We also added a cursor, which lead to some bugs on the first minigame.
 
 
 ## Tools used

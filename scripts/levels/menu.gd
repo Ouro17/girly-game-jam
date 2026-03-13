@@ -16,6 +16,10 @@ func _ready() -> void:
     if exit_button:
         exit_button.pressed.connect(_on_exit_pressed)
 
+    GlobalState.set_key("mini_game_0", false)
+    GlobalState.set_key("mini_game_1", false)
+    GlobalState.set_key("mini_game_2", false)
+
 func _on_button_pressed() -> void:
     SceneManager.change_scene_to(next_level)
 

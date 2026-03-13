@@ -116,10 +116,10 @@ movement_threshold = 20.0
 navigation_agent = NodePath("Navigation")
 sprite = NodePath("Sprite2D")
 animation_player = NodePath("AnimationPlayer")
-time_to_peek = Vector2(1, 3)
+time_to_peek = Vector2(3, 10)
 time_to_walk = Vector2(1, 3)
 angry_time = Vector2(1, 3)
-pick_up_time = Vector2(1, 5)
+pick_up_time = Vector2(1, 2)
 mole_area = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=493213891]

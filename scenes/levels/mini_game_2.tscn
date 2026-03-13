@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cvvhflaq8syr2" path="res://assets/sounds/victory_theme_004.ogg" id="3_fw7ko"]
 [ext_resource type="PackedScene" uid="uid://pgvfx1i4tmb7" path="res://scenes/levels/mini_game_intro_2.tscn" id="4_32lln"]
 [ext_resource type="AudioStream" uid="uid://cn0x7pa4n1ial" path="res://assets/music/SongGirly_009_Loop.ogg" id="4_lqojs"]
+[ext_resource type="AudioStream" uid="uid://cnqs1j3sdu5es" path="res://assets/sounds/magic_001.wav" id="5_kth5j"]
 [ext_resource type="PackedScene" uid="uid://dau5pc3cvbgon" path="res://scenes/dialogs/dialog.tscn" id="5_u3yqj"]
 [ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="6_o87ru"]
 [ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="7_5n0ms"]
@@ -67,27 +68,34 @@ _data = {
 &"pull": SubResource("Animation_u5hb1")
 }
 
-[node name="MiniGame2" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "victory_sound", "music", "navigation_map", "spawn_markers", "vegetables", "number_holder", "first_dialog", "last_dialog")]
+[node name="MiniGame2" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "retry_sound", "victory_sound", "music", "navigation_map", "spawn_markers", "vegetables", "number_holder", "first_dialog", "last_dialog", "retry_dialog")]
 script = ExtResource("1_fw7ko")
 mini_game_intro = NodePath("MiniGameIntro_2")
+retry_sound = NodePath("RetrySound")
 victory_sound = NodePath("Victory")
 music = NodePath("Music")
-timer_range = Vector2(1, 5)
+timer_range = Vector2(1, 2)
+restock_time = 0.1
 mole_scene = ExtResource("2_2rqse")
-max_moles = 10
+max_moles = 20
 navigation_map = NodePath("Map/NavigationRegion2D")
 spawn_markers = [NodePath("Map/EntryPoints/Marker2D"), NodePath("Map/EntryPoints/Marker2D2"), NodePath("Map/EntryPoints/Marker2D3"), NodePath("Map/EntryPoints/Marker2D4"), NodePath("Map/EntryPoints/Marker2D6"), NodePath("Map/EntryPoints/Marker2D5"), NodePath("Map/EntryPoints/Marker2D7"), NodePath("Map/EntryPoints/Marker2D8"), NodePath("Map/EntryPoints/Marker2D9"), NodePath("Map/EntryPoints/Marker2D10"), NodePath("Map/EntryPoints/Marker2D11"), NodePath("Map/EntryPoints/Marker2D12"), NodePath("Map/EntryPoints/Marker2D13"), NodePath("Map/EntryPoints/Marker2D14")]
 vegetables = [NodePath("Map/Vegetables/Vegetable3"), NodePath("Map/Vegetables/Vegetable"), NodePath("Map/Vegetables/Vegetable4"), NodePath("Map/Vegetables/Vegetable5"), NodePath("Map/Vegetables/Vegetable6"), NodePath("Map/Vegetables/Vegetable7"), NodePath("Map/Vegetables/Vegetable8"), NodePath("Map/Vegetables/Vegetable9"), NodePath("Map/Vegetables/Vegetable10"), NodePath("Map/Vegetables/Vegetable11"), NodePath("Map/Vegetables/Vegetable12"), NodePath("Map/Vegetables/Vegetable13"), NodePath("Map/Vegetables/Vegetable14"), NodePath("Map/Vegetables/Vegetable15"), NodePath("Map/Vegetables/Vegetable16"), NodePath("Map/Vegetables/Vegetable17"), NodePath("Map/Vegetables/Vegetable18"), NodePath("Map/Vegetables/Vegetable19"), NodePath("Map/Vegetables/Vegetable20"), NodePath("Map/Vegetables/Vegetable21"), NodePath("Map/Vegetables/Vegetable22"), NodePath("Map/Vegetables/Vegetable23"), NodePath("Map/Vegetables/Vegetable24"), NodePath("Map/Vegetables/Vegetable2")]
 number_holder = NodePath("CanvasLayer/NumberHolder")
 next_level = "res://scenes/levels/map.tscn"
 first_dialog = NodePath("CanvasLayer/Dialog_0")
-last_dialog = NodePath("CanvasLayer/Dialog_3")
+last_dialog = NodePath("CanvasLayer/Dialog_4")
+retry_dialog = NodePath("CanvasLayer/Dialog_3")
 state = SubResource("Resource_fsirv")
 
 [node name="IntroSound" type="AudioStreamPlayer" parent="." unique_id=1789269393]
 stream = ExtResource("2_fw7ko")
 volume_db = -5.0
 autoplay = true
+
+[node name="RetrySound" type="AudioStreamPlayer" parent="." unique_id=1650355159]
+stream = ExtResource("5_kth5j")
+volume_db = -5.0
 
 [node name="Victory" type="AudioStreamPlayer" parent="." unique_id=1531315106]
 stream = ExtResource("3_fw7ko")
@@ -117,6 +125,7 @@ theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
 theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_2_DIALOG_0"
+horizontal_alignment = 2
 next_dialog = NodePath("../Dialog_1")
 time_out = 4.0
 
@@ -135,6 +144,7 @@ theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
 theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_2_DIALOG_1"
+horizontal_alignment = 2
 next_dialog = NodePath("../Dialog_2")
 time_out = 4.0
 
@@ -153,19 +163,39 @@ theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
 theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_2_DIALOG_2"
+horizontal_alignment = 2
 time_out = 4.0
 
-[node name="Dialog_3" parent="CanvasLayer" unique_id=589213497 instance=ExtResource("5_u3yqj")]
+[node name="Dialog_3" parent="CanvasLayer" unique_id=530509466 instance=ExtResource("5_u3yqj")]
 visible = false
-offset_left = 690.0
-offset_top = 37.0
-offset_right = 1139.0
-offset_bottom = 71.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -424.0
+offset_top = 30.0
+offset_right = -183.0
+offset_bottom = 53.0
+grow_horizontal = 0
 theme = ExtResource("6_o87ru")
 theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
 theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_2_DIALOG_3"
+horizontal_alignment = 2
+time_out = 5.0
+
+[node name="Dialog_4" parent="CanvasLayer" unique_id=589213497 instance=ExtResource("5_u3yqj")]
+visible = false
+offset_left = 646.0
+offset_top = 29.0
+offset_right = 1095.0
+offset_bottom = 64.0
+theme = ExtResource("6_o87ru")
+theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
+theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_2_DIALOG_4"
+horizontal_alignment = 2
 time_out = 5.0
 
 [node name="NumberHolder" parent="CanvasLayer" unique_id=1606689379 instance=ExtResource("7_5n0ms")]
@@ -178,9 +208,20 @@ offset_right = -492.0
 offset_bottom = 33.0
 grow_horizontal = 2
 theme = ExtResource("6_o87ru")
-current_value = 30
+current_value = 60
 has_max_value = true
-max_value = 30
+max_value = 60
+
+[node name="TimeLeft" type="Label" parent="CanvasLayer" unique_id=1748461947]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 121.0
+offset_bottom = 51.0
+theme = ExtResource("6_o87ru")
+theme_override_font_sizes/font_size = 26
+text = "UI_TIME_LEFT"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Textures" type="Node" parent="." unique_id=687521404]
 

@@ -13,7 +13,6 @@ enum Stage {
     MOVE_FAIRY_1_0,
     MOVE_FAIRY_2_0,
     MOVE_FAIRIES,
-    MOVE_ALL,
     END
 }
 
@@ -103,6 +102,8 @@ func _on_dialog_finished(dialog: Dialog) -> void:
     if dialog == dialogs[dialogs.size() - 1]:
         dialog_cloud.visible = false
         flash_label.visible = false
+
+        entities[Entities.Girl].flip()
         entities[Entities.Girl].set_target(entries[Entities.Girl].next_position(), GIRL_MOVEMENT)
         entities[Entities.Fairy_0].set_target(entries[Entities.Fairy_0].next_position(), FAIRY_MOVEMENT)
         entities[Entities.Fairy_1].set_target(entries[Entities.Fairy_1].next_position(), FAIRY_MOVEMENT)
@@ -131,6 +132,7 @@ func _on_dialog_finished(dialog: Dialog) -> void:
 
         entities[Entities.Fairy_2].z_index = 100
         entities[Entities.Fairy_2].set_target(entries[Entities.Fairy_2].next_position(), FAIRY_MOVEMENT)
+
         current_stage = Stage.END
 
 func _input(event):

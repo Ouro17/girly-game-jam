@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://dali8g8fu1ytx" path="res://assets/sounds/egg_lay.wav" id="5_idowc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkjvq"]
+radius = 28.0
+height = 66.0
 
 [node name="Egg" type="Area2D" unique_id=1581326164 node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_mkjvq")
