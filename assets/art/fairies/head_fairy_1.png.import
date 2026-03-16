@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://prluh2xwdcl0"
-path="res://.godot/imported/head_fairy.png-c60ebed9bd70f6b0c2c614bacd8e58cc.ctex"
+uid="uid://blhdgq0s5jpij"
+path="res://.godot/imported/head_fairy_1.png-8a087735c00a69cf6cb8ec744c650c15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/head_fairy.png"
-dest_files=["res://.godot/imported/head_fairy.png-c60ebed9bd70f6b0c2c614bacd8e58cc.ctex"]
+source_file="res://assets/art/fairies/head_fairy_1.png"
+dest_files=["res://.godot/imported/head_fairy_1.png-8a087735c00a69cf6cb8ec744c650c15.ctex"]
 
 [params]
 

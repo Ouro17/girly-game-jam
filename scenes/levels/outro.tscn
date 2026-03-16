@@ -20,9 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="16_ik23h"]
 [ext_resource type="Texture2D" uid="uid://dgm2a1gocs0nd" path="res://assets/art/map/crown_3.png" id="17_8dybj"]
 [ext_resource type="PackedScene" uid="uid://dmh3vbkjjlhgm" path="res://scenes/entities/go_to_entity.tscn" id="18_4bsmt"]
-[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/newbie_fairy.png" id="19_qss0p"]
-[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/head_fairy.png" id="20_y16sc"]
-[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sister_fairy.png" id="21_w8wua"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/fairies/newbie_fairy_0.png" id="19_qss0p"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/fairies/head_fairy_0.png" id="20_y16sc"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/fairies/sister_fairy_0.png" id="21_w8wua"]
 [ext_resource type="Texture2D" uid="uid://bgyhm8fyo7xv" path="res://assets/art/intro/girl.png" id="22_t70ky"]
 
 [sub_resource type="Resource" id="Resource_ey8bw"]

@@ -31,6 +31,9 @@ var sprite: Sprite2D
 var animation_player: AnimationPlayer
 
 @export
+var hit_sound : AudioStreamPlayer
+
+@export
 var time_to_peek: Vector2
 
 @export
@@ -144,7 +147,6 @@ func _on_time_out() -> void:
         enable_movement(true)
         _start_timer(time_to_peek)
     elif current_state == MoleState.Angry:
-        vegetable.stop()
         vegetable.is_target = false
         removing.emit()
         queue_free()
@@ -159,6 +161,8 @@ func _on_clicked() -> void:
         return
 
     timer.stop()
+    vegetable.stop()
     current_state = MoleState.Angry
+    hit_sound.play()
     animation_player.play(ANIMATION_ANGRY)
     _start_timer(angry_time)

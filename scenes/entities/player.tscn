@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mm40ut7gce2"]
 
 [ext_resource type="Script" uid="uid://dejm0b607umm6" path="res://scripts/entities/player.gd" id="1_08t41"]
-[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/newbie_fairy.png" id="2_42nxq"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/fairies/newbie_fairy_0.png" id="2_42nxq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0qees"]
 radius = 42.0

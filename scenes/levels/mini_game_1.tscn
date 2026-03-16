@@ -12,24 +12,30 @@
 [ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="6_x74sk"]
 [ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="7_f0hj2"]
 [ext_resource type="PackedScene" uid="uid://bmlfxyvt86m8f" path="res://scenes/entities/bad_apple.tscn" id="7_jc1dy"]
-[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/head_fairy.png" id="7_rdunt"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/fairies/head_fairy_0.png" id="7_rdunt"]
 [ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="8_8n2ph"]
 [ext_resource type="AudioStream" uid="uid://cr3qcfgm4kpnn" path="res://assets/sounds/branches_01.wav" id="9_7en2i"]
 [ext_resource type="Texture2D" uid="uid://bxk72gtujsj3m" path="res://assets/art/map/trunk_4.png" id="9_fsuuw"]
 [ext_resource type="AudioStream" uid="uid://ddh4n617cwjah" path="res://assets/sounds/victory_theme_002.ogg" id="9_yatho"]
+[ext_resource type="AudioStream" uid="uid://mkgc8khfy1fs" path="res://assets/sounds/fairy_002.wav" id="10_1mvcn"]
 [ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="10_qt7dq"]
 [ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="10_ya60s"]
 [ext_resource type="AudioStream" uid="uid://djyena83sd81l" path="res://assets/music/SongGirly_006_Loop.ogg" id="11_7en2i"]
 [ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="11_frj36"]
+[ext_resource type="AudioStream" uid="uid://e1j6e0q44fd6" path="res://assets/sounds/fairy_001.wav" id="11_s5jt8"]
 [ext_resource type="Texture2D" uid="uid://wevrjgt31jrk" path="res://assets/art/map/crown_4.png" id="12_diq7j"]
 [ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="13_x74sk"]
 [ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="14_2pi3j"]
 [ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="14_18wxj"]
 [ext_resource type="Texture2D" uid="uid://bn700dfokopay" path="res://assets/art/map/trunk_5.png" id="15_diq7j"]
+[ext_resource type="Texture2D" uid="uid://c0ccsh1riost4" path="res://assets/art/dialog_mini_games.png" id="15_qrwg3"]
 [ext_resource type="Texture2D" uid="uid://dhlw08ifbglr" path="res://assets/art/map/trunk_1.png" id="16_x74sk"]
+[ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="19_h0hg3"]
 [ext_resource type="Texture2D" uid="uid://dgm2a1gocs0nd" path="res://assets/art/map/crown_3.png" id="19_m1vqb"]
 [ext_resource type="PackedScene" uid="uid://cts4n854tdnf3" path="res://scenes/entities/apple_0.tscn" id="25_bu8e1"]
 [ext_resource type="PackedScene" uid="uid://dwfoqhvi1j0ee" path="res://scenes/entities/fairy.tscn" id="27_jc1dy"]
+[ext_resource type="Texture2D" uid="uid://bub8ev3k0lifp" path="res://assets/art/map/marigold.png" id="33_s5jt8"]
+[ext_resource type="Texture2D" uid="uid://c81q6ptkyscnj" path="res://assets/art/map/herb.png" id="34_h7lmp"]
 
 [sub_resource type="Resource" id="Resource_8n2ph"]
 script = ExtResource("2_mylm7")
@@ -43,10 +49,13 @@ b = Vector2(-1000, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc1dy"]
 size = Vector2(1197, 21)
 
-[node name="MiniGame1" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "victory_sound", "music", "from", "collision_shape", "outlimits", "fairy", "number_holder", "first_dialog", "last_dialog")]
+[node name="MiniGame1" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "intro_sound", "victory_sound", "bad_sound", "good_sound", "music", "from", "collision_shape", "outlimits", "fairy", "number_holder", "first_dialog", "last_instruction_dialog", "last_dialog")]
 script = ExtResource("1_kx7g1")
 mini_game_intro = NodePath("MiniGameIntro_1")
+intro_sound = NodePath("IntroSound")
 victory_sound = NodePath("Victory")
+bad_sound = NodePath("BadSound")
+good_sound = NodePath("GoodSound")
 music = NodePath("Music")
 timer_range = Vector2(0.5, 1.5)
 falling_elements = Array[PackedScene]([ExtResource("25_bu8e1"), ExtResource("3_5hgbn"), ExtResource("4_jc1dy"), ExtResource("5_yatho"), ExtResource("6_7en2i"), ExtResource("7_jc1dy")])
@@ -57,13 +66,22 @@ fairy = NodePath("Fairy")
 number_holder = NodePath("CanvasLayer/NumberHolder")
 next_level = "res://scenes/levels/map.tscn"
 first_dialog = NodePath("CanvasLayer/Dialog_0")
-last_dialog = NodePath("CanvasLayer/Dialog_3")
+last_instruction_dialog = NodePath("CanvasLayer/Dialog_3")
+last_dialog = NodePath("CanvasLayer/Dialog_4")
 state = SubResource("Resource_8n2ph")
 
 [node name="IntroSound" type="AudioStreamPlayer" parent="." unique_id=435405437]
 stream = ExtResource("9_7en2i")
 volume_db = -5.0
 autoplay = true
+
+[node name="BadSound" type="AudioStreamPlayer" parent="." unique_id=2002629500]
+stream = ExtResource("10_1mvcn")
+volume_db = -5.0
+
+[node name="GoodSound" type="AudioStreamPlayer" parent="." unique_id=1426279059]
+stream = ExtResource("11_s5jt8")
+volume_db = -5.0
 
 [node name="Victory" type="AudioStreamPlayer" parent="." unique_id=769336688]
 stream = ExtResource("9_yatho")
@@ -75,10 +93,19 @@ volume_db = -10.0
 autoplay = true
 
 [node name="MiniGameIntro_1" parent="." unique_id=809843581 instance=ExtResource("3_yqcg6")]
+wait_time = 3.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1309865142]
 
-[node name="Dialog_0" parent="CanvasLayer" unique_id=1947356223 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_diq7j")]
+[node name="Dialog_cloud" type="TextureRect" parent="CanvasLayer" unique_id=1988855215]
+visible = false
+offset_left = 494.0
+offset_top = 9.0
+offset_right = 1129.0
+offset_bottom = 96.0
+texture = ExtResource("15_qrwg3")
+
+[node name="Dialog_0" parent="CanvasLayer" unique_id=1947356223 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("5_diq7j")]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -89,14 +116,14 @@ offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
 theme = ExtResource("14_2pi3j")
-theme_override_colors/font_color = Color(0.95686275, 0.85490197, 0.08235294, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_0"
 next_dialog = NodePath("../Dialog_1")
-time_out = 4.0
+dialog_cloud = NodePath("../Dialog_cloud")
+time_out = 3.0
 
-[node name="Dialog_1" parent="CanvasLayer" unique_id=1119049695 node_paths=PackedStringArray("next_dialog") instance=ExtResource("5_diq7j")]
+[node name="Dialog_1" parent="CanvasLayer" unique_id=1119049695 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("5_diq7j")]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -107,14 +134,14 @@ offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
 theme = ExtResource("14_2pi3j")
-theme_override_colors/font_color = Color(0.95686275, 0.85490197, 0.08235294, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_1"
 next_dialog = NodePath("../Dialog_2")
+dialog_cloud = NodePath("../Dialog_cloud")
 time_out = 4.0
 
-[node name="Dialog_2" parent="CanvasLayer" unique_id=728835761 instance=ExtResource("5_diq7j")]
+[node name="Dialog_2" parent="CanvasLayer" unique_id=728835761 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("5_diq7j")]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -125,23 +152,41 @@ offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
 theme = ExtResource("14_2pi3j")
-theme_override_colors/font_color = Color(0.95686275, 0.85490197, 0.08235294, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_2"
+next_dialog = NodePath("../Dialog_3")
+dialog_cloud = NodePath("../Dialog_cloud")
 time_out = 4.0
 
-[node name="Dialog_3" parent="CanvasLayer" unique_id=1793182022 instance=ExtResource("5_diq7j")]
+[node name="Dialog_3" parent="CanvasLayer" unique_id=1793182022 node_paths=PackedStringArray("dialog_cloud") instance=ExtResource("5_diq7j")]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -738.0
+offset_top = 31.0
+offset_right = -173.0
+offset_bottom = 66.0
+grow_horizontal = 0
+theme = ExtResource("14_2pi3j")
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_READY"
+dialog_cloud = NodePath("../Dialog_cloud")
+time_out = 2.0
+
+[node name="Dialog_4" parent="CanvasLayer" unique_id=1438688861 node_paths=PackedStringArray("dialog_cloud") instance=ExtResource("5_diq7j")]
 visible = false
 offset_left = 690.0
 offset_top = 37.0
 offset_right = 1139.0
 offset_bottom = 71.0
 theme = ExtResource("14_2pi3j")
-theme_override_colors/font_color = Color(0.95686275, 0.85490197, 0.08235294, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_1_DIALOG_3"
+dialog_cloud = NodePath("../Dialog_cloud")
 time_out = 5.0
 
 [node name="NumberHolder" parent="CanvasLayer" unique_id=1606689379 instance=ExtResource("6_x74sk")]
@@ -152,6 +197,9 @@ offset_bottom = 638.0
 theme = ExtResource("14_2pi3j")
 has_max_value = true
 max_value = 15
+
+[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("19_h0hg3")]
+is_mini_game = true
 
 [node name="Textures" type="Node" parent="." unique_id=917866759]
 
@@ -282,6 +330,45 @@ texture = ExtResource("14_18wxj")
 position = Vector2(918, 35)
 texture = ExtResource("19_m1vqb")
 
+[node name="Marigold" type="Sprite2D" parent="Textures" unique_id=918241188]
+position = Vector2(337.00003, 272)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("33_s5jt8")
+
+[node name="Marigold5" type="Sprite2D" parent="Textures" unique_id=1023576342]
+position = Vector2(1010, 483)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("33_s5jt8")
+
+[node name="Marigold2" type="Sprite2D" parent="Textures" unique_id=1784424022]
+position = Vector2(402.00003, 259)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("33_s5jt8")
+
+[node name="Marigold3" type="Sprite2D" parent="Textures" unique_id=520480046]
+position = Vector2(375, 556)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("33_s5jt8")
+
+[node name="Marigold4" type="Sprite2D" parent="Textures" unique_id=496364078]
+position = Vector2(1209, 260)
+scale = Vector2(0.5250007, 0.4615388)
+texture = ExtResource("33_s5jt8")
+
+[node name="Herb2" type="Sprite2D" parent="Textures" unique_id=1733057311]
+position = Vector2(960, 234)
+scale = Vector2(0.7692308, 0.84)
+texture = ExtResource("34_h7lmp")
+
+[node name="Herb" type="Sprite2D" parent="Textures" unique_id=1882494028]
+position = Vector2(923, 240)
+texture = ExtResource("34_h7lmp")
+
+[node name="Herb3" type="Sprite2D" parent="Textures" unique_id=550402427]
+position = Vector2(944, 264)
+scale = Vector2(0.88461536, 0.82)
+texture = ExtResource("34_h7lmp")
+
 [node name="Helper" type="Sprite2D" parent="." unique_id=231764570]
 z_index = 99
 position = Vector2(1200, 95)
@@ -303,4 +390,4 @@ shape = SubResource("RectangleShape2D_jc1dy")
 
 [node name="Fairy" parent="." unique_id=337846277 instance=ExtResource("27_jc1dy")]
 position = Vector2(637, 557)
-speed = 350.0
+speed = 500.0

@@ -4,8 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://ibf70q74yfwx" path="res://scenes/UI/language_menu.tscn" id="2_k3l6u"]
 [ext_resource type="AudioStream" uid="uid://cja8tth7qtdlw" path="res://assets/music/SongGirly_007_Loop.ogg" id="2_w6ftq"]
 [ext_resource type="Theme" uid="uid://oy3t17qlmoo3" path="res://theme/MenuTheme.tres" id="3_6qf5j"]
+[ext_resource type="AudioStream" uid="uid://81x0tflnf5rk" path="res://assets/sounds/click.wav" id="3_lt4mj"]
 [ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="3_w6ftq"]
 [ext_resource type="Texture2D" uid="uid://dvss2qp5r1i2r" path="res://assets/art/menu/menu_cloud.png" id="4_6qf5j"]
+[ext_resource type="AudioStream" uid="uid://buyn4t4wr7bpd" path="res://assets/sounds/magic_002.wav" id="4_dexxl"]
 [ext_resource type="Texture2D" uid="uid://b0h6anyw5dx8o" path="res://assets/art/menu/menu_title_en.png" id="5_lt4mj"]
 [ext_resource type="Texture2D" uid="uid://df5ajvaujav5n" path="res://assets/art/menu/menu_box.png" id="6_dexxl"]
 [ext_resource type="Texture2D" uid="uid://cuhusi2n10sim" path="res://assets/art/menu/menu_buttons.png" id="7_dnrjr"]
@@ -36,16 +38,25 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_khahd"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1128703437 node_paths=PackedStringArray("start_button", "exit_button")]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1128703437 node_paths=PackedStringArray("start_sound", "click_sound", "start_button", "exit_button")]
 script = ExtResource("1_g3w80")
+start_sound = NodePath("StartSound")
+click_sound = NodePath("ClickSound")
 start_button = NodePath("VBoxContainer/StartButton")
 exit_button = NodePath("VBoxContainer/ExitButton")
 next_level = "res://scenes/levels/intro.tscn"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=662489902]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=662489902]
 stream = ExtResource("2_w6ftq")
 volume_db = -10.0
 autoplay = true
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=182433421]
+stream = ExtResource("3_lt4mj")
+volume_db = -5.0
+
+[node name="StartSound" type="AudioStreamPlayer" parent="." unique_id=1844248754]
+stream = ExtResource("4_dexxl")
 
 [node name="Background" type="TextureRect" parent="." unique_id=157396180]
 anchors_preset = 8

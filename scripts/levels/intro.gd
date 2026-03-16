@@ -136,7 +136,7 @@ func _on_dialog_finished(dialog: Dialog) -> void:
         current_stage = Stage.END
 
 func _input(event):
-    if (event is InputEventKey or event is InputEventMouseButton) and event.pressed:
+    if (event is InputEventKey or event is InputEventMouseButton) and event.pressed and not event.is_action_pressed("quit"):
         get_viewport().set_input_as_handled()
         if current_dialog != null:
             current_dialog = current_dialog.start_next_dialog()

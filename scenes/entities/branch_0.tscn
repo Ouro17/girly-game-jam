@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scripts/entities/falling_entity.gd" id="1_d7yth"]
 [ext_resource type="Texture2D" uid="uid://dpkp020uyv7o5" path="res://assets/art/mini_game_1/branch_0.png" id="2_d7yth"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0o73r"]
-radius = 19.104973
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7yth"]
+size = Vector2(26, 169)
 
 [sub_resource type="Animation" id="Animation_0o73r"]
 length = 0.001
@@ -52,10 +52,12 @@ script = ExtResource("1_d7yth")
 is_bad = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1358872660]
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_d7yth")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2042702601]
-shape = SubResource("CircleShape2D_0o73r")
+position = Vector2(-2, 1.5)
+shape = SubResource("RectangleShape2D_d7yth")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1592822122]
 libraries/ = SubResource("AnimationLibrary_qbnld")

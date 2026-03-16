@@ -38,6 +38,7 @@ MINIGAME_1_DIALOG_2,Gather 15 apples for the cake!,¡Consigue 15 manzanas para l
 MINIGAME_1_DIALOG_3,Wonderful! Now we can bake the cake!,¡Maravilloso! ¡Ahora podemos hacer la tarta!,すばらしい！これでケーキが作れる！
 MINIGAME_2_DIALOG_0,The moles are trying to steal the vegetables!,¡Los topos están intentando robar las verduras!,モグラたちが野菜を盗もうとしている！
 MINIGAME_2_DIALOG_1,Avoid it by giving them a smash!,¡Evítalo golpeándolos!,出てきたら叩いて止めよう！
-MINIGAME_2_DIALOG_2,But you can only do it when show their head!,¡Pero solo puedes hacerlo cuando saquen la cabeza!,でも、頭を出したときだけ叩けるよ！
+MINIGAME_2_DIALOG_2,But only when they show their head!,¡Pero solo cuando saquen la cabeza!,でも、頭を出したときだけ叩けるよ！
 MINIGAME_2_DIALOG_3,Oh no! Let's try again!,¡Oh no! ¡Intentémoslo otra vez!,ああ！もう一度やってみよう！
 MINIGAME_2_DIALOG_4,You protected the vegetables!,¡Has protegido las verduras!,野菜を守ったね！
+MINIGAME_READY,Ready? Go!,¿Listo? ¡Vamos!,準備はいい？スタート！

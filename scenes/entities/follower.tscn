@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c4n485kh48y7h"]
 
 [ext_resource type="Script" uid="uid://6iytkn73qjbn" path="res://scripts/entities/follower.gd" id="1_b8lyh"]
-[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/head_fairy.png" id="2_vdbnc"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/fairies/head_fairy_0.png" id="2_vdbnc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vdbnc"]
 radius = 42.0

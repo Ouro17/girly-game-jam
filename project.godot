@@ -21,7 +21,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalInput="*uid://cb4d48yjl81da"
 EventBus="*uid://dkp2hk0q6muoe"
 SceneManager="*uid://ejluko3frolj"
 GlobalState="*uid://dxyebo0sdoa7r"
@@ -32,6 +31,7 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://cv36vwclhrqoc"
+mouse_cursor/custom_image_hotspot=Vector2(11, 9)
 
 [input]
 

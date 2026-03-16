@@ -7,15 +7,17 @@
 [ext_resource type="AudioStream" uid="uid://dali8g8fu1ytx" path="res://assets/sounds/egg_lay.wav" id="5_idowc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkjvq"]
-radius = 28.0
-height = 66.0
+radius = 23.0
+height = 56.0
 
 [node name="Egg" type="Area2D" unique_id=1581326164 node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_mkjvq")
 sprite = NodePath("Sprite2D")
 textures = Array[Texture2D]([ExtResource("1_mx2x7"), ExtResource("3_73jvg"), ExtResource("4_idowc")])
+time_to_disappear = Vector2(10, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336369997]
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_mx2x7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=583681092]

@@ -14,7 +14,10 @@ var victory_sound : AudioStreamPlayer
 var music : AudioStreamPlayer
 
 @export
-var timer_range : Vector2
+var mole_movement : AudioStreamPlayer
+
+@export
+var respaw_time_range : Vector2
 
 @export
 var restock_time : float
@@ -44,6 +47,9 @@ var next_level: String
 var first_dialog : Dialog
 
 @export
+var last_instruction_dialog : Dialog
+
+@export
 var last_dialog : Dialog
 
 @export
@@ -61,6 +67,7 @@ var countdown_timer : Timer
 func _ready() -> void:
     mini_game_intro.intro_finished.connect(_on_intro_finished)
     last_dialog.dialog_finished.connect(_on_dialog_finished)
+    last_instruction_dialog.dialog_finished.connect(_on_dialog_finished)
     retry_dialog.dialog_finished.connect(_on_retry_dialog_finished)
 
     game_enabled = false
@@ -83,7 +90,7 @@ func _ready() -> void:
             vegetable.is_target = true
 
 func start_spawn_timer() -> void:
-    spawn_timer.start(randf_range(timer_range.x, timer_range.y))
+    spawn_timer.start(randf_range(respaw_time_range.x, respaw_time_range.y))
 
 func start_count_down_timer() -> void:
     countdown_timer.start(1)
@@ -109,6 +116,10 @@ func spawn() -> void:
 
     if instance != null:
         current_moles = min (current_moles + 1, max_moles)
+
+        if not mole_movement.playing:
+            mole_movement.play()
+
         vegetable.is_target = true
 
         add_child(instance)
@@ -128,6 +139,10 @@ func _on_retry_dialog_finished(dialog : Dialog) -> void:
 
 func _on_mole_removed() -> void:
     current_moles = max(0, current_moles - 1)
+
+    if current_moles == 0:
+        mole_movement.stop()
+
     if game_enabled and vegetables.all(func(v : Vegetable):
         return not v.visible
     ):
@@ -142,14 +157,9 @@ func _on_mole_removed() -> void:
             vegetable.visible = true
             await get_tree().create_timer(restock_time).timeout
 
-
-
 func _on_intro_finished() -> void:
     mini_game_intro.visible = false
     first_dialog.start_dialog()
-    game_enabled = true
-    start_spawn_timer()
-    start_count_down_timer()
 
 func _level_complete(result : bool)-> void:
     _save_state(result)
@@ -165,6 +175,10 @@ func _save_state(value: bool) -> void:
 func _on_dialog_finished(dialog : Dialog) -> void:
     if dialog == last_dialog:
         _level_complete(true)
+    elif dialog == last_instruction_dialog:
+        game_enabled = true
+        start_spawn_timer()
+        start_count_down_timer()
 
 func _on_time_out() -> void:
     if game_enabled:

@@ -5,7 +5,16 @@ extends Node2D
 var mini_game_intro : MiniGameIntro
 
 @export
+var intro_sound : AudioStreamPlayer
+
+@export
 var victory_sound : AudioStreamPlayer
+
+@export
+var bad_sound : AudioStreamPlayer
+
+@export
+var good_sound : AudioStreamPlayer
 
 @export
 var music : AudioStreamPlayer
@@ -38,6 +47,9 @@ var next_level: String
 var first_dialog : Dialog
 
 @export
+var last_instruction_dialog: Dialog
+
+@export
 var last_dialog : Dialog
 
 @export
@@ -49,6 +61,7 @@ var game_enabled
 func _ready() -> void:
     mini_game_intro.intro_finished.connect(_on_intro_finished)
     last_dialog.dialog_finished.connect(_on_dialog_finished)
+    last_instruction_dialog.dialog_finished.connect(_on_dialog_finished)
     outlimits.body_entered.connect(_on_out_of_limits)
 
     game_enabled = false
@@ -84,13 +97,12 @@ func spawn(index : int) -> void:
     if instance != null:
         from.add_child(instance)
         instance.global_position = get_random_point_in_area()
+        if instance.is_bad:
+            intro_sound.play()
 
 func _on_intro_finished() -> void:
     mini_game_intro.visible = false
     first_dialog.start_dialog()
-    fairy.input_enabled = true
-    game_enabled = true
-    start_timer()
 
 func _level_complete(result : bool)-> void:
     _save_state(result)
@@ -106,6 +118,10 @@ func _save_state(value: bool) -> void:
 func _on_dialog_finished(dialog : Dialog) -> void:
     if dialog == last_dialog:
         _level_complete(true)
+    elif dialog == last_instruction_dialog:
+        fairy.input_enabled = true
+        game_enabled = true
+        start_timer()
 
 func _on_out_of_limits(body : Node2D) -> void:
     body.queue_free()
@@ -114,8 +130,10 @@ func _on_body_entered(body : Node2D) -> void:
     if body is FallingEntity:
         if body.is_bad:
             number_holder.decrement()
+            bad_sound.play()
         else:
             number_holder.increment()
+            good_sound.play()
 
     if number_holder.is_max_value_reached:
         game_enabled = false

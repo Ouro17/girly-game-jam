@@ -145,6 +145,36 @@ Also we work on the documentation and on the itch.io page.
 
 We also added a cursor, which lead to some bugs on the first minigame.
 
+### Feedback phase
+
+After the first release, we got feedback that we can summarize in:
+
+- Elements are hard too click, perphaps because they are too small
+- More SFX to make clear that elements are clicked or that something happened
+- More speed for the fairy in the second minigame
+- In the first minigame, it's too easy to pick 2 eggs of different colors
+
+We also wanted to include new things to make the game more engaging, so our final goals are:
+
+- [x] Egg minigame:
+    - [x] Avoid eggs beign picked in groups
+    - [x] Make the eggs bigger
+    - [x] Make the eggs disappear overtime
+    - [x] Add SFX to egg putting and egg picking
+- [x] Apple minigame:
+    - [x] Make the fairy faster, elements slower
+    - [x] Make elements bigger
+    - [x] Add SFX when picking good or bad
+- [x] Mole minigame:
+    - [x] Make more clear when the mole is hit
+    - [x] Add more SFX for the minigame
+- [x] In all minigames:
+    - [x] Make instruction more clear, by making the last dialog permanent and putting a dialog box
+    - [x] Start the minigame only when the dialog is finished
+- [x] Fix cursor size and make it more predictable to click
+- [x] Add menu pause during the gameplay and able to go back to the map
+- [ ] Add movement to the fairies wings and wobble in general
+- [ ] On the ranch, make sounds for the different elements
 
 ## Tools used
 - Godot 4.6

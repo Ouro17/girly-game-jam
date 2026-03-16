@@ -96,8 +96,8 @@ animation_player = NodePath("Sprite2D/AnimationPlayer")
 egg_position = NodePath("EggPosition")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=762760273]
-position = Vector2(4.9999995, -34.000004)
-scale = Vector2(0.3, 0.3)
+position = Vector2(9, -63.999996)
+scale = Vector2(0.4, 0.4)
 texture = SubResource("CompressedTexture2D_vr1sk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=2093134625]
@@ -114,4 +114,4 @@ target_desired_distance = 3.0
 path_postprocessing = 1
 
 [node name="EggPosition" type="Marker2D" parent="." unique_id=1426326353]
-position = Vector2(37, 0)
+position = Vector2(47, -19)

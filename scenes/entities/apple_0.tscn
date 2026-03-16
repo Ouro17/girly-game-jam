@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dhseqd4gncg0t" path="res://scripts/entities/falling_entity.gd" id="1_vs2i0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0o73r"]
-radius = 19.104973
+radius = 23.0
 
 [sub_resource type="Animation" id="Animation_0o73r"]
 length = 0.001
@@ -51,7 +51,7 @@ floor_block_on_wall = false
 script = ExtResource("1_vs2i0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1358872660]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_0o73r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2042702601]

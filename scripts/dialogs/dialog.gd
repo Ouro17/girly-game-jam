@@ -7,12 +7,16 @@ signal dialog_finished(dialog : Dialog)
 var next_dialog : Dialog
 
 @export
+var dialog_cloud : TextureRect
+
+@export
 var time_out : float
 
 var timer : Timer
 
 func start_dialog() -> void:
     visible = true
+    dialog_cloud.visible = true
     if time_out > 0:
         timer = Timer.new()
         timer.one_shot = true
@@ -22,7 +26,7 @@ func start_dialog() -> void:
 
 func start_next_dialog() -> Dialog:
     visible = false
-
+    dialog_cloud.visible = false
     dialog_finished.emit(self)
 
     if next_dialog != null:

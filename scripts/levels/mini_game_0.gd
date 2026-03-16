@@ -2,39 +2,45 @@ class_name MiniGame0
 extends Node2D
 
 @export
-var mini_game_intro : MiniGameIntro
+var mini_game_intro: MiniGameIntro
 
 @export
-var victory_sound : AudioStreamPlayer
+var egg_on_basket_sound: AudioStreamPlayer
 
 @export
-var music : AudioStreamPlayer
+var victory_sound: AudioStreamPlayer
+
+@export
+var music: AudioStreamPlayer
 
 @export
 var movement_area: NavigationRegion2D
 
 @export
-var chickens : Array[Chicken]
+var chickens: Array[Chicken]
 
 @export
-var egg_baskets : Array[EggBasket]
+var egg_baskets: Array[EggBasket]
 
 @export
-var number_holders : Array[NumberHolder]
+var number_holders: Array[NumberHolder]
 
 @export
 var next_level: String
 
 @export
-var first_dialog : Dialog
+var first_dialog: Dialog
 
 @export
-var last_dialog : Dialog
+var last_instruction_dialog: Dialog
 
 @export
-var state : State
+var last_dialog: Dialog
 
-var fill_baskets : Array[bool]
+@export
+var state: State
+
+var fill_baskets: Array[bool]
 
 func _ready() -> void:
     mini_game_intro.intro_finished.connect(_on_intro_finished)
@@ -47,16 +53,16 @@ func _ready() -> void:
         fill_baskets.append(false)
 
     last_dialog.dialog_finished.connect(_on_dialog_finished)
+    last_instruction_dialog.dialog_finished.connect(_on_dialog_finished)
 
 func _on_intro_finished() -> void:
     mini_game_intro.visible = false
-    for chicken in chickens:
-        chicken.set_enable(true)
 
     first_dialog.start_dialog()
 
-func _level_complete(result : bool)-> void:
+func _level_complete(result: bool) -> void:
     _save_state(result)
+
     EventBus.observers.emit(state.id)
 
     SceneManager.change_scene_to(next_level)
@@ -65,11 +71,13 @@ func _save_state(value: bool) -> void:
     if state != null:
         return state.save_state(value)
 
-func is_true(value : bool):
+func is_true(value: bool):
     return value
 
-func _on_egg_received(index : int, correct : bool) -> void:
+func _on_egg_received(index: int, correct: bool) -> void:
     var holder = number_holders[index]
+
+    egg_on_basket_sound.play()
 
     if correct:
         holder.increment()
@@ -83,6 +91,9 @@ func _on_egg_received(index : int, correct : bool) -> void:
         music.stop()
         last_dialog.start_dialog()
 
-func _on_dialog_finished(dialog : Dialog) -> void:
+func _on_dialog_finished(dialog: Dialog) -> void:
     if dialog == last_dialog:
         _level_complete(true)
+    elif dialog == last_instruction_dialog:
+        for chicken in chickens:
+            chicken.set_enable(true)

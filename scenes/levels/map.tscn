@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="4_o1cqd"]
 [ext_resource type="AudioStream" uid="uid://w3b1naosdtp1" path="res://assets/music/SongGirly_001v1_Loop.ogg" id="5_dim3t"]
 [ext_resource type="PackedScene" uid="uid://dmsg4yhttrq6w" path="res://scenes/levels/end_map_label.tscn" id="5_ex8ba"]
+[ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="5_u1b8a"]
 [ext_resource type="PackedScene" uid="uid://mm40ut7gce2" path="res://scenes/entities/player.tscn" id="6_gpbhb"]
 [ext_resource type="Texture2D" uid="uid://oosqsa6ghoj0" path="res://assets/art/map/sun_0.png" id="8_oxjr2"]
 [ext_resource type="Texture2D" uid="uid://js12vbmqlh4u" path="res://assets/art/map/sun_1.png" id="9_3rg7r"]
@@ -17,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c4n485kh48y7h" path="res://scenes/entities/follower.tscn" id="12_sxedr"]
 [ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="13_qsxn8"]
 [ext_resource type="Texture2D" uid="uid://y10r2bf2itck" path="res://assets/art/map/trunk_0.png" id="14_dim3t"]
-[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sister_fairy.png" id="14_gnus1"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/fairies/sister_fairy_0.png" id="14_gnus1"]
 [ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="15_o1cqd"]
 [ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="16_u1b8a"]
 [ext_resource type="Texture2D" uid="uid://uf3i707y3h63" path="res://assets/art/map/crown_2.png" id="17_k01hm"]
@@ -132,6 +133,8 @@ offset_right = 227.0
 offset_bottom = 106.0
 grow_horizontal = 2
 
+[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("5_u1b8a")]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459841556]
 stream = ExtResource("5_dim3t")
 volume_db = -10.0
@@ -159,6 +162,7 @@ texture = ExtResource("4_05abr")
 [node name="Sun" type="Sprite2D" parent="Art/SkyElements" unique_id=508493480]
 z_index = -98
 position = Vector2(142, 100)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_oxjr2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Art/SkyElements/Sun" unique_id=339130245]
@@ -383,11 +387,12 @@ position = Vector2(-30, 0)
 shape = SubResource("RectangleShape2D_o1cqd")
 
 [node name="Label" type="Label" parent="Entrances/LevelEntrance_0" unique_id=629774439]
-offset_left = -107.0
-offset_top = -38.0
-offset_right = 48.0
-offset_bottom = -15.0
+offset_left = -136.0
+offset_top = -46.0
+offset_right = 76.0
+offset_bottom = -16.0
 theme = ExtResource("4_o1cqd")
+theme_override_font_sizes/font_size = 20
 text = "TASK_MINIGAME_0"
 
 [node name="LevelEntrance_1" type="Area2D" parent="Entrances" unique_id=991618904]
@@ -405,6 +410,7 @@ offset_top = 43.0
 offset_right = 62.0
 offset_bottom = 66.0
 theme = ExtResource("4_o1cqd")
+theme_override_font_sizes/font_size = 20
 text = "TASK_MINIGAME_1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -419,12 +425,15 @@ position = Vector2(-33.5, 26)
 shape = SubResource("RectangleShape2D_ookhf")
 
 [node name="Label" type="Label" parent="Entrances/LevelEntrance_2" unique_id=1352772652]
-offset_left = -74.0
-offset_top = 43.0
-offset_right = 97.0
-offset_bottom = 66.0
+offset_left = -117.0
+offset_top = 34.0
+offset_right = 54.0
+offset_bottom = 64.0
 theme = ExtResource("4_o1cqd")
+theme_override_font_sizes/font_size = 20
 text = "TASK_MINIGAME_2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Player" parent="." unique_id=2046264894 instance=ExtResource("6_gpbhb")]
 position = Vector2(869, 467)

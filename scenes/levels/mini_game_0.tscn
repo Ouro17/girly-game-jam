@@ -5,16 +5,19 @@
 [ext_resource type="AudioStream" uid="uid://h5fgettjus3j" path="res://assets/sounds/chicken.wav" id="3_0hdmg"]
 [ext_resource type="AudioStream" uid="uid://uy86fkkkxd7j" path="res://assets/sounds/victory_theme_000.ogg" id="3_2rcqc"]
 [ext_resource type="AudioStream" uid="uid://2e2smcs7t33k" path="res://assets/music/SongGirly_008_Loop.ogg" id="3_310pp"]
-[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sister_fairy.png" id="3_g6fga"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/fairies/sister_fairy_0.png" id="3_g6fga"]
+[ext_resource type="AudioStream" uid="uid://qcrnncm57pes" path="res://assets/sounds/egg_on_basket.wav" id="4_iu2p1"]
 [ext_resource type="PackedScene" uid="uid://c38i6ktso3wln" path="res://scenes/levels/mini_game_intro_0.tscn" id="4_ridya"]
 [ext_resource type="Texture2D" uid="uid://igdj7h5tt85n" path="res://assets/art/mini_game_0/chicken_run.png" id="5_4c7x7"]
 [ext_resource type="Texture2D" uid="uid://hvff83fp386b" path="res://assets/art/mini_game_0/chicken_run_fence_back.png" id="6_17mlp"]
 [ext_resource type="PackedScene" uid="uid://cm7jlgo4xdpyr" path="res://scenes/entities/egg_basket.tscn" id="6_eg1k5"]
 [ext_resource type="Texture2D" uid="uid://b7bpm2ikemrpt" path="res://assets/art/mini_game_0/chicken_run_fence_front.png" id="7_0hdmg"]
 [ext_resource type="Texture2D" uid="uid://dgip1ddxrhe4y" path="res://assets/art/mini_game_0/basket_pink.png" id="7_458go"]
+[ext_resource type="Texture2D" uid="uid://c0ccsh1riost4" path="res://assets/art/dialog_mini_games.png" id="7_l03e1"]
 [ext_resource type="PackedScene" uid="uid://be0xickamo2pv" path="res://scenes/entities/chicken.tscn" id="7_nfofj"]
 [ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="7_w7lsb"]
 [ext_resource type="Texture2D" uid="uid://cs46ckogfhwgu" path="res://assets/art/mini_game_0/basket_green.png" id="8_310pp"]
+[ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="12_t1bkq"]
 [ext_resource type="PackedScene" uid="uid://dau5pc3cvbgon" path="res://scenes/dialogs/dialog.tscn" id="14_0hdmg"]
 [ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="15_g1s10"]
 
@@ -32,9 +35,10 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(59, 172, 58, 657, 922, 653, 917, 170)])
 agent_radius = 5.0
 
-[node name="MiniGame0" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "victory_sound", "music", "movement_area", "chickens", "egg_baskets", "number_holders", "first_dialog", "last_dialog")]
+[node name="MiniGame0" type="Node2D" unique_id=76823715 node_paths=PackedStringArray("mini_game_intro", "egg_on_basket_sound", "victory_sound", "music", "movement_area", "chickens", "egg_baskets", "number_holders", "first_dialog", "last_instruction_dialog", "last_dialog")]
 script = ExtResource("1_ridya")
 mini_game_intro = NodePath("MiniGameIntro_0")
+egg_on_basket_sound = NodePath("EggOnBasket")
 victory_sound = NodePath("VictorySound")
 music = NodePath("Music")
 movement_area = NodePath("NavigationRegion2D")
@@ -43,11 +47,16 @@ egg_baskets = [NodePath("Baskets/Basket_0"), NodePath("Baskets/Basket_1"), NodeP
 number_holders = [NodePath("CanvasLayer/NumberHolder"), NodePath("CanvasLayer/NumberHolder2"), NodePath("CanvasLayer/NumberHolder3")]
 next_level = "res://scenes/levels/map.tscn"
 first_dialog = NodePath("CanvasLayer/Dialog_0")
-last_dialog = NodePath("CanvasLayer/Dialog_3")
+last_instruction_dialog = NodePath("CanvasLayer/Dialog_3")
+last_dialog = NodePath("CanvasLayer/Dialog_4")
 state = SubResource("Resource_itc4e")
 
 [node name="VictorySound" type="AudioStreamPlayer" parent="." unique_id=1928242998]
 stream = ExtResource("3_2rcqc")
+volume_db = -10.0
+
+[node name="EggOnBasket" type="AudioStreamPlayer" parent="." unique_id=1896088665]
+stream = ExtResource("4_iu2p1")
 volume_db = -10.0
 
 [node name="ChickenSound" type="AudioStreamPlayer" parent="." unique_id=812105654]
@@ -62,7 +71,15 @@ autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1309865142]
 
-[node name="Dialog_0" parent="CanvasLayer" unique_id=1947356223 node_paths=PackedStringArray("next_dialog") instance=ExtResource("14_0hdmg")]
+[node name="Dialog_cloud" type="TextureRect" parent="CanvasLayer" unique_id=1736544497]
+visible = false
+offset_left = 494.0
+offset_top = 9.0
+offset_right = 1129.0
+offset_bottom = 96.0
+texture = ExtResource("7_l03e1")
+
+[node name="Dialog_0" parent="CanvasLayer" unique_id=1947356223 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("14_0hdmg")]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -73,59 +90,77 @@ offset_right = -183.0
 offset_bottom = 53.0
 grow_horizontal = 0
 theme = ExtResource("7_w7lsb")
-theme_override_colors/font_color = Color(0.7693932, 0.6314846, 0.9928457, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_0"
 next_dialog = NodePath("../Dialog_1")
+dialog_cloud = NodePath("../Dialog_cloud")
 time_out = 4.0
 
-[node name="Dialog_1" parent="CanvasLayer" unique_id=1119049695 node_paths=PackedStringArray("next_dialog") instance=ExtResource("14_0hdmg")]
+[node name="Dialog_1" parent="CanvasLayer" unique_id=1119049695 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("14_0hdmg")]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -385.0
-offset_top = 30.0
-offset_right = -183.0
-offset_bottom = 53.0
+offset_left = -603.0
+offset_top = 31.0
+offset_right = -270.0
+offset_bottom = 66.0
 grow_horizontal = 0
 theme = ExtResource("7_w7lsb")
-theme_override_colors/font_color = Color(0.7693932, 0.6314846, 0.9928457, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_1"
 next_dialog = NodePath("../Dialog_2")
+dialog_cloud = NodePath("../Dialog_cloud")
 time_out = 4.0
 
-[node name="Dialog_2" parent="CanvasLayer" unique_id=728835761 instance=ExtResource("14_0hdmg")]
+[node name="Dialog_2" parent="CanvasLayer" unique_id=728835761 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("14_0hdmg")]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -424.0
-offset_top = 30.0
-offset_right = -183.0
-offset_bottom = 53.0
+offset_left = -658.0
+offset_top = 31.0
+offset_right = -270.0
+offset_bottom = 66.0
 grow_horizontal = 0
 theme = ExtResource("7_w7lsb")
-theme_override_colors/font_color = Color(0.7693932, 0.6314846, 0.9928457, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_2"
-time_out = 4.0
+next_dialog = NodePath("../Dialog_3")
+dialog_cloud = NodePath("../Dialog_cloud")
+time_out = 3.0
 
-[node name="Dialog_3" parent="CanvasLayer" unique_id=1793182022 instance=ExtResource("14_0hdmg")]
+[node name="Dialog_3" parent="CanvasLayer" unique_id=1793182022 node_paths=PackedStringArray("dialog_cloud") instance=ExtResource("14_0hdmg")]
 visible = false
-offset_left = 748.0
-offset_top = 30.0
-offset_right = 1098.0
-offset_bottom = 64.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -738.0
+offset_top = 31.0
+offset_right = -173.0
+offset_bottom = 66.0
+grow_horizontal = 0
 theme = ExtResource("7_w7lsb")
-theme_override_colors/font_color = Color(0.7693932, 0.6314846, 0.9928457, 1)
-theme_override_colors/font_shadow_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
+theme_override_font_sizes/font_size = 24
+text = "MINIGAME_READY"
+dialog_cloud = NodePath("../Dialog_cloud")
+time_out = 2.0
+
+[node name="Dialog_4" parent="CanvasLayer" unique_id=1447541244 node_paths=PackedStringArray("dialog_cloud") instance=ExtResource("14_0hdmg")]
+visible = false
+offset_left = 629.0
+offset_top = 31.0
+offset_right = 1010.0
+offset_bottom = 66.0
+theme = ExtResource("7_w7lsb")
+theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
 theme_override_font_sizes/font_size = 24
 text = "MINIGAME_0_DIALOG_3"
+dialog_cloud = NodePath("../Dialog_cloud")
 time_out = 4.0
 
 [node name="NumberHolder" parent="CanvasLayer" unique_id=1606689379 instance=ExtResource("15_g1s10")]
@@ -157,6 +192,9 @@ max_value = 10
 
 [node name="MiniGameIntro_0" parent="." unique_id=809843581 instance=ExtResource("4_ridya")]
 wait_time = 4.5
+
+[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("12_t1bkq")]
+is_mini_game = true
 
 [node name="Textures" type="Node" parent="." unique_id=917866759]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpqvaat11id51"
-path="res://.godot/imported/sister_fairy.png-8dc5ac839f3bea00fe61ba390f2d33e1.ctex"
+uid="uid://ll6lales3rke"
+path="res://.godot/imported/sister_fairy_1.png-a5bc8990ce0691a2677014da494d8aef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/sister_fairy.png"
-dest_files=["res://.godot/imported/sister_fairy.png-8dc5ac839f3bea00fe61ba390f2d33e1.ctex"]
+source_file="res://assets/art/fairies/sister_fairy_1.png"
+dest_files=["res://.godot/imported/sister_fairy_1.png-a5bc8990ce0691a2677014da494d8aef.ctex"]
 
 [params]
 

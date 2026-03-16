@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="6_4attq"]
 [ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="6_7ttt4"]
 [ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="7_0xv0b"]
+[ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="8_6l4sf"]
 [ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="8_7ttt4"]
 [ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="9_6l4sf"]
 [ext_resource type="Texture2D" uid="uid://bn700dfokopay" path="res://assets/art/map/trunk_5.png" id="10_r0100"]
@@ -21,9 +22,15 @@
 [ext_resource type="Texture2D" uid="uid://dgm2a1gocs0nd" path="res://assets/art/map/crown_3.png" id="14_beoo7"]
 [ext_resource type="PackedScene" uid="uid://dmh3vbkjjlhgm" path="res://scenes/entities/go_to_entity.tscn" id="15_3h8ha"]
 [ext_resource type="Texture2D" uid="uid://bgyhm8fyo7xv" path="res://assets/art/intro/girl.png" id="15_r5eo8"]
-[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/head_fairy.png" id="16_qkk1i"]
-[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/newbie_fairy.png" id="18_bg8ub"]
-[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/sister_fairy.png" id="19_2i82p"]
+[ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/fairies/head_fairy_0.png" id="16_qkk1i"]
+[ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/fairies/newbie_fairy_0.png" id="18_bg8ub"]
+[ext_resource type="Texture2D" uid="uid://dpqvaat11id51" path="res://assets/art/fairies/sister_fairy_0.png" id="19_2i82p"]
+[ext_resource type="Script" uid="uid://bytbgkh8bsgpt" path="res://scripts/entities/go_to_entity.gd" id="21_7ttt4"]
+[ext_resource type="Texture2D" uid="uid://bub8ev3k0lifp" path="res://assets/art/map/marigold.png" id="22_xacom"]
+[ext_resource type="Texture2D" uid="uid://cbacntidqd005" path="res://assets/art/fairies/newbie_fairy_1.png" id="23_6l4sf"]
+[ext_resource type="Texture2D" uid="uid://c81q6ptkyscnj" path="res://assets/art/map/herb.png" id="23_bg8ub"]
+[ext_resource type="Texture2D" uid="uid://ll6lales3rke" path="res://assets/art/fairies/sister_fairy_1.png" id="25_0epg4"]
+[ext_resource type="Texture2D" uid="uid://blhdgq0s5jpij" path="res://assets/art/fairies/head_fairy_1.png" id="27_qi8q2"]
 
 [sub_resource type="Resource" id="Resource_7ttt4"]
 script = ExtResource("2_0xv0b")
@@ -43,6 +50,122 @@ metadata/_custom_type_script = "uid://b5shl5kxdjpjm"
 script = ExtResource("2_0xv0b")
 entity = 3
 metadata/_custom_type_script = "uid://b5shl5kxdjpjm"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_esgp8"]
+
+[sub_resource type="Animation" id="Animation_r0100"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_0epg4"]
+resource_name = "play"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("18_bg8ub"), ExtResource("23_6l4sf")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4xtws"]
+_data = {
+&"RESET": SubResource("Animation_r0100"),
+&"play": SubResource("Animation_0epg4")
+}
+
+[sub_resource type="Animation" id="Animation_4xtws"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("19_2i82p")]
+}
+
+[sub_resource type="Animation" id="Animation_qi8q2"]
+resource_name = "play"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("19_2i82p"), ExtResource("25_0epg4")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_beoo7"]
+_data = {
+&"RESET": SubResource("Animation_4xtws"),
+&"play": SubResource("Animation_qi8q2")
+}
+
+[sub_resource type="Animation" id="Animation_beoo7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_r5eo8"]
+resource_name = "play"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("16_qkk1i"), ExtResource("27_qi8q2")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qkk1i"]
+_data = {
+&"RESET": SubResource("Animation_beoo7"),
+&"play": SubResource("Animation_r5eo8")
+}
 
 [node name="Intro" type="Node2D" unique_id=1411035401 node_paths=PackedStringArray("flash_label", "dialog_cloud", "entities", "girl_markers", "fairy_0", "fairy_1", "fairy_2", "dialogs")]
 script = ExtResource("1_3kqdl")
@@ -98,7 +221,7 @@ theme_override_font_sizes/font_size = 20
 text = "UI_PRESS_ANY_TO_CONTINUE"
 loops = 4
 
-[node name="Dialog0" parent="CanvasLayer" unique_id=1793182022 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog0" parent="CanvasLayer" unique_id=1793182022 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -117,8 +240,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_0"
 next_dialog = NodePath("../Dialog1")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog1" parent="CanvasLayer" unique_id=874271436 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog1" parent="CanvasLayer" unique_id=874271436 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -137,8 +261,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_1"
 next_dialog = NodePath("../Dialog2")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog2" parent="CanvasLayer" unique_id=1541869302 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog2" parent="CanvasLayer" unique_id=1541869302 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -157,8 +282,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_2"
 next_dialog = NodePath("../Dialog3")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog3" parent="CanvasLayer" unique_id=657770250 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog3" parent="CanvasLayer" unique_id=657770250 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -177,8 +303,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_3"
 next_dialog = NodePath("../Dialog4")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog4" parent="CanvasLayer" unique_id=933891482 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog4" parent="CanvasLayer" unique_id=933891482 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -197,8 +324,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_4"
 next_dialog = NodePath("../Dialog5")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog5" parent="CanvasLayer" unique_id=1397155824 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog5" parent="CanvasLayer" unique_id=1397155824 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -217,8 +345,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_5"
 next_dialog = NodePath("../Dialog6")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog6" parent="CanvasLayer" unique_id=974720774 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog6" parent="CanvasLayer" unique_id=974720774 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -237,8 +366,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_6"
 next_dialog = NodePath("../Dialog7")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog7" parent="CanvasLayer" unique_id=77380926 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog7" parent="CanvasLayer" unique_id=77380926 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -257,8 +387,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_7"
 next_dialog = NodePath("../Dialog8")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog8" parent="CanvasLayer" unique_id=1516883182 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog8" parent="CanvasLayer" unique_id=1516883182 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -277,8 +408,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_8"
 next_dialog = NodePath("../Dialog9")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog9" parent="CanvasLayer" unique_id=75392364 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog9" parent="CanvasLayer" unique_id=75392364 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -297,8 +429,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_9"
 next_dialog = NodePath("../Dialog10")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog10" parent="CanvasLayer" unique_id=256731405 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog10" parent="CanvasLayer" unique_id=256731405 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -317,8 +450,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_10"
 next_dialog = NodePath("../Dialog11")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog11" parent="CanvasLayer" unique_id=1591583584 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog11" parent="CanvasLayer" unique_id=1591583584 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -337,8 +471,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_11"
 next_dialog = NodePath("../Dialog12")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog12" parent="CanvasLayer" unique_id=771121204 node_paths=PackedStringArray("next_dialog") instance=ExtResource("3_kxb22")]
+[node name="Dialog12" parent="CanvasLayer" unique_id=771121204 node_paths=PackedStringArray("next_dialog", "dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -357,8 +492,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_12"
 next_dialog = NodePath("../Dialog13")
+dialog_cloud = NodePath("../DialogCloud")
 
-[node name="Dialog13" parent="CanvasLayer" unique_id=1730419282 instance=ExtResource("3_kxb22")]
+[node name="Dialog13" parent="CanvasLayer" unique_id=1730419282 node_paths=PackedStringArray("dialog_cloud") instance=ExtResource("3_kxb22")]
 visible = false
 anchors_preset = 7
 anchor_left = 0.5
@@ -376,157 +512,233 @@ theme_override_colors/font_color = Color(0.2901961, 0.8392157, 0.46666667, 1)
 theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.38928658, 1)
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_13"
+dialog_cloud = NodePath("../DialogCloud")
+
+[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("8_6l4sf")]
 
 [node name="Textures" type="Node" parent="." unique_id=438823552]
 
-[node name="Background" type="Sprite2D" parent="Textures" unique_id=801091843]
+[node name="Background" type="Sprite2D" parent="Textures" unique_id=1807441216]
 z_index = -99
 position = Vector2(640, 359.5)
 scale = Vector2(0.37094906, 0.117350265)
 texture = ExtResource("3_3h8ha")
 
-[node name="Trunk6" type="Sprite2D" parent="Textures" unique_id=167240983]
+[node name="Trunk6" type="Sprite2D" parent="Textures" unique_id=1593091398]
 position = Vector2(909, 28)
 texture = ExtResource("4_kxb22")
 
-[node name="Trunk4" type="Sprite2D" parent="Textures" unique_id=1773294987]
+[node name="Trunk4" type="Sprite2D" parent="Textures" unique_id=395316583]
 position = Vector2(257, 171)
 scale = Vector2(2.6111112, 2.0783134)
 texture = ExtResource("5_h2c36")
 
-[node name="Trunk2" type="Sprite2D" parent="Textures" unique_id=896165347]
+[node name="Trunk2" type="Sprite2D" parent="Textures" unique_id=268160499]
 position = Vector2(363.99997, 117.99999)
 scale = Vector2(1.9827586, 1.9272727)
 texture = ExtResource("6_4attq")
 
-[node name="Crown17" type="Sprite2D" parent="Textures" unique_id=56893244]
+[node name="Crown17" type="Sprite2D" parent="Textures" unique_id=10917410]
 position = Vector2(411, 25)
 texture = ExtResource("7_0xv0b")
 
-[node name="Crown15" type="Sprite2D" parent="Textures" unique_id=906699562]
+[node name="Crown15" type="Sprite2D" parent="Textures" unique_id=1517520801]
 position = Vector2(400, 100)
 texture = ExtResource("8_7ttt4")
 
-[node name="Trunk3" type="Sprite2D" parent="Textures" unique_id=1960405934]
+[node name="Trunk3" type="Sprite2D" parent="Textures" unique_id=1615108883]
 position = Vector2(658, 244.00002)
 scale = Vector2(1.8179834, 2.1542792)
 texture = ExtResource("9_6l4sf")
 
-[node name="Trunk5" type="Sprite2D" parent="Textures" unique_id=1673355860]
+[node name="Trunk5" type="Sprite2D" parent="Textures" unique_id=1962788805]
 position = Vector2(146, 212)
 scale = Vector2(3.7368422, 2.3679245)
 texture = ExtResource("10_r0100")
 
-[node name="Trunk1" type="Sprite2D" parent="Textures" unique_id=1546881611]
+[node name="Trunk1" type="Sprite2D" parent="Textures" unique_id=1173285969]
 position = Vector2(1112, 96.00003)
 scale = Vector2(1.6639347, 1.9931507)
 texture = ExtResource("4_kxb22")
 
-[node name="Crown0" type="Sprite2D" parent="Textures" unique_id=1808184522]
+[node name="Crown0" type="Sprite2D" parent="Textures" unique_id=756790273]
 position = Vector2(731.00006, 131)
 scale = Vector2(3.740385, 2.5681818)
 texture = ExtResource("11_0epg4")
 
-[node name="Crown1" type="Sprite2D" parent="Textures" unique_id=180306293]
+[node name="Crown1" type="Sprite2D" parent="Textures" unique_id=624313859]
 position = Vector2(520, 150.00002)
 scale = Vector2(2.2053573, 1.45)
 texture = ExtResource("8_7ttt4")
 
-[node name="Crown4" type="Sprite2D" parent="Textures" unique_id=1664682978]
+[node name="Crown4" type="Sprite2D" parent="Textures" unique_id=330675427]
 position = Vector2(709, 46.000004)
 scale = Vector2(1.7247192, 1.3227848)
 texture = ExtResource("12_4xtws")
 
-[node name="Crown2" type="Sprite2D" parent="Textures" unique_id=2110055133]
+[node name="Crown2" type="Sprite2D" parent="Textures" unique_id=481178850]
 position = Vector2(527, 44)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("13_qi8q2")
 
-[node name="Crown5" type="Sprite2D" parent="Textures" unique_id=1372950057]
+[node name="Crown5" type="Sprite2D" parent="Textures" unique_id=1106294400]
 position = Vector2(304.99994, 57)
 scale = Vector2(1.53937, 1.5791367)
 texture = ExtResource("7_0xv0b")
 
-[node name="Crown3" type="Sprite2D" parent="Textures" unique_id=819550232]
+[node name="Crown3" type="Sprite2D" parent="Textures" unique_id=598327465]
 position = Vector2(132.00003, 57.000008)
 scale = Vector2(3.740385, 2.5681818)
 texture = ExtResource("11_0epg4")
 
-[node name="Crown6" type="Sprite2D" parent="Textures" unique_id=1647308166]
+[node name="Crown6" type="Sprite2D" parent="Textures" unique_id=126497920]
 position = Vector2(222, 116.00001)
 scale = Vector2(2.2053573, 1.45)
 texture = ExtResource("8_7ttt4")
 
-[node name="Crown7" type="Sprite2D" parent="Textures" unique_id=974557400]
+[node name="Crown7" type="Sprite2D" parent="Textures" unique_id=56288381]
 position = Vector2(80.99997, 132)
 scale = Vector2(1.7247192, 1.3227848)
 texture = ExtResource("12_4xtws")
 
-[node name="Crown8" type="Sprite2D" parent="Textures" unique_id=1193121763]
+[node name="Crown8" type="Sprite2D" parent="Textures" unique_id=903884212]
 position = Vector2(123, 101)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("13_qi8q2")
 
-[node name="Crown9" type="Sprite2D" parent="Textures" unique_id=1805831537]
+[node name="Crown9" type="Sprite2D" parent="Textures" unique_id=1340816782]
 position = Vector2(120.00001, 42)
 scale = Vector2(1.53937, 1.5791367)
 texture = ExtResource("7_0xv0b")
 
-[node name="Crown10" type="Sprite2D" parent="Textures" unique_id=1857817466]
+[node name="Crown10" type="Sprite2D" parent="Textures" unique_id=174041224]
 position = Vector2(1120, 103)
 scale = Vector2(3.740385, 2.5681818)
 texture = ExtResource("11_0epg4")
 
-[node name="Crown11" type="Sprite2D" parent="Textures" unique_id=1326061494]
+[node name="Crown11" type="Sprite2D" parent="Textures" unique_id=1122803384]
 position = Vector2(1188.5, 100.75001)
 scale = Vector2(2.2053573, 1.45)
 texture = ExtResource("8_7ttt4")
 
-[node name="Crown12" type="Sprite2D" parent="Textures" unique_id=714028165]
+[node name="Crown12" type="Sprite2D" parent="Textures" unique_id=1752843321]
 position = Vector2(1188, 67.00001)
 scale = Vector2(1.7247192, 1.3227848)
 texture = ExtResource("12_4xtws")
 
-[node name="Crown13" type="Sprite2D" parent="Textures" unique_id=1629773390]
+[node name="Crown13" type="Sprite2D" parent="Textures" unique_id=657185156]
 position = Vector2(1035, 48)
 scale = Vector2(1.0000001, 1)
 texture = ExtResource("13_qi8q2")
 
-[node name="Crown14" type="Sprite2D" parent="Textures" unique_id=1944599308]
+[node name="Crown14" type="Sprite2D" parent="Textures" unique_id=1104548834]
 position = Vector2(1243, 103)
 scale = Vector2(1.53937, 1.5791367)
 texture = ExtResource("7_0xv0b")
 
-[node name="Crown16" type="Sprite2D" parent="Textures" unique_id=1716939346]
+[node name="Crown16" type="Sprite2D" parent="Textures" unique_id=1202392366]
 position = Vector2(918, 35)
 texture = ExtResource("14_beoo7")
 
-[node name="Fairy_0" parent="." unique_id=1201763383 instance=ExtResource("15_3h8ha")]
+[node name="Marigold" type="Sprite2D" parent="Textures" unique_id=1502254280]
+position = Vector2(337.00003, 272)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("22_xacom")
+
+[node name="Marigold5" type="Sprite2D" parent="Textures" unique_id=1860004141]
+position = Vector2(1010, 483)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("22_xacom")
+
+[node name="Marigold2" type="Sprite2D" parent="Textures" unique_id=717784664]
+position = Vector2(402.00003, 259)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("22_xacom")
+
+[node name="Marigold3" type="Sprite2D" parent="Textures" unique_id=1277173199]
+position = Vector2(375, 556)
+scale = Vector2(0.7125, 0.6730769)
+texture = ExtResource("22_xacom")
+
+[node name="Marigold4" type="Sprite2D" parent="Textures" unique_id=486969036]
+position = Vector2(1209, 260)
+scale = Vector2(0.5250007, 0.4615388)
+texture = ExtResource("22_xacom")
+
+[node name="Herb2" type="Sprite2D" parent="Textures" unique_id=457655961]
+position = Vector2(960, 234)
+scale = Vector2(0.7692308, 0.84)
+texture = ExtResource("23_bg8ub")
+
+[node name="Herb" type="Sprite2D" parent="Textures" unique_id=2070204086]
+position = Vector2(923, 240)
+texture = ExtResource("23_bg8ub")
+
+[node name="Herb3" type="Sprite2D" parent="Textures" unique_id=1686074768]
+position = Vector2(944, 264)
+scale = Vector2(0.88461536, 0.82)
+texture = ExtResource("23_bg8ub")
+
+[node name="Fairy_0" type="CharacterBody2D" parent="." unique_id=1201763383 node_paths=PackedStringArray("sprite")]
 z_index = -1
 position = Vector2(672, 132)
+motion_mode = 1
+script = ExtResource("21_7ttt4")
+movement_threshold = 20.0
+sprite = NodePath("Sprite2D")
 
-[node name="Sprite2D" parent="Fairy_0" index="0" unique_id=1114708631]
+[node name="Sprite2D" type="Sprite2D" parent="Fairy_0" unique_id=1114708631]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("18_bg8ub")
 flip_h = true
 
-[node name="Fairy_1" parent="." unique_id=342899497 instance=ExtResource("15_3h8ha")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fairy_0" unique_id=186507101]
+shape = SubResource("CircleShape2D_esgp8")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fairy_0" unique_id=59729278]
+libraries/ = SubResource("AnimationLibrary_4xtws")
+autoplay = &"play"
+
+[node name="Fairy_1" type="CharacterBody2D" parent="." unique_id=342899497 node_paths=PackedStringArray("sprite")]
 z_index = -1
 position = Vector2(533, 129)
+motion_mode = 1
+script = ExtResource("21_7ttt4")
+movement_threshold = 20.0
+sprite = NodePath("Sprite2D")
 
-[node name="Sprite2D" parent="Fairy_1" index="0" unique_id=1114708631]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("16_qkk1i")
-flip_h = true
-
-[node name="Fairy_2" parent="." unique_id=93941508 instance=ExtResource("15_3h8ha")]
-z_index = -1
-position = Vector2(577, 155)
-
-[node name="Sprite2D" parent="Fairy_2" index="0" unique_id=1114708631]
+[node name="Sprite2D" type="Sprite2D" parent="Fairy_1" unique_id=1803078712]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("19_2i82p")
 flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fairy_1" unique_id=878646873]
+shape = SubResource("CircleShape2D_esgp8")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fairy_1" unique_id=947598104]
+libraries/ = SubResource("AnimationLibrary_beoo7")
+autoplay = &"play"
+
+[node name="Fairy_2" type="CharacterBody2D" parent="." unique_id=93941508 node_paths=PackedStringArray("sprite")]
+z_index = -1
+position = Vector2(577, 155)
+motion_mode = 1
+script = ExtResource("21_7ttt4")
+movement_threshold = 20.0
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fairy_2" unique_id=284302972]
+scale = Vector2(0.2, 0.2)
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fairy_2" unique_id=677569983]
+shape = SubResource("CircleShape2D_esgp8")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fairy_2" unique_id=918050249]
+libraries/ = SubResource("AnimationLibrary_qkk1i")
+autoplay = &"play"
 
 [node name="Girl" parent="." unique_id=697011590 instance=ExtResource("15_3h8ha")]
 z_index = 1
@@ -579,7 +791,4 @@ position = Vector2(454, 397)
 [node name="Fairy_2_Position_2" type="Marker2D" parent="Fairy_2_Positions" unique_id=723058090]
 position = Vector2(1482, 499)
 
-[editable path="Fairy_0"]
-[editable path="Fairy_1"]
-[editable path="Fairy_2"]
 [editable path="Girl"]
