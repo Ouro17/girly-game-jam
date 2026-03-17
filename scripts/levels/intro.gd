@@ -50,6 +50,8 @@ var current_dialog: Dialog
 
 var current_stage: Stage
 
+var allow_input : bool
+
 const FAIRY_MOVEMENT = 300
 const GIRL_MOVEMENT = 200
 
@@ -67,6 +69,8 @@ func get_markers(index : Entities) -> Array[Marker2D]:
     return girl_markers
 
 func _ready() -> void:
+    allow_input = false
+
     current_dialog = dialogs[0]
 
     for dialog in dialogs:
@@ -89,6 +93,7 @@ func _ready() -> void:
     girl.target_reached.connect(_on_target_reached)
 
 func _on_target_reached(entity: GoToEntity) -> void:
+    allow_input = true
     if current_stage == Stage.MOVE_GIRL_0 and entity.id == Entities.Girl:
         dialog_cloud.visible = true
         current_dialog.start_dialog()
@@ -99,7 +104,7 @@ func _on_target_reached(entity: GoToEntity) -> void:
         _next_level()
 
 func _on_dialog_finished(dialog: Dialog) -> void:
-    if dialog == dialogs[dialogs.size() - 1]:
+    if dialog == dialogs[dialogs.size() - 1]: # Ending
         dialog_cloud.visible = false
         flash_label.visible = false
 
@@ -136,6 +141,9 @@ func _on_dialog_finished(dialog: Dialog) -> void:
         current_stage = Stage.END
 
 func _input(event):
+    if not allow_input:
+        return
+
     if (event is InputEventKey or event is InputEventMouseButton) and event.pressed and not event.is_action_pressed("quit"):
         get_viewport().set_input_as_handled()
         if current_dialog != null:

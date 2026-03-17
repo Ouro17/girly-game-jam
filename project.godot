@@ -59,8 +59,12 @@ locale/translation_remaps={
 "res://assets/art/mini_game_2/title_mini_game_2_1_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_1_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_1_ja.png:ja"),
 "res://assets/art/mini_game_2/title_mini_game_2_2_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_2_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_2_ja.png:ja")
 }
-locale/translations=PackedStringArray("res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation", "res://assets/translations/UI_translations.en.translation", "res://assets/translations/UI_translations.es.translation", "res://assets/translations/UI_translations.ja.translation")
+locale/translations=PackedStringArray("res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation", "res://assets/translations/UI_translations.en.translation", "res://assets/translations/UI_translations.es.translation", "res://assets/translations/UI_translations.ja.translation", "res://assets/translations/game_translations.ca.translation", "res://assets/translations/UI_translations.ca.translation")
 locale/locale_filter_mode=0
+
+[layer_names]
+
+2d_physics/layer_2="Clicklable"
 
 [physics]
 

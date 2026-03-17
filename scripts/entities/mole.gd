@@ -46,7 +46,7 @@ var angry_time: Vector2
 var pick_up_time: Vector2
 
 @export
-var mole_area : MoleArea
+var clickable_area : ClickableArea
 
 var target_position: Vector2
 var is_movement_enabled: bool
@@ -75,7 +75,7 @@ func set_vegetable(new_value : Vegetable) -> void:
     navigation_agent.target_position = target_position
 
 func _ready():
-    mole_area.clicked.connect(_on_clicked)
+    clickable_area.clicked.connect(_on_clicked)
 
     current_state = MoleState.Walk
     navigation_agent.velocity_computed.connect(_on_velocity_computed)

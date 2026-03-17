@@ -1,15 +1,16 @@
-keys,en,es,ja
-UI_LANGUAGE,Language,Idioma,言語
-UI_CLOSE,Close,Cerrar,閉じる
-UI_EXIT,Exit game,Salir,閉じる
-UI_START,Start,Empezar,始める
-UI_PAUSE,Pause,Pause,ポーズ
-UI_CONTINUE,Continue,Continuar,続ける
-UI_BACK_TO_MAP,Back to ranch,Volver al rancho,牧場に戻る
-UI_BACK_TO_MENU,Exit to menu,Salir al menu,メニューに戻る
-UI_TITLE,Fairy Care Initiative,Iniciativa Hadas Cuidadoras,ようせいケアけいかく
-UI_PRESS_ANY_TO_CONTINUE,Press any button to continue,Pulsa cualquier botón para continuar,何かキーを押して続ける
-UI_TIME_LEFT,Time,Tiempo,タイム
-LANG_EN,English,English,English
-LANG_ES,Español,Español,Español
-LANG_JA,日本語,日本語,日本語
+keys,en,es,ja,ca
+UI_LANGUAGE,Language,Idioma,言語,ca
+UI_CLOSE,Close,Cerrar,閉じる,ca
+UI_EXIT,Exit game,Salir,閉じる,ca
+UI_START,Start,Empezar,始める,ca
+UI_PAUSE,Pause,Pause,ポーズ,ca
+UI_CONTINUE,Continue,Continuar,続ける,ca
+UI_BACK_TO_MAP,Back to ranch,Volver al rancho,牧場に戻る,ca
+UI_BACK_TO_MENU,Exit to menu,Salir al menu,メニューに戻る,ca
+UI_TITLE,Fairy Care Initiative,Iniciativa Hadas Cuidadoras,ようせいケアけいかく,ca
+UI_PRESS_ANY_TO_CONTINUE,Press any button to continue,Pulsa cualquier botón para continuar,何かキーを押して続ける,ca
+UI_TIME_LEFT,Time,Tiempo,タイム,ca
+LANG_EN,English,English,English,English
+LANG_ES,Español,Español,Español,Español
+LANG_JA,日本語,日本語,日本語,日本語
+LANG_CA,ca,ca,ca,ca

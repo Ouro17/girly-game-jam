@@ -686,6 +686,8 @@ motion_mode = 1
 script = ExtResource("21_7ttt4")
 movement_threshold = 20.0
 sprite = NodePath("Sprite2D")
+idle_wobble_strength = 6.0
+idle_wobble_speed = 2.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Fairy_0" unique_id=1114708631]
 scale = Vector2(0.2, 0.2)
@@ -706,6 +708,8 @@ motion_mode = 1
 script = ExtResource("21_7ttt4")
 movement_threshold = 20.0
 sprite = NodePath("Sprite2D")
+idle_wobble_strength = 6.0
+idle_wobble_speed = 2.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Fairy_1" unique_id=1803078712]
 scale = Vector2(0.2, 0.2)
@@ -727,6 +731,8 @@ motion_mode = 1
 script = ExtResource("21_7ttt4")
 movement_threshold = 20.0
 sprite = NodePath("Sprite2D")
+idle_wobble_strength = 6.0
+idle_wobble_speed = 2.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Fairy_2" unique_id=284302972]
 scale = Vector2(0.2, 0.2)

@@ -6,10 +6,10 @@ uid="uid://cqs6r4ug135xg"
 
 [deps]
 
-files=["res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation"]
+files=["res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation", "res://assets/translations/game_translations.ca.translation"]
 
 source_file="res://assets/translations/game_translations.csv"
-dest_files=["res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation"]
+dest_files=["res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation", "res://assets/translations/game_translations.ca.translation"]
 
 [params]
 

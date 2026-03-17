@@ -165,6 +165,7 @@ We also wanted to include new things to make the game more engaging, so our fina
     - [x] Make the fairy faster, elements slower
     - [x] Make elements bigger
     - [x] Add SFX when picking good or bad
+    - [x] The worm apple is very hard to see, move it less
 - [x] Mole minigame:
     - [x] Make more clear when the mole is hit
     - [x] Add more SFX for the minigame
@@ -172,9 +173,11 @@ We also wanted to include new things to make the game more engaging, so our fina
     - [x] Make instruction more clear, by making the last dialog permanent and putting a dialog box
     - [x] Start the minigame only when the dialog is finished
 - [x] Fix cursor size and make it more predictable to click
-- [x] Add menu pause during the gameplay and able to go back to the map
-- [ ] Add movement to the fairies wings and wobble in general
-- [ ] On the ranch, make sounds for the different elements
+- [ ] Add menu pause during the gameplay and able to go back to the map
+- [x] Add movement to the fairies wings and wobble in general
+- [x] On the ranch, make sounds for the different elements
+- [x] Fix the dialog system on intro and outro so if you click very fast it does not make the game stuck
+- [ ] Add catalan as language
 
 ## Tools used
 - Godot 4.6

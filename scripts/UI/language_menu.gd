@@ -24,6 +24,7 @@ var _language_UI = {
     "en": "LANG_EN",
     "es": "LANG_ES",
     "ja": "LANG_JA",
+    "ca": "LANG_CA",
 }
 
 func _ready() -> void:

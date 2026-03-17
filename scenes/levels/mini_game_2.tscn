@@ -20,12 +20,51 @@
 [ext_resource type="Texture2D" uid="uid://if07reipecgm" path="res://assets/art/mini_game_2/carrot_head.png" id="14_kth5j"]
 [ext_resource type="Texture2D" uid="uid://m82xucnmyxnu" path="res://assets/art/mini_game_2/potato_head.png" id="14_n1dgv"]
 [ext_resource type="Texture2D" uid="uid://n8744e68lty2" path="res://assets/art/mini_game_2/beetroot_head.png" id="16_0m7ds"]
+[ext_resource type="Texture2D" uid="uid://cbacntidqd005" path="res://assets/art/fairies/newbie_fairy_1.png" id="17_ef58g"]
 [ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/fairies/newbie_fairy_0.png" id="22_ef58g"]
 
 [sub_resource type="Resource" id="Resource_fsirv"]
 script = ExtResource("3_2q8ro")
 id = "mini_game_2"
 metadata/_custom_type_script = "uid://dgcvhq2w4qg1v"
+
+[sub_resource type="Animation" id="Animation_fw7ko"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("22_ef58g")]
+}
+
+[sub_resource type="Animation" id="Animation_lqojs"]
+resource_name = "play"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("22_ef58g"), ExtResource("17_ef58g")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_32lln"]
+_data = {
+&"RESET": SubResource("Animation_fw7ko"),
+&"play": SubResource("Animation_lqojs")
+}
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_0y6n6"]
 vertices = PackedVector2Array(138, 75, 153, 674, 77, 676, 67, 74, 1146, 669, 163, 674, 161, 617, 801, 612.4453, 1145, 610, 810.39844, 612.375, 803, 407, 892, 407, 892, 607, 502, 408, 511, 613, 426, 608, 418, 407, 1167, 604, 1087, 602, 1083, 403, 1158, 402, 1137, 400, 151, 403, 150, 334, 1133, 333, 490, 155, 489, 329, 390, 332, 396, 151, 770, 332, 758, 159, 865, 161, 817.1094, 327.78906, 872, 327, 1135, 161, 1138, 330, 1061, 328, 1060, 159, 1133, 77, 1136, 153, 144, 149, 146, 75)
@@ -115,8 +154,7 @@ stream = ExtResource("8_sfeno")
 volume_db = -10.0
 
 [node name="MiniGameIntro_2" parent="." unique_id=809843581 instance=ExtResource("4_32lln")]
-visible = false
-wait_time = 0.01
+wait_time = 2.5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1085494626]
 
@@ -269,6 +307,10 @@ z_index = 99
 position = Vector2(1200, 95)
 scale = Vector2(0.27291667, 0.24856046)
 texture = ExtResource("22_ef58g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Helper" unique_id=730866658]
+libraries/ = SubResource("AnimationLibrary_32lln")
+autoplay = &"play"
 
 [node name="Map" type="Node" parent="." unique_id=969201818]
 

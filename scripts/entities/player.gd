@@ -21,9 +21,16 @@ var wobble_time: float = 0.0
 
 func _ready() -> void:
     target_position = global_position
+    wobble_time += randf_range(0.0, 10.0)
 
 func _input(event: InputEvent) -> void:
     if not input_enabled:
+        return
+
+    if get_viewport().is_input_handled():
+        return
+
+    if GlobalState.get_key(&"Area", false):
         return
 
     if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

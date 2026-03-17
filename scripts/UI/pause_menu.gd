@@ -58,6 +58,7 @@ func _on_back_to_map_pressed() -> void:
     if is_mini_game:
         SceneManager.change_scene_to(back_level)
     else:
+        click_sound.stop()
         SceneManager.change_scene_to(menu_level)
 
     pause(false)

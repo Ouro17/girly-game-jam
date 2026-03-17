@@ -48,6 +48,8 @@ var current_dialog: Dialog
 
 var current_stage: Stage
 
+var allow_input : bool
+
 const FAIRY_MOVEMENT = 300
 const GIRL_MOVEMENT = 200
 
@@ -65,6 +67,7 @@ func get_markers(index : Entities) -> Array[Marker2D]:
     return girl_markers
 
 func _ready() -> void:
+    allow_input = false
     current_dialog = dialogs[0]
 
     for dialog in dialogs:
@@ -97,6 +100,7 @@ func _on_target_reached(entity: GoToEntity) -> void:
         flash_label.visible = true
         flash_label.start_flashing()
         current_stage = Stage.MOVE_GIRL
+        allow_input = true
 
 func _on_dialog_finished(dialog: Dialog) -> void:
     if dialog == dialogs[dialogs.size() - 1]:
@@ -120,7 +124,10 @@ func _on_dialog_finished(dialog: Dialog) -> void:
         current_stage = Stage.END
 
 func _input(event):
-    if (event is InputEventKey or event is InputEventMouseButton) and event.pressed:
+    if not allow_input:
+        return
+
+    if (event is InputEventKey or event is InputEventMouseButton) and event.pressed and not event.is_action_pressed("quit"):
         get_viewport().set_input_as_handled()
         if current_dialog != null:
             current_dialog = current_dialog.start_next_dialog()

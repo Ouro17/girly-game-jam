@@ -41,6 +41,8 @@ func _ready() -> void:
 
     max_distance = follow_distance + follow_tolerance
 
+    wobble_time += randf_range(0.0, 10.0)
+
 func _physics_process(delta: float) -> void:
     if leader == null:
         return
@@ -56,9 +58,7 @@ func _physics_process(delta: float) -> void:
         desired_velocity = direction_to_leader * speed
 
     desired_velocity += _calculate_separation()
-
-    if desired_velocity == Vector2.ZERO:
-        desired_velocity += _idle_wobble()
+    desired_velocity += _idle_wobble()
 
     velocity = desired_velocity
 
