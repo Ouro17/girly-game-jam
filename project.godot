@@ -49,15 +49,15 @@ interact={
 [internationalization]
 
 locale/translation_remaps={
-"res://assets/art/mini_game_0/title_chicken_0_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_0_es.png:es", "res://assets/art/mini_game_0/title_chicken_0_ja.png:ja"),
-"res://assets/art/mini_game_0/title_chicken_1_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_1_es.png:es", "res://assets/art/mini_game_0/title_chicken_1_ja.png:ja"),
-"res://assets/art/mini_game_0/title_chicken_2_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_2_es.png:es", "res://assets/art/mini_game_0/title_chicken_2_ja.png:ja"),
-"res://assets/art/mini_game_1/title_mini_game_1_0_en.png": PackedStringArray("res://assets/art/mini_game_1/title_mini_game_1_0_es.png:es", "res://assets/art/mini_game_1/title_mini_game_1_0_ja.png:ja"),
-"res://assets/art/mini_game_1/title_mini_game_1_1_en.png": PackedStringArray("res://assets/art/mini_game_1/title_mini_game_1_1_es.png:es", "res://assets/art/mini_game_1/title_mini_game_1_1_ja.png:ja"),
-"res://assets/art/mini_game_1/title_mini_game_1_2_en.png": PackedStringArray("res://assets/art/mini_game_1/title_mini_game_1_2_es.png:es", "res://assets/art/mini_game_1/title_mini_game_1_2_ja.png:ja"),
-"res://assets/art/mini_game_2/title_mini_game_2_0_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_0_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_0_ja.png:ja"),
-"res://assets/art/mini_game_2/title_mini_game_2_1_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_1_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_1_ja.png:ja"),
-"res://assets/art/mini_game_2/title_mini_game_2_2_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_2_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_2_ja.png:ja")
+"res://assets/art/mini_game_0/title_chicken_0_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_0_es.png:es", "res://assets/art/mini_game_0/title_chicken_0_ja.png:ja", "res://assets/art/mini_game_0/title_chicken_0_ca.png:ca"),
+"res://assets/art/mini_game_0/title_chicken_1_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_1_es.png:es", "res://assets/art/mini_game_0/title_chicken_1_ja.png:ja", "res://assets/art/mini_game_0/title_chicken_1_ca.png:ca"),
+"res://assets/art/mini_game_0/title_chicken_2_en.png": PackedStringArray("res://assets/art/mini_game_0/title_chicken_2_es.png:es", "res://assets/art/mini_game_0/title_chicken_2_ja.png:ja", "res://assets/art/mini_game_0/title_chicken_2_ca.png:ca"),
+"res://assets/art/mini_game_1/title_mini_game_1_0_en.png": PackedStringArray("res://assets/art/mini_game_1/title_mini_game_1_0_es.png:es", "res://assets/art/mini_game_1/title_mini_game_1_0_ja.png:ja", "res://assets/art/mini_game_1/title_mini_game_1_0_ca.png:ca"),
+"res://assets/art/mini_game_1/title_mini_game_1_1_en.png": PackedStringArray("res://assets/art/mini_game_1/title_mini_game_1_1_es.png:es", "res://assets/art/mini_game_1/title_mini_game_1_1_ja.png:ja", "res://assets/art/mini_game_1/title_mini_game_1_1_ca.png:ca"),
+"res://assets/art/mini_game_1/title_mini_game_1_2_en.png": PackedStringArray("res://assets/art/mini_game_1/title_mini_game_1_2_es.png:es", "res://assets/art/mini_game_1/title_mini_game_1_2_ja.png:ja", "res://assets/art/mini_game_1/title_mini_game_1_2_ca.png:ca"),
+"res://assets/art/mini_game_2/title_mini_game_2_0_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_0_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_0_ja.png:ja", "res://assets/art/mini_game_2/title_mini_game_2_0_ca.png:ca"),
+"res://assets/art/mini_game_2/title_mini_game_2_1_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_1_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_1_ja.png:ja", "res://assets/art/mini_game_2/title_mini_game_2_1_ca.png:ca"),
+"res://assets/art/mini_game_2/title_mini_game_2_2_en.png": PackedStringArray("res://assets/art/mini_game_2/title_mini_game_2_2_es.png:es", "res://assets/art/mini_game_2/title_mini_game_2_2_ja.png:ja", "res://assets/art/mini_game_2/title_mini_game_2_2_ca.png:ca")
 }
 locale/translations=PackedStringArray("res://assets/translations/game_translations.en.translation", "res://assets/translations/game_translations.es.translation", "res://assets/translations/game_translations.ja.translation", "res://assets/translations/UI_translations.en.translation", "res://assets/translations/UI_translations.es.translation", "res://assets/translations/UI_translations.ja.translation", "res://assets/translations/game_translations.ca.translation", "res://assets/translations/UI_translations.ca.translation")
 locale/locale_filter_mode=0

@@ -1,16 +1,16 @@
 keys,en,es,ja,ca
-UI_LANGUAGE,Language,Idioma,言語,ca
-UI_CLOSE,Close,Cerrar,閉じる,ca
-UI_EXIT,Exit game,Salir,閉じる,ca
-UI_START,Start,Empezar,始める,ca
-UI_PAUSE,Pause,Pause,ポーズ,ca
-UI_CONTINUE,Continue,Continuar,続ける,ca
-UI_BACK_TO_MAP,Back to ranch,Volver al rancho,牧場に戻る,ca
-UI_BACK_TO_MENU,Exit to menu,Salir al menu,メニューに戻る,ca
-UI_TITLE,Fairy Care Initiative,Iniciativa Hadas Cuidadoras,ようせいケアけいかく,ca
-UI_PRESS_ANY_TO_CONTINUE,Press any button to continue,Pulsa cualquier botón para continuar,何かキーを押して続ける,ca
-UI_TIME_LEFT,Time,Tiempo,タイム,ca
+UI_LANGUAGE,Language,Idioma,言語,Idioma
+UI_CLOSE,Close,Cerrar,閉じる,Tancar
+UI_EXIT,Exit game,Salir,閉じる,Sortir
+UI_START,Start,Empezar,始める,Començar
+UI_PAUSE,Pause,Pause,ポーズ,Pausa
+UI_CONTINUE,Continue,Continuar,続ける,Continuar
+UI_BACK_TO_MAP,Back to ranch,Volver al rancho,牧場に戻る,Tornar a la granja
+UI_BACK_TO_MENU,Exit to menu,Salir al menu,メニューに戻る,Sortir al menú
+UI_TITLE,Fairy Care Initiative,Iniciativa Hadas Cuidadoras,ようせいケアけいかく,Iniciativa Fades Cuidadores
+UI_PRESS_ANY_TO_CONTINUE,Press any button to continue,Pulsa cualquier botón para continuar,何かキーを押して続ける,Prem qualsevol botó per a continuar
+UI_TIME_LEFT,Time,Tiempo,タイム,Temps
 LANG_EN,English,English,English,English
 LANG_ES,Español,Español,Español,Español
 LANG_JA,日本語,日本語,日本語,日本語
-LANG_CA,ca,ca,ca,ca
+LANG_CA,Català,Català,Català,Català
