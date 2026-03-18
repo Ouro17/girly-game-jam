@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="7_0xv0b"]
 [ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="8_6l4sf"]
 [ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="8_7ttt4"]
+[ext_resource type="PackedScene" uid="uid://dkmgu635r16f" path="res://scenes/UI/pause_button.tscn" id="8_qkk1i"]
 [ext_resource type="Texture2D" uid="uid://dqvbmlucbqyp0" path="res://assets/art/map/trunk_3.png" id="9_6l4sf"]
 [ext_resource type="Texture2D" uid="uid://bn700dfokopay" path="res://assets/art/map/trunk_5.png" id="10_r0100"]
 [ext_resource type="Texture2D" uid="uid://bi852kx88sayf" path="res://assets/art/map/crown_0.png" id="11_0epg4"]
@@ -513,6 +514,9 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "INTRO_DIALOG_13"
 dialog_cloud = NodePath("../DialogCloud")
+
+[node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("8_qkk1i")]
+pause_menu = NodePath("../PauseMenu")
 
 [node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("8_6l4sf")]
 

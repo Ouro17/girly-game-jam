@@ -1,44 +1,44 @@
 keys,en,es,ja,ca
-INTRO_DIALOG_0,Oh! My parents are gone because of the newborn!,¡Oh! ¡Mis padres se fueron por el recién nacido!,あっ！赤ちゃんが生まれたから、両親はいなくなっちゃった！,ca
-INTRO_DIALOG_1,What can I do for myself?,¿Qué puedo hacer yo sola?,私はどうしたらいいの？,ca
-INTRO_DIALOG_2,It is too much work in the farm!,¡Hay demasiado trabajo en la granja!,農場の仕事が多すぎるよ！,ca
-INTRO_DIALOG_3,If only someone could help me!,¡Si tan solo alguien pudiera ayudarme!,誰か助けてくれたらいいのに！,ca
-INTRO_DIALOG_4,You see? I was right. She is alone and needs help!,¿Lo ves? Tenía razón. ¡Está sola y necesita ayuda!,ほらね？言った通りだ。彼女は一人で助けが必要だ！,ca
-INTRO_DIALOG_5,You are right! Let's send the newbie to help her.,¡Tienes razón! Enviemos a la novata para ayudarla.,その通り！新人を送って手伝わせよう。,ca
-INTRO_DIALOG_6,You there! Don't be shy! Help her!,¡Tú! ¡No seas tímido! ¡Ayúdala!,そこのあなた！恥ずかしがらないで！手伝って！,ca
-INTRO_DIALOG_6,Me? Are you sure? Okay...,¿Yo? ¿Seguro? Bueno...,私？？本当に？？わ、わかりました。。。,ca
-INTRO_DIALOG_7,Hello little girl!,¡Hola pequeña!,こんにちは、小さな女の子！,ca
-INTRO_DIALOG_8,A Fairy!,¡Un hada!,妖精だ！,ca
-INTRO_DIALOG_9,Yes! We are from the FCI and we are here to help you!,¡Sí! Somos de la FCI y estamos aquí para ayudarte.,そう！私たちはFCIから来て、あなたを助けに来たの！,ca
-INTRO_DIALOG_10,Oh! Thank you fairy! I have so much work in the farm!,¡Oh! ¡Gracias hada! ¡Tengo muchísimo trabajo en la granja!,わあ！ありがとう妖精さん！農場の仕事がたくさんあるの！,ca
-INTRO_DIALOG_11,We can do any kind of work! Guide us to the farm!,¡Podemos hacer cualquier tipo de trabajo! ¡Guíanos a la granja!,どんな仕事でもできるよ！農場へ案内して！,ca
-INTRO_DIALOG_12,Thank you! Follow me!,¡Gracias! ¡Sígueme!,ありがとう！ついてきて！,ca
-INTRO_DIALOG_13,To the farm!,¡A la granja!,農場へ！,ca
-OUTRO_DIALOG_0,Wow! That was a lot of work!,¡Wow! ¡Eso fue mucho trabajo!,わあ！すごい量の仕事だったね！,ca
-OUTRO_DIALOG_1,But you did very well newbie!,¡Pero lo hiciste muy bien novata!,でも新人、よくやったよ！,ca
-OUTRO_DIALOG_2,Newbie no more!,¡Ya no es novata!,もう新人じゃない！,ca
-OUTRO_DIALOG_3,From now on you are a real FCI member!,¡Desde ahora eres un verdadero miembro de la FCI!,今日からあなたは本物のFCIメンバーだ！,ca
-OUTRO_DIALOG_4,Thank you fairies!,¡Gracias hadas!,ありがとう妖精さんたち！,ca
-OUTRO_DIALOG_5,Now the farm is tidy and the work done!,¡Ahora la granja está ordenada y el trabajo terminado!,これで農場はきれいになって、仕事も終わった！,ca
-OUTRO_DIALOG_6,My parents can rest and take care of the baby!,¡Mis padres pueden descansar y cuidar del bebé!,両親も休んで赤ちゃんの世話ができるね！,ca
-OUTRO_DIALOG_7,It was a pleasure to help!,¡Fue un placer ayudar!,手伝えてうれしかった！,ca
-OUTRO_DIALOG_8,We have to go to help other children but remember...,Tenemos que ir a ayudar a otros niños. Pero recuerda...,私たちは他の子どもたちを助けに行かなきゃ。でも覚えておいて。。。,ca
-OUTRO_DIALOG_9,The FCI will be there when you need help!,¡La FCI estará ahí cuando necesites ayuda!,助けが必要なときはFCIがそばにいるよ！,ca
-OUTRO_DIALOG_10,Goodbye little fairies! Thank you!,¡Adiós pequeñas hadas! ¡Gracias!,さようなら妖精さんたち！ありがとう！,ca
-TASK_MINIGAME_0,Where are my eggs?,¿Dónde estan mis huevos?,たまごはどこ？,ca
-TASK_MINIGAME_1,Apple rain,Lluvia de manzanas,アップルレイン,ca
-TASK_MINIGAME_2,Hit'mole,Dale al topo,モグラたたき,ca
-MINIGAME_0_DIALOG_0,Gather the eggs and put it in the right basket!,¡Recoge los huevos y ponlos en la cesta correcta!,たまごを集めて、正しいかごに入れて！,ca
-MINIGAME_0_DIALOG_1,Be careful with the colors!,¡Ten cuidado con los colores!,色に気をつけて！,ca
-MINIGAME_0_DIALOG_2,Gather 10 eggs on each basket!,¡Consigue 10 huevos en cada cesta!,それぞれのかごにたまごを10こ集めて！,ca
-MINIGAME_0_DIALOG_3,Good work! Back to the ranch!,¡Buen trabajo! ¡Volvamos al rancho!,よくできた！牧場にもどろう！,ca
-MINIGAME_1_DIALOG_0,Gather the falling apples!,¡Recoge las manzanas que se caen!,落ちてくるりんごを集めて！,ca
-MINIGAME_1_DIALOG_1,Avoid the bad apples and the branches!,¡Ten cuidado con los colores!,悪いりんごと枝をよけて！,ca
-MINIGAME_1_DIALOG_2,Gather 15 apples for the cake!,¡Consigue 15 manzanas para la tarta!,ケーキのためにりんごを15こ集めて！,ca
-MINIGAME_1_DIALOG_3,Wonderful! Now we can bake the cake!,¡Maravilloso! ¡Ya podemos hacer la tarta!,すばらしい！これでケーキが作れる！,ca
-MINIGAME_2_DIALOG_0,The moles are trying to steal the vegetables!,¡Los topos están intentando robar las verduras!,モグラたちが野菜を盗もうとしている！,ca
-MINIGAME_2_DIALOG_1,Avoid it by giving them a smash!,¡Evítalo golpeándolos!,出てきたら叩いて止めよう！,ca
-MINIGAME_2_DIALOG_2,But only when they show their head!,¡Pero solo cuando saquen la cabeza!,でも、頭を出したときだけ叩けるよ！,ca
-MINIGAME_2_DIALOG_3,Oh no! Let's try again!,¡Oh no! ¡Intentémoslo otra vez!,ああ！もう一度やってみよう！,ca
-MINIGAME_2_DIALOG_4,You protected the vegetables!,¡Has protegido las verduras!,野菜を守ったね！,ca
-MINIGAME_READY,Ready? Go!,¿Listo? ¡Vamos!,準備はいい？スタート！,ca
+INTRO_DIALOG_0,Oh! My parents left me in charge of the farm..,¡Oh! Mis padres me dejaron a cargo de la granja...,あっ！赤ちゃんが生まれたから、両親はいなくなっちゃった！,Oh! Els meus pares m'han deixat a càrrec de la granja...
+INTRO_DIALOG_1,What can I do all by myself?,¿Qué puedo hacer yo sola?,私はどうしたらいいの？,Com ho faré tot sola?
+INTRO_DIALOG_2,It is too much work in the farm...,Hay demasiado trabajo en la granja...,農場の仕事が多すぎるよ！,Hi ha molt treball a la granja...
+INTRO_DIALOG_3,If only someone could help me!,¡Si alguien pudiera ayudarme!,誰か助けてくれたらいいのに！,Si tan sols algú pogués ajudar-me...
+INTRO_DIALOG_4,You see? I was right. She is alone and needs help!,¿Lo ves? Tenía razón. ¡Está sola y necesita nuestra ayuda!,ほらね？言った通りだ。彼女は一人で助けが必要だ！,Ho veus? Tenia raó! Està sola i necessita la nostra ajuda
+INTRO_DIALOG_5,You are right! Let's send the newbie to help her,¡Tienes razón! Enviemos a la novata para ayudarla,その通り！新人を送って手伝わせよう。,Tota la raó! Enviem a la novençana perquè l'ajudi
+INTRO_DIALOG_6,"Come on, don't be shy! Help her!","¡Venga, no seas tímida! ¡Ayúdala!",そこのあなた！恥ずかしがらないで！手伝って！,"Vinga va, no siguis tímida! Ajúdala"
+INTRO_DIALOG_6,"Me? Are you sure? Well, okay...","¿Yo? ¿Seguras? Bueno, vale...",私？本当に？？わ、わかりました。。。,"Jo? De debò? Bé, d'acord..."
+INTRO_DIALOG_7,Hello little girl!,"¡Hola, pequeña!",こんにちは、小さな女の子！,"¡Hola, petitona!"
+INTRO_DIALOG_8,A fairy!,¡Un hada!,妖精だ！,Una fada!
+INTRO_DIALOG_9,Yes! We are from the FCI and we are here to help you!,¡Sí! Somos de la FCI y hemos venido a ayudarte,そう！私たちはFCIから来て、あなたを助けに来たの！,Sí! Som de la FCI i hem vingut a ajudar-te
+INTRO_DIALOG_10,Oh! Thank you fairy! I have so much work in the farm...,¡Oh! ¡Gracias hada! Tengo tanto trabajo en la granja...,わあ！ありがとう妖精さん！農場の仕事がたくさんあるの！,Oh! Gràcies fada. Tinc tant treball a la granja...
+INTRO_DIALOG_11,We can do any kind of work.  Guide us to the farm!,Podemos hacer cualquier tipo de trabajo. ¡Guíanos a la granja!,どんな仕事でもできるよ！農場へ案内して！,Podem fer qualsevol tipus de treball. Guia'ns a la teva granja!
+INTRO_DIALOG_12,Thank you! Follow me!,¡Gracias! ¡Seguirme!,ありがとう！ついてきて！,¡Gràcies! Seguiu-me!
+INTRO_DIALOG_13,To the faaaaarm!,¡A la granjaaaaa!,牧場へ！,"Som-hi, a la granjaaaa!"
+OUTRO_DIALOG_0,Wow! That was a lot of work!,¡Wow! ¡Hemos trabajado mucho!,わあ！すごい量の仕事だったね！,Wow! Hem treballat moltíssim!
+OUTRO_DIALOG_1,But you did very well newbie,Pero lo hiciste muy bien novata,でも新人、よくやったよ！,Però ho has fet genial novençana
+OUTRO_DIALOG_2,Newbie no more!,¡Ya no es novata!,もう新人じゃない！,Ja no és novençana!
+OUTRO_DIALOG_3,From now on you are a real FCI member! ,¡Desde ahora eres un verdadero miembro de la FCI!,今日からあなたは本物のFCIメンバーだ！,Des d'ara ets un veritable membre de la FCI
+OUTRO_DIALOG_4,Thank you fairies!,¡Gracias hadas!,ありがとう妖精さんたち！,Gràcies fades!
+OUTRO_DIALOG_5,Now the farm is tidy and the work done,Ahora la granja está ordenada y el trabajo terminado,これで農場はきれいになって、仕事も終わった！,Ara la granja està endreçada i el treball enllestit
+OUTRO_DIALOG_6,My parents can rest and trust me with the farm,Mis padres pueden descansar y confiarme la granja tranquilamente,両親も休んで赤ちゃんの世話ができるね！,Els meus pares poden descansar i confiar-me la granja tranquil·lament
+OUTRO_DIALOG_7,It was a pleasure to help!,¡Fue un placer ayudar!,手伝えてうれしかった！,Ha estat un plaer ajudar-te!
+OUTRO_DIALOG_8,We have to go to help other children but remember...,Tenemos que irnos a ayudar a otros niños. Pero recuerda...,私たちは他の子どもたちを助けに行かなきゃ。でも覚えておいて。。。,Hem de marxar i ajudar a altres nens. Però recorda...
+OUTRO_DIALOG_9,The FCI will be there when you need help!,¡La FCI estará ahí siempre que necesites ayuda!,助けが必要なときはFCIがそばにいるよ！,La FCI estarà a la teva disposició sempre que ens necessitis!
+OUTRO_DIALOG_10,Goodbye little fairies! Thank you!,¡Adiós pequeñas hadas! ¡Gracias!,さようなら妖精さんたち！ありがとう！,"Adéu petites fades, moltes gràcies"
+TASK_MINIGAME_0,Where are my eggs?,¿Dónde estan mis huevos?,たまごはどこ？,On són els ous?
+TASK_MINIGAME_1,Apple rain,Lluvia de manzanas,アップルレイン,Pluja de pomes
+TASK_MINIGAME_2,Hit'mole,Dale al topo,モグラたたき,Fot-li al talp
+MINIGAME_0_DIALOG_0,Gather the eggs!,¡Recoge los huevos!,たまごを集めて！,Recull els ous!
+MINIGAME_0_DIALOG_1,Be careful with the colors!,¡Ten cuidado con los colores!,色に気をつけて！,Ves amb compte amb els colors!
+MINIGAME_0_DIALOG_2,Gather 10 eggs on each basket!,¡Consigue 10 huevos en cada cesta!,それぞれのかごにたまごを10こ集めて！,Aconsegueix 10 ous per cada cistell
+MINIGAME_0_DIALOG_3,Good work! Back to the ranch!,¡Buen trabajo! ¡Volvamos al rancho!,よくできた！牧場にもどろう！,Ben fet! Tornem a la granja
+MINIGAME_1_DIALOG_0,Gather the falling apples,Recoge las manzanas que se caen,落ちてくるりんごを集めて！,Recull les pomes que cauen
+MINIGAME_1_DIALOG_1,Avoid the bad apples and the branches!,¡Ten cuidado con los colores!,悪いりんごと枝をよけて！,Evita les branques i les pomes amb cucs!
+MINIGAME_1_DIALOG_2,Gather 15 apples for the cake!,¡Consigue 15 manzanas para la tarta!,ケーキのためにりんごを15こ集めて！,Aconsegueix 15 pomes per fer un pastís!
+MINIGAME_1_DIALOG_3,Wonderful! Now we can bake the cake!,¡Maravilloso! ¡Ya podemos hacer la tarta!,すばらしい！これでケーキが作れる！,Meravellós! Ja podem cuinar el pastís!
+MINIGAME_2_DIALOG_0,The moles are trying to steal the vegetables!,¡Los topos están intentando robar las verduras!,モグラたちが野菜を盗もうとしている！,Els talps volen treure'ns les verdures!
+MINIGAME_2_DIALOG_1,Avoid it by giving them a smash!,¡Evítalo golpeándolos!,出てきたら叩いて止めよう！,Evita-ho donant-los un cop!
+MINIGAME_2_DIALOG_2,But only when they show their head!,¡Pero solo cuando saquen la cabeza!,でも、頭を出したときだけ叩けるよ！,Però només quan treguin el cap
+MINIGAME_2_DIALOG_3,"Oh, no! Let's try again!","¡Oh, no! ¡Intentémoslo otra vez!",ああ！もう一度やってみよう！,"Oh, no! Tornem a intentar-ho!"
+MINIGAME_2_DIALOG_4,You protected the vegetables!,¡Has protegido las verduras!,野菜を守ったね！,Has protegit les verdures!
+MINIGAME_READY,Ready? Go!,¿Listo? ¡Vamos!,準備はいい？スタート！,"Preparats, llestos, ja!"

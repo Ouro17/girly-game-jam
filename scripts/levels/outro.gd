@@ -127,6 +127,9 @@ func _input(event):
     if not allow_input:
         return
 
+    if GlobalState.get_key(&"Area", false):
+        return
+
     if (event is InputEventKey or event is InputEventMouseButton) and event.pressed and not event.is_action_pressed("quit"):
         get_viewport().set_input_as_handled()
         if current_dialog != null:

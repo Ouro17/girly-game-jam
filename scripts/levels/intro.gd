@@ -140,8 +140,11 @@ func _on_dialog_finished(dialog: Dialog) -> void:
 
         current_stage = Stage.END
 
-func _input(event):
+func _input(event: InputEvent) -> void:
     if not allow_input:
+        return
+
+    if GlobalState.get_key(&"Area", false):
         return
 
     if (event is InputEventKey or event is InputEventMouseButton) and event.pressed and not event.is_action_pressed("quit"):

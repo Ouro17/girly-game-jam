@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://dkmgu635r16f"]
+
+[ext_resource type="Script" uid="uid://di8yvuw0eu6ju" path="res://scripts/UI/pause_button.gd" id="1_4ks8w"]
+[ext_resource type="Texture2D" uid="uid://cd0cblnpbetiy" path="res://assets/art/pause.png" id="2_6rsu1"]
+
+[sub_resource type="Animation" id="Animation_4ks8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_otvjb"]
+resource_name = "back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.5707963267948966, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6rsu1"]
+resource_name = "play"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5707963267948966]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_otvjb"]
+_data = {
+&"RESET": SubResource("Animation_4ks8w"),
+&"back": SubResource("Animation_otvjb"),
+&"play": SubResource("Animation_6rsu1")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4ks8w"]
+animation = &"back"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6rsu1"]
+animation = &"play"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hvkw2"]
+advance_mode = 2
+advance_condition = &"back"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mdyaa"]
+advance_mode = 2
+advance_condition = &"play"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0jqvd"]
+break_loop_at_end = true
+advance_mode = 2
+advance_condition = &"play"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1mvdc"]
+states/Start/position = Vector2(201, 100)
+states/back/node = SubResource("AnimationNodeAnimation_4ks8w")
+states/back/position = Vector2(572, 100)
+states/play/node = SubResource("AnimationNodeAnimation_6rsu1")
+states/play/position = Vector2(578, 195)
+transitions = ["play", "back", SubResource("AnimationNodeStateMachineTransition_hvkw2"), "back", "play", SubResource("AnimationNodeStateMachineTransition_mdyaa"), "Start", "play", SubResource("AnimationNodeStateMachineTransition_0jqvd")]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=878377317 node_paths=PackedStringArray("texture", "animation_player", "animation_tree")]
+process_mode = 3
+script = ExtResource("1_4ks8w")
+texture = NodePath("TextureRect")
+animation_player = NodePath("AnimationPlayer")
+animation_tree = NodePath("AnimationTree")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1218416114]
+offset_left = 23.0
+offset_top = 22.0
+offset_right = 73.0
+offset_bottom = 72.0
+pivot_offset = Vector2(25, 25)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_6rsu1")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1638712777]
+libraries/ = SubResource("AnimationLibrary_otvjb")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1617322457]
+tree_root = SubResource("AnimationNodeStateMachine_1mvdc")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/back = false
+parameters/conditions/play = false

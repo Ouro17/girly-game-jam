@@ -36,7 +36,6 @@ var max_distance : float
 
 func _ready() -> void:
     if leader != null:
-        global_position = leader.global_position
         z_index = leader.z_index - 1
 
     max_distance = follow_distance + follow_tolerance

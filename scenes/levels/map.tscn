@@ -37,7 +37,9 @@
 [ext_resource type="Texture2D" uid="uid://r1llfiwadmdd" path="res://assets/art/mini_game_1/apple_0.png" id="28_pl2do"]
 [ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="28_qsxn8"]
 [ext_resource type="Texture2D" uid="uid://deu3s1oa6e4xi" path="res://assets/art/mini_game_1/apple_1.png" id="29_ookhf"]
+[ext_resource type="AudioStream" uid="uid://8x11316g5k55" path="res://assets/sounds/truck.wav" id="29_otrhh"]
 [ext_resource type="Texture2D" uid="uid://dpamndoctnkto" path="res://assets/art/mini_game_1/apple_2.png" id="30_qsxn8"]
+[ext_resource type="AudioStream" uid="uid://bmy2arahrtwgs" path="res://assets/sounds/rat.wav" id="31_2fngh"]
 [ext_resource type="Script" uid="uid://bts7f55o5jcme" path="res://scripts/levels/level_entrance.gd" id="32_dim3t"]
 [ext_resource type="Texture2D" uid="uid://bub8ev3k0lifp" path="res://assets/art/map/marigold.png" id="33_dim3t"]
 [ext_resource type="Texture2D" uid="uid://dqjbfhcxeva77" path="res://assets/art/map/patch_map.png" id="33_o1cqd"]
@@ -45,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://ll6lales3rke" path="res://assets/art/fairies/sister_fairy_1.png" id="40_voih8"]
 [ext_resource type="Texture2D" uid="uid://prluh2xwdcl0" path="res://assets/art/fairies/head_fairy_0.png" id="41_1fsak"]
 [ext_resource type="Texture2D" uid="uid://blhdgq0s5jpij" path="res://assets/art/fairies/head_fairy_1.png" id="42_q8wrr"]
+[ext_resource type="PackedScene" uid="uid://dkmgu635r16f" path="res://scenes/UI/pause_button.tscn" id="48_2fngh"]
 
 [sub_resource type="Resource" id="Resource_fpdas"]
 script = ExtResource("2_fpdas")
@@ -200,24 +203,24 @@ _data = {
 [node name="Map" type="Node2D" unique_id=1665987138 node_paths=PackedStringArray("end_map_label", "task_list", "level_entrances")]
 script = ExtResource("1_1j1lv")
 next_levels = Array[String](["res://scenes/levels/mini_game_0.tscn", "res://scenes/levels/mini_game_1.tscn", "res://scenes/levels/mini_game_2.tscn", "res://scenes/levels/outro.tscn"])
-end_map_label = NodePath("CanvasLayer/EndMapLabel")
+end_map_label = NodePath("TaskLayer/EndMapLabel")
 events_observer = Array[ExtResource("2_fpdas")]([SubResource("Resource_fpdas"), SubResource("Resource_4u8by"), SubResource("Resource_5ek3c")])
-task_list = NodePath("CanvasLayer/TaskListPanel")
+task_list = NodePath("TaskLayer/TaskListPanel")
 level_entrances = [NodePath("Entrances/LevelEntrance_0"), NodePath("Entrances/LevelEntrance_1"), NodePath("Entrances/LevelEntrance_2")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=956188810]
+[node name="TaskLayer" type="CanvasLayer" parent="." unique_id=956188810]
 
-[node name="TaskListPanel" parent="CanvasLayer" unique_id=941280822 instance=ExtResource("3_4u8by")]
+[node name="TaskListPanel" parent="TaskLayer" unique_id=941280822 instance=ExtResource("3_4u8by")]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -293.0
+offset_left = -327.0
 offset_top = 17.0
-offset_right = -34.0
+offset_right = -15.0
 offset_bottom = 140.0
 grow_horizontal = 0
 
-[node name="EndMapLabel" parent="CanvasLayer" unique_id=2145342449 instance=ExtResource("5_ex8ba")]
+[node name="EndMapLabel" parent="TaskLayer" unique_id=2145342449 instance=ExtResource("5_ex8ba")]
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
@@ -228,9 +231,12 @@ offset_right = 227.0
 offset_bottom = 106.0
 grow_horizontal = 2
 
-[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("5_u1b8a")]
+[node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("48_2fngh")]
+pause_menu = NodePath("../PauseMenuLayer")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459841556]
+[node name="PauseMenuLayer" parent="." unique_id=1294541332 instance=ExtResource("5_u1b8a")]
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459841556]
 stream = ExtResource("5_dim3t")
 volume_db = -10.0
 autoplay = true
@@ -411,7 +417,7 @@ scale = Vector2(0.9999992, 0.99999976)
 shape = SubResource("CapsuleShape2D_cbk36")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Art/Elements/Truck" unique_id=1019454313]
-stream = ExtResource("27_1atqk")
+stream = ExtResource("29_otrhh")
 volume_db = -5.0
 
 [node name="Rat" type="Sprite2D" parent="Art/Elements" unique_id=421907892 node_paths=PackedStringArray("clickable_area", "sound")]
@@ -434,7 +440,7 @@ scale = Vector2(0.99999946, 0.99999964)
 shape = SubResource("RectangleShape2D_2fngh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Art/Elements/Rat" unique_id=1517403044]
-stream = ExtResource("27_1atqk")
+stream = ExtResource("31_2fngh")
 volume_db = -5.0
 
 [node name="Herb" type="Sprite2D" parent="Art/Elements" unique_id=907689354]
@@ -456,12 +462,12 @@ scale = Vector2(0.20051695, 0.17183283)
 texture = ExtResource("26_t3pip")
 
 [node name="Herb4" type="Sprite2D" parent="Art/Elements" unique_id=519944002]
-position = Vector2(82.62503, 627.87506)
+position = Vector2(91.62503, 621.875)
 scale = Vector2(0.7307692, 0.9200005)
 texture = ExtResource("21_cbk36")
 
 [node name="Herb5" type="Sprite2D" parent="Art/Elements" unique_id=416487204]
-position = Vector2(104.62503, 638.875)
+position = Vector2(113.62503, 632.87494)
 scale = Vector2(0.4423078, 0.5899998)
 texture = ExtResource("21_cbk36")
 
@@ -481,27 +487,27 @@ scale = Vector2(0.67307687, 0.6600004)
 texture = ExtResource("21_cbk36")
 
 [node name="ChickenRunFenceFront" type="Sprite2D" parent="Art/Elements" unique_id=1993786354]
-position = Vector2(186.62505, 660.87506)
+position = Vector2(198.62503, 656.87506)
 scale = Vector2(0.18378845, 0.112870894)
 texture = ExtResource("27_yk617")
 
 [node name="BasketYellow" type="Sprite2D" parent="Art/Elements" unique_id=1141733484]
-position = Vector2(408, 357)
+position = Vector2(453.80002, 340.90002)
 scale = Vector2(0.29424426, 0.24606755)
 texture = ExtResource("28_qsxn8")
 
 [node name="Apple0" type="Sprite2D" parent="Art/Elements" unique_id=174319328]
-position = Vector2(397.8, 384.05)
+position = Vector2(443.6, 367.95)
 scale = Vector2(0.2, 0.164)
 texture = ExtResource("28_pl2do")
 
 [node name="Apple1" type="Sprite2D" parent="Art/Elements" unique_id=2103201412]
-position = Vector2(421, 380.99997)
+position = Vector2(466.80002, 364.9)
 scale = Vector2(0.2, 0.164)
 texture = ExtResource("29_ookhf")
 
 [node name="Apple2" type="Sprite2D" parent="Art/Elements" unique_id=1211027544]
-position = Vector2(410.00003, 393)
+position = Vector2(455.80005, 376.90002)
 scale = Vector2(0.2, 0.164)
 texture = ExtResource("30_qsxn8")
 
@@ -535,16 +541,18 @@ position = Vector2(-30, 0)
 shape = SubResource("RectangleShape2D_o1cqd")
 
 [node name="Label" type="Label" parent="Entrances/LevelEntrance_0" unique_id=629774439]
-offset_left = -136.0
+offset_left = -163.0
 offset_top = -46.0
-offset_right = 76.0
+offset_right = 112.0
 offset_bottom = -16.0
 theme = ExtResource("4_o1cqd")
 theme_override_font_sizes/font_size = 20
 text = "TASK_MINIGAME_0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LevelEntrance_1" type="Area2D" parent="Entrances" unique_id=991618904]
-position = Vector2(406, 360)
+position = Vector2(453, 345)
 script = ExtResource("32_dim3t")
 next_level = 1
 
@@ -553,10 +561,10 @@ position = Vector2(4, 8)
 shape = SubResource("RectangleShape2D_u1b8a")
 
 [node name="Label" type="Label" parent="Entrances/LevelEntrance_1" unique_id=608437167]
-offset_left = -60.0
-offset_top = 43.0
-offset_right = 62.0
-offset_bottom = 66.0
+offset_left = -96.0
+offset_top = 40.0
+offset_right = 112.0
+offset_bottom = 71.0
 theme = ExtResource("4_o1cqd")
 theme_override_font_sizes/font_size = 20
 text = "TASK_MINIGAME_1"
@@ -585,7 +593,7 @@ vertical_alignment = 1
 
 [node name="Follower" type="CharacterBody2D" parent="." unique_id=585176023 node_paths=PackedStringArray("leader", "other_followers")]
 z_index = 99
-position = Vector2(896, 359)
+position = Vector2(693, 353)
 script = ExtResource("38_k01hm")
 leader = NodePath("../Player")
 other_followers = [NodePath("../Follower2")]
@@ -612,7 +620,7 @@ autoplay = &"play"
 
 [node name="Follower2" type="CharacterBody2D" parent="." unique_id=675395327 node_paths=PackedStringArray("leader", "other_followers")]
 z_index = 99
-position = Vector2(896, 359)
+position = Vector2(781, 419)
 script = ExtResource("38_k01hm")
 leader = NodePath("../Player")
 other_followers = [NodePath("../Follower")]
@@ -637,4 +645,4 @@ libraries/ = SubResource("AnimationLibrary_cuu0l")
 autoplay = &"play"
 
 [node name="Player" parent="." unique_id=2046264894 instance=ExtResource("6_gpbhb")]
-position = Vector2(869, 467)
+position = Vector2(698, 438)

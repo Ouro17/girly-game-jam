@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://c0ccsh1riost4" path="res://assets/art/dialog_mini_games.png" id="15_qrwg3"]
 [ext_resource type="Texture2D" uid="uid://dhlw08ifbglr" path="res://assets/art/map/trunk_1.png" id="16_x74sk"]
 [ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="19_h0hg3"]
+[ext_resource type="PackedScene" uid="uid://dkmgu635r16f" path="res://scenes/UI/pause_button.tscn" id="19_is4xs"]
 [ext_resource type="Texture2D" uid="uid://dgm2a1gocs0nd" path="res://assets/art/map/crown_3.png" id="19_m1vqb"]
 [ext_resource type="PackedScene" uid="uid://cts4n854tdnf3" path="res://scenes/entities/apple_0.tscn" id="25_bu8e1"]
 [ext_resource type="PackedScene" uid="uid://dwfoqhvi1j0ee" path="res://scenes/entities/fairy.tscn" id="27_jc1dy"]
@@ -130,9 +131,6 @@ volume_db = -10.0
 stream = ExtResource("11_7en2i")
 volume_db = -10.0
 autoplay = true
-
-[node name="MiniGameIntro_1" parent="." unique_id=809843581 instance=ExtResource("3_yqcg6")]
-wait_time = 2.5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1309865142]
 
@@ -236,6 +234,12 @@ offset_bottom = 638.0
 theme = ExtResource("14_2pi3j")
 has_max_value = true
 max_value = 15
+
+[node name="MiniGameIntro_1" parent="." unique_id=809843581 instance=ExtResource("3_yqcg6")]
+wait_time = 2.5
+
+[node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("19_is4xs")]
+pause_menu = NodePath("../PauseMenu")
 
 [node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("19_h0hg3")]
 is_mini_game = true

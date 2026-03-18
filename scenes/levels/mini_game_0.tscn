@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://be0xickamo2pv" path="res://scenes/entities/chicken.tscn" id="7_nfofj"]
 [ext_resource type="Theme" uid="uid://btlkwsg0o3blf" path="res://theme/DialogTheme.tres" id="7_w7lsb"]
 [ext_resource type="Texture2D" uid="uid://cs46ckogfhwgu" path="res://assets/art/mini_game_0/basket_green.png" id="8_310pp"]
+[ext_resource type="PackedScene" uid="uid://dkmgu635r16f" path="res://scenes/UI/pause_button.tscn" id="12_01ylo"]
 [ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="12_t1bkq"]
 [ext_resource type="PackedScene" uid="uid://dau5pc3cvbgon" path="res://scenes/dialogs/dialog.tscn" id="14_0hdmg"]
 [ext_resource type="PackedScene" uid="uid://db2qhle2sop0j" path="res://scenes/UI/number_holder.tscn" id="15_g1s10"]
@@ -123,10 +124,10 @@ visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -535.0
-offset_top = 30.0
-offset_right = -183.0
-offset_bottom = 53.0
+offset_left = -637.0
+offset_top = 31.0
+offset_right = -285.0
+offset_bottom = 66.0
 grow_horizontal = 0
 theme = ExtResource("7_w7lsb")
 theme_override_colors/font_color = Color(0.3372549, 0.3372549, 0.3372549, 1)
@@ -159,9 +160,9 @@ visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -658.0
+offset_left = -691.0
 offset_top = 31.0
-offset_right = -270.0
+offset_right = -240.0
 offset_bottom = 66.0
 grow_horizontal = 0
 theme = ExtResource("7_w7lsb")
@@ -177,9 +178,9 @@ visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -738.0
+offset_left = -748.0
 offset_top = 31.0
-offset_right = -173.0
+offset_right = -183.0
 offset_bottom = 66.0
 grow_horizontal = 0
 theme = ExtResource("7_w7lsb")
@@ -231,6 +232,9 @@ max_value = 10
 
 [node name="MiniGameIntro_0" parent="." unique_id=809843581 instance=ExtResource("4_ridya")]
 wait_time = 4.5
+
+[node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("12_01ylo")]
+pause_menu = NodePath("../PauseMenu")
 
 [node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("12_t1bkq")]
 is_mini_game = true

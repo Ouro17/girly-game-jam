@@ -173,7 +173,7 @@ We also wanted to include new things to make the game more engaging, so our fina
     - [x] Make instruction more clear, by making the last dialog permanent and putting a dialog box
     - [x] Start the minigame only when the dialog is finished
 - [x] Fix cursor size and make it more predictable to click
-- [ ] Add menu pause during the gameplay and able to go back to the map
+- [x] Add menu pause during the gameplay and able to go back to the map
 - [x] Add movement to the fairies wings and wobble in general
 - [x] On the ranch, make sounds for the different elements
 - [x] Fix the dialog system on intro and outro so if you click very fast it does not make the game stuck

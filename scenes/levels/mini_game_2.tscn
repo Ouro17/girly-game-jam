@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ikcn5nkt2wfm" path="res://scenes/entities/vegetable.tscn" id="13_fsirv"]
 [ext_resource type="Script" uid="uid://dpfwedxtpojag" path="res://scripts/entities/vegetable.gd" id="13_i3ujm"]
 [ext_resource type="PackedScene" uid="uid://blfcefwmgi6ff" path="res://scenes/UI/pause_menu.tscn" id="13_up6wu"]
+[ext_resource type="PackedScene" uid="uid://dkmgu635r16f" path="res://scenes/UI/pause_button.tscn" id="14_fw7ko"]
 [ext_resource type="Texture2D" uid="uid://if07reipecgm" path="res://assets/art/mini_game_2/carrot_head.png" id="14_kth5j"]
 [ext_resource type="Texture2D" uid="uid://m82xucnmyxnu" path="res://assets/art/mini_game_2/potato_head.png" id="14_n1dgv"]
 [ext_resource type="Texture2D" uid="uid://n8744e68lty2" path="res://assets/art/mini_game_2/beetroot_head.png" id="16_0m7ds"]
@@ -153,9 +154,6 @@ autoplay = true
 stream = ExtResource("8_sfeno")
 volume_db = -10.0
 
-[node name="MiniGameIntro_2" parent="." unique_id=809843581 instance=ExtResource("4_32lln")]
-wait_time = 2.5
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1085494626]
 
 [node name="Dialog_cloud" type="TextureRect" parent="CanvasLayer" unique_id=1070907930]
@@ -271,10 +269,10 @@ time_out = 5.0
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -492.0
-offset_top = 33.0
-offset_right = -492.0
-offset_bottom = 33.0
+offset_left = -427.0
+offset_top = 49.0
+offset_right = -427.0
+offset_bottom = 49.0
 grow_horizontal = 2
 theme = ExtResource("6_o87ru")
 current_value = 60
@@ -282,15 +280,21 @@ has_max_value = true
 max_value = 60
 
 [node name="TimeLeft" type="Label" parent="CanvasLayer" unique_id=1748461947]
-offset_left = 10.0
-offset_top = 12.0
-offset_right = 121.0
-offset_bottom = 51.0
+offset_left = 75.0
+offset_top = 28.0
+offset_right = 186.0
+offset_bottom = 67.0
 theme = ExtResource("6_o87ru")
 theme_override_font_sizes/font_size = 26
 text = "UI_TIME_LEFT"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="MiniGameIntro_2" parent="." unique_id=809843581 instance=ExtResource("4_32lln")]
+wait_time = 2.5
+
+[node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("14_fw7ko")]
+pause_menu = NodePath("../PauseMenu")
 
 [node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("13_up6wu")]
 is_mini_game = true

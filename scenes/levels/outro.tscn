@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c4o02sgfwaom1" path="res://assets/art/map/pexels-artempodrez-7233124.jpg" id="6_u8tpa"]
 [ext_resource type="Texture2D" uid="uid://dhlw08ifbglr" path="res://assets/art/map/trunk_1.png" id="7_pr0uv"]
 [ext_resource type="Texture2D" uid="uid://bxk72gtujsj3m" path="res://assets/art/map/trunk_4.png" id="8_f1x7h"]
+[ext_resource type="PackedScene" uid="uid://dkmgu635r16f" path="res://scenes/UI/pause_button.tscn" id="8_f2jod"]
 [ext_resource type="Texture2D" uid="uid://rxv8y3yloxb6" path="res://assets/art/map/trunk_2.png" id="9_6qhlp"]
 [ext_resource type="Texture2D" uid="uid://iqj4mpy04bxf" path="res://assets/art/map/crown_5.png" id="10_g6uq8"]
 [ext_resource type="Texture2D" uid="uid://cisy884ctsvxp" path="res://assets/art/map/crown_1.png" id="11_ik2ll"]
@@ -176,8 +177,6 @@ fairy_0 = [NodePath("Fairy_0_Positions/Fairy_0_Position_0"), NodePath("Fairy_0_P
 fairy_1 = [NodePath("Fairy_1_Positions/Fairy_1_Position_0"), NodePath("Fairy_1_Positions/Fairy_1_Position_1")]
 fairy_2 = [NodePath("Fairy_2_Positions/Fairy_2_Position_0"), NodePath("Fairy_2_Positions/Fairy_2_Position_1")]
 dialogs = [NodePath("CanvasLayer/Dialog0"), NodePath("CanvasLayer/Dialog1"), NodePath("CanvasLayer/Dialog2"), NodePath("CanvasLayer/Dialog3"), NodePath("CanvasLayer/Dialog4"), NodePath("CanvasLayer/Dialog5"), NodePath("CanvasLayer/Dialog6"), NodePath("CanvasLayer/Dialog7"), NodePath("CanvasLayer/Dialog8"), NodePath("CanvasLayer/Dialog9"), NodePath("CanvasLayer/Dialog10")]
-
-[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("3_u8tpa")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1215339404]
 stream = ExtResource("2_dxqrg")
@@ -449,6 +448,11 @@ theme_override_colors/font_shadow_color = Color(0.38928655, 0.38928664, 0.389286
 theme_override_font_sizes/font_size = 28
 text = "OUTRO_DIALOG_10"
 dialog_cloud = NodePath("../DialogCloud")
+
+[node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("8_f2jod")]
+pause_menu = NodePath("../PauseMenu")
+
+[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("3_u8tpa")]
 
 [node name="Textures" type="Node" parent="." unique_id=1100473651]
 
