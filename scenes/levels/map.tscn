@@ -225,11 +225,12 @@ visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -230.0
-offset_top = 51.0
-offset_right = 227.0
-offset_bottom = 106.0
+offset_left = -244.0
+offset_top = 59.0
+offset_right = 244.0
+offset_bottom = 118.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.17923622, 0.17923622, 0.17923622, 1)
 
 [node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("48_2fngh")]
 pause_menu = NodePath("../PauseMenuLayer")

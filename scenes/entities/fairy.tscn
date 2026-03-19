@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c4xxw4qs5vo8v" path="res://scripts/entities/fairy.gd" id="1_fv1qd"]
 [ext_resource type="Texture2D" uid="uid://klpcrpntyiur" path="res://assets/art/fairies/newbie_fairy_0.png" id="1_ty7oa"]
 [ext_resource type="Texture2D" uid="uid://cbacntidqd005" path="res://assets/art/fairies/newbie_fairy_1.png" id="3_fv1qd"]
+[ext_resource type="Texture2D" uid="uid://bgxivv0qwdrm2" path="res://assets/art/mini_game_1/basket_yellow.png" id="4_f42cr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fv1qd"]
 size = Vector2(98, 37)
@@ -72,3 +73,8 @@ disabled = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=529321490]
 libraries/ = SubResource("AnimationLibrary_eiilm")
 autoplay = &"play"
+
+[node name="Basket" type="Sprite2D" parent="." unique_id=764326380]
+position = Vector2(-42, -4)
+scale = Vector2(0.36207283, 0.39132723)
+texture = ExtResource("4_f42cr")
