@@ -2,36 +2,38 @@ class_name PauseMenu
 extends CanvasLayer
 
 @export
-var pause_sound : AudioStreamPlayer
+var pause_sound: AudioStreamPlayer
 
 @export
-var click_sound : AudioStreamPlayer
+var click_sound: AudioStreamPlayer
 
 @export
-var streams_to_pause : Array[AudioStreamPlayer]
+var streams_to_pause: Array[AudioStreamPlayer]
 
 @export
-var is_mini_game : bool
+var is_mini_game: bool
 
 @export
-var back_level : String
+var back_level: String
 
 @export
-var menu_level : String
+var menu_level: String
 
 @export
-var continue_button : Button
+var continue_button: Button
 
 @export
-var back_to_somewhere : Button
+var back_to_somewhere: Button
 
 @export
-var exit_button : Button
+var exit_button: Button
 
 @export
-var back_to_menu : Button
+var back_to_menu: Button
 
-var input_handled : bool = false
+var input_handled: bool = false
+
+var stream_data: Dictionary[String, float]
 
 func _input(event):
     if input_handled:
@@ -44,16 +46,25 @@ func _input(event):
         and not click_sound.playing and get_tree().paused:
             click_sound.play()
 
-func pause(value : bool) -> void:
-    visible = value
+func pause(value: bool) -> void:
+    if value:
+        stream_data.clear()
 
-    for stream in streams_to_pause:
-        stream.stream_paused = value
+        for stream in streams_to_pause:
+            if stream.playing:
+                stream_data[stream.name] = stream.get_playback_position()
+                stream.stop()
+    else:
+        for stream in streams_to_pause:
+            if stream_data.has(stream.name):
+                stream.play(stream_data[stream.name])
 
     get_tree().set_deferred("paused", value)
 
     if value:
         pause_sound.play()
+
+    visible = value
 
 func _ready() -> void:
     continue_button.pressed.connect(_on_continue_pressed)
