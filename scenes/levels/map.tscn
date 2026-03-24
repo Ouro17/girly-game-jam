@@ -231,11 +231,15 @@ offset_right = 244.0
 offset_bottom = 118.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0.17923622, 0.17923622, 0.17923622, 1)
+text = "UI_GAME_OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("48_2fngh")]
 pause_menu = NodePath("../PauseMenuLayer")
 
-[node name="PauseMenuLayer" parent="." unique_id=1294541332 instance=ExtResource("5_u1b8a")]
+[node name="PauseMenuLayer" parent="." unique_id=1294541332 node_paths=PackedStringArray("streams_to_pause") instance=ExtResource("5_u1b8a")]
+streams_to_pause = [NodePath("../MusicAudioStreamPlayer")]
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459841556]
 stream = ExtResource("5_dim3t")

@@ -16,12 +16,10 @@ func _on_mouse_entered():
 func _on_mouse_exited():
     GlobalState.set_key(&"Area", false)
 
-func _input_event(viewport: Viewport, event: InputEvent, _shape_index: int) -> void:
+func _input_event(_viewport: Viewport, event: InputEvent, _shape_index: int) -> void:
     if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
         if event.pressed:
             mouse_was_pressed = true
         elif not event.pressed and mouse_was_pressed:
             clicked.emit()
             mouse_was_pressed = false
-
-        viewport.set_input_as_handled()

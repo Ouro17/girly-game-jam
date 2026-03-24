@@ -452,7 +452,8 @@ dialog_cloud = NodePath("../DialogCloud")
 [node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("8_f2jod")]
 pause_menu = NodePath("../PauseMenu")
 
-[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("3_u8tpa")]
+[node name="PauseMenu" parent="." unique_id=1294541332 node_paths=PackedStringArray("streams_to_pause") instance=ExtResource("3_u8tpa")]
+streams_to_pause = [NodePath("../AudioStreamPlayer")]
 
 [node name="Textures" type="Node" parent="." unique_id=1100473651]
 

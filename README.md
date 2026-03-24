@@ -169,6 +169,7 @@ We also wanted to include new things to make the game more engaging, so our fina
 - [x] Mole minigame:
     - [x] Make more clear when the mole is hit
     - [x] Add more SFX for the minigame
+    - [x] Fix not hitting mole when a hidden mole is on top a peeking one
 - [x] In all minigames:
     - [x] Make instruction more clear, by making the last dialog permanent and putting a dialog box
     - [x] Start the minigame only when the dialog is finished
@@ -177,7 +178,7 @@ We also wanted to include new things to make the game more engaging, so our fina
 - [x] Add movement to the fairies wings and wobble in general
 - [x] On the ranch, make sounds for the different elements
 - [x] Fix the dialog system on intro and outro so if you click very fast it does not make the game stuck
-- [ ] Add catalan as language
+- [x] Add catalan as language
 
 ## Tools used
 - Godot 4.6

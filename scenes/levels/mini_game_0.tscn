@@ -236,7 +236,8 @@ wait_time = 4.5
 [node name="PauseButtonLayer" parent="." unique_id=878377317 node_paths=PackedStringArray("pause_menu") instance=ExtResource("12_01ylo")]
 pause_menu = NodePath("../PauseMenu")
 
-[node name="PauseMenu" parent="." unique_id=1294541332 instance=ExtResource("12_t1bkq")]
+[node name="PauseMenu" parent="." unique_id=1294541332 node_paths=PackedStringArray("streams_to_pause") instance=ExtResource("12_t1bkq")]
+streams_to_pause = [NodePath("../VictorySound"), NodePath("../EggOnBasket"), NodePath("../ChickenSound"), NodePath("../Music")]
 is_mini_game = true
 
 [node name="Textures" type="Node" parent="." unique_id=917866759]

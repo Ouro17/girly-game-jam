@@ -8,6 +8,9 @@ var pause_sound : AudioStreamPlayer
 var click_sound : AudioStreamPlayer
 
 @export
+var streams_to_pause : Array[AudioStreamPlayer]
+
+@export
 var is_mini_game : bool
 
 @export
@@ -28,17 +31,29 @@ var exit_button : Button
 @export
 var back_to_menu : Button
 
+var input_handled : bool = false
+
 func _input(event):
+    if input_handled:
+        input_handled = false
+        return
+
     if event.is_action_pressed("quit"):
        pause(not get_tree().paused)
-       pause_sound.play()
-    elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
-        if not click_sound.playing and get_tree().paused:
+    elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released() \
+        and not click_sound.playing and get_tree().paused:
             click_sound.play()
 
 func pause(value : bool) -> void:
     visible = value
+
+    for stream in streams_to_pause:
+        stream.stream_paused = value
+
     get_tree().set_deferred("paused", value)
+
+    if value:
+        pause_sound.play()
 
 func _ready() -> void:
     continue_button.pressed.connect(_on_continue_pressed)

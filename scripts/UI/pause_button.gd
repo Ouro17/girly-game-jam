@@ -31,4 +31,5 @@ func _on_mouse_exited() -> void:
 
 func _on_gui_input(event: InputEvent) -> void:
     if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+        pause_menu.input_handled = true
         pause_menu.pause(not get_tree().paused)
